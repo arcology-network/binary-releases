@@ -55,7 +55,7 @@ $ python
 ```
 
 ## Interactive examples
-   1. [Simple Coin transfer case](https://github.com/arcology-network/documents/blob/main/Simple-Transfer-Example)
+   1. [Simple Coin transfer case](https://github.com/arcology-network/documents/blob/main/simple-coin-transfer)
    2. [Double spending Prevention case](https://github.com/arcology-network/documents/blob/main/Double-Spend-Example-Prevention)
 
 ## Parallelized CryptoKitties 
