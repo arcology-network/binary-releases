@@ -1,4 +1,4 @@
-# Test Suite
+# Benchmarking suite
 The test suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge and some understanding in python and blockchain. The suite has some interactive and batch examples for performance benchmarking.
 
 ## What is the test suite
