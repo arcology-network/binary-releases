@@ -35,7 +35,7 @@ The all the scripts files are in the home directory
 Ammolite is a collection of libraries implemented in Python that helps to interact with a full node through HTTP. Support for IPC or WebSocket will be added in the future. To start Ammolite, just start **python** and then import necessary Ammolite modules.
 
 ## API
-The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/documents/ammolite-API)
+The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/documents/blob/main/ammolite-API)
 
 ## Login to the Monaco testnet 
 SSH into the test node with the credentials provided
@@ -55,13 +55,13 @@ $ python
 ```
 
 ## Interactive examples
-   1. [Simple Coin transfer case](https://github.com/arcology-network/documents/Simple-Transfer-Example)
-   2. [Double spending Prevention case](https://github.com/arcology-network/documents/Double-Spend-Example-Prevention)
+   1. [Simple Coin transfer case](https://github.com/arcology-network/documents/blob/main/Simple-Transfer-Example)
+   2. [Double spending Prevention case](https://github.com/arcology-network/documents/blob/main/Double-Spend-Example-Prevention)
 
 ## Parallelized CryptoKitties 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
-   2. [How to parallize CryptoKitties](https://github.com/arcology-network/documents/Parallel-Kitties)
-   3. [CryptoKitties transfer](https://github.com/arcology-network/documents/Simple-PK-Example)
+   2. [How to parallize CryptoKitties](https://github.com/arcology-network/documents/blob/main/Parallel-Kitties)
+   3. [CryptoKitties transfer](https://github.com/arcology-network/documents/blob/main/Simple-PK-Example)
    
 ## Benchmarking
 **1. Start the performance observer**
