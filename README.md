@@ -55,13 +55,13 @@ $ python
 ```
 
 ## Interactive examples
-   1. [Simple Coin transfer case](https://github.com/arcology-network/documents/blob/main/simple-coin-transfer)
-   2. [Double spending Prevention case](https://github.com/arcology-network/documents/blob/main/Double-Spend-Example-Prevention)
+   1. [Simple Coin transfer case](https://github.com/arcology-network/documents/blob/main/simple-coin-transfer.md)
+   2. [Double spending Prevention case](https://github.com/arcology-network/documents/blob/main/Double-Spend-Example-Prevention.md)
 
 ## Parallelized CryptoKitties 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
-   2. [How to parallize CryptoKitties](https://github.com/arcology-network/documents/blob/main/Parallel-Kitties)
-   3. [CryptoKitties transfer](https://github.com/arcology-network/documents/blob/main/Simple-PK-Example)
+   2. [How to parallize CryptoKitties](https://github.com/arcology-network/documents/blob/main/Parallel-Kitties.md)
+   3. [CryptoKitties transfer](https://github.com/arcology-network/documents/blob/main/Simple-PK-Example.md)
    
 ## Benchmarking
 **1. Start the performance observer**
