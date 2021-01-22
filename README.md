@@ -96,7 +96,7 @@ $ python
 
 ---
 
-## Benchmarking
+## Start Benchmarking
 
 To benchmark the system, we suggest you to use the pre-generated data file containing signed transctions in binary format. Generating large volumn of transactions is a very length process that usually takes a lot of time. The pre-generated data files are under the data directory.
 
