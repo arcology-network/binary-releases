@@ -52,7 +52,7 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 ## API
 
-The Ammolite API document is avaiable here [Ammolite API](https://github.com/HPISTechnologies/wiki/wiki/ammolite-API)
+The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API)
 
 ## Login to the Monaco testnet
 
@@ -78,8 +78,8 @@ $ python
 
 ## Token transfer examples
 
-   1. [Simple Coin transfer case](https://github.com/HPISTechnologies/wiki/wiki/Simple-Transfer-Example)
-   2. [Double spending Prevention](https://github.com/HPISTechnologies/wiki/wiki/Double-Spend-Example-Prevention)
+   1. [Simple Coin transfer case](https://github.com/arcology-network/benchmarking/blob/main/Simple-Transfer-Example.md)
+   2. [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Example-Prevention.md)
 
 ## Parallelized CryptoKitties
 
@@ -87,13 +87,13 @@ $ python
 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
    2. [The Concurrency framework `(TBD)`]()
-   3. [How to parallelize CryptoKitties](https://github.com/HPISTechnologies/wiki/wiki/How-to-Parallelize-CryptoKitties)
-   4. [What is ParallelKitties `(TBD)`](https://github.com/HPISTechnologies/wiki/wiki/Parallel-Kitties)
+   3. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
+   4. [What is ParallelKitties `(TBD)`](https://github.com/arcology-network/benchmarking/blob/main/Parallel-Kitties.md)
    6. [PK source code]()
 
 ### Interactive Examples
 
-   1. [ParallelKitties transfer](https://github.com/HPISTechnologies/wiki/wiki/Simple-PK-Example)
+   1. [ParallelKitties transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-PK-Example.md)
 
 ---
 
