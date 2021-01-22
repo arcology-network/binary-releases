@@ -89,11 +89,11 @@ $ python
    2. [The Concurrency framework `(TBD)`]()
    3. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
    4. [What is ParallelKitties `(TBD)`](https://github.com/arcology-network/benchmarking/blob/main/Parallel-Kitties.md)
-   6. [PK source code]()
+   6. [PK source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
 
 ### Interactive Examples
 
-   1. [ParallelKitties transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-PK-Example.md)
+   1. [Simple Kitty transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-Kitty-Transfer-Example.md)
 
 ---
 
