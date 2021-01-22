@@ -64,8 +64,6 @@ SSH into the test node with the credentials provided
 * **Username**:   `xxx(TBD)`
 * **Password**:   `xxx(TBD)`
 
-![alt text](./benchmarking-suite/ssh.png)
-
 ## List all the files
 
 ![alt text](./benchmarking-suite/contents.png)
