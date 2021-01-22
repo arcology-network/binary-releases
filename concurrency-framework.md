@@ -112,7 +112,7 @@ The code snippet above is pretty self-explanatory. Cumulative variables are good
 
 Generally, a smart contract must be processed in serial mode as long as it contains some serial-only logic, even if the serial part only accounts for a tiny proportion of the whole program. While simple  parallelization isn’t always achievable. An alternative way is to reconstruct the code to separate the parallel from serial logics and wrapped them in two linked transactions executed in sequential order. This is referred to as multi-phase execution.
 
-![alt text](.\images\two-phase-execution.png)
+![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/two-phase-execution.png)
 
 In a multi-phase execution model, the parallel logics get executed first,  followed by a serial phase called deferred execution. The end state from the parallel phase is cached for serial part to continue the execution.  This design can help majority of smart contracts to gain dramatic performance speedup.
 
