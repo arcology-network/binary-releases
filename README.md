@@ -78,8 +78,8 @@ $ python
 
 ## Token transfer examples
 
-   1. [Simple Coin transfer case](https://github.com/arcology-network/benchmarking/blob/main/Simple-Transfer-Example.md)
-   2. [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Example-Prevention.md)
+   1. [Simple Coin transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-Coin-Transfer-Example.md)
+   2. [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Prevention-Example.md)
 
 ## Parallelized CryptoKitties
 
