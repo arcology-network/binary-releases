@@ -49,7 +49,7 @@ The followings are nessary for benchmarking:
 ## Connection Diagram
 
 <p align="center">
-  <img width="60%" height="60%" src="./benchmarking-suite/connect-to-cluster.png">
+  <img width="50%" height="50%" src="./benchmarking-suite/connect-to-cluster.png">
 </p>
 
 ## Ammolite
