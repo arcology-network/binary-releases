@@ -52,15 +52,13 @@ The followings are nessary for benchmarking:
 
 Ammolite is a collection of libraries implemented in Python that helps to interact with a full node through HTTP. Support for IPC or WebSocket will be added in the future. To start Ammolite, just start **python** and then import necessary Ammolite modules.
 
+## Connection to the Node clusters
+
+![alt text](./benchmarking-suite/connect-to-cluster.png)
+
 ## API
 
 The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md)
-
-## Connection to the Node clusters
-
-<p align="center">
-  <img width="80%" height="80%" src="./benchmarking-suite/connect-to-cluster.png">
-</p>
 
 ---
 
