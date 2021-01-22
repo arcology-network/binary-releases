@@ -7,7 +7,7 @@
 Randomly pick an address from ～/accounts.txt as the sender
 ```Python
 >>> acc_from = Account('60adc6a616ecdb1cfb63842464a95caa75d123ecaca373b4b32a3ffbe3fbe517')
-# Randomly pick anohter address from ～/accounts.txt as recipients 
+# Randomly pick another address from ～/accounts.txt as recipients, remove the '0x' prefix of address.
 >>> address_to1 = 'CA29C9C657d1c111483b2d6A3242a8D851A5802a'
 >>> address_to2 = '72450a903cfa2ABe5d90823465fC8d0e50c237C8'
 ```

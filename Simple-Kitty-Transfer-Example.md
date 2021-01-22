@@ -1,5 +1,10 @@
 ### Interactive mode
 
+Import necessary ammolite modules
+```Python
+>>> from ammolite import (Cli, HTTPProvider, Account)
+```
+
 Compile the parallelized CryptoKitties source code with the solcx library
 ```Python
 >>> from solcx import compile_files
@@ -59,7 +64,7 @@ Pick a user account from ～/accounts.txt
 >>> coo = Account(coo_private_key)
 >>> user1 = Account(user_private_key)
 ```
-Another user account from ～/accounts.txt
+Another user account from ～/accounts.txt, remove the '0x' prefix of the address.
 ```Python
 >>> user2_address = 'b1f0f5FD90E331D695AB1E65C33ce8Cf47b69696'
 
@@ -98,10 +103,10 @@ Parse the events field in the receipt
 >>> events = kitty_core_contract.processReceipt(receipts[0])
 
 ```
-There are two events
-* Birth event indicates that a new kitty has been created and owned by the user1，kittyId is ID for the new kitty. 
-  matron and sire for promotion kitty are always 0，gene is the first argument just filled in
-* Another event is the kitty was transferred from user0 to user1 address while the tokenId should be the same as the kittyId in the Birth event
+There are two events contained in the receipt
+1. Birth event indicates that a new kitty was created and owned by the user1，kittyId is for the new kitty. 
+  matron and sire for promotion kitty are always 0，gene is the first argument when calling kitty_core_contract.functions.createPromoKitty()
+2. Another event is the kitty was transferred from user0 to user1 while the tokenId should be the same as the kittyId in the Birth event
 ```Python
 >>> events
 {'Birth': {'owner': '00000000000000000000000016fcefbde47fbe724aa59e5f73a35aebce7ff2a2', 'kittyId': '1a5d529ea3a20e584aed24e232dd98f71dab638bed23006512bd5d9d423ca4fa', 'matronId': '0000000000000000000000000000000000000000000000000000000000000000', 'sireId': '0000000000000000000000000000000000000000000000000000000000000000', 'genes': '0000000000000000000000000000000000000000000000000000000000000000'}, 'Transfer': {'from': '0000000000000000000000000000000000000000000000000000000000000000', 'to': '00000000000000000000000016fcefbde47fbe724aa59e5f73a35aebce7ff2a2', 'tokenId': '1a5d529ea3a20e584aed24e232dd98f71dab638bed23006512bd5d9d423ca4fa'}}

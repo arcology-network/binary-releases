@@ -12,7 +12,7 @@ Randomly pick an account from ～/accounts.txt as the sender and sign a transact
 ```Python
 >>> acc_from = Account('0aba7626ab7c2268c73b9108731ce319a29f648d5b97bd3e1530418cc20a6750')
 ```
-Choose another account as the recipient
+Choose another account as the recipient, remove the '0x' prefix of address
 ```Python
 >>> address_to = 'Ebf0b4412cEf2bF1f03dd403e1619C9A812175ac'
 ```
@@ -62,6 +62,7 @@ Check the final balances after the transaction
 ```
 
 ## Script
+
 ```Python
 from ammolite import (Cli, HTTPProvider, Account)
 import time

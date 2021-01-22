@@ -8,7 +8,7 @@ Manages all the connection with the *url* specified
 
 ```Python
 >>> import ammolite
->>> provider = ammolite.HTTPProvider('http://localhost:8080')
+>>> provider = ammolite.HTTPProvider('http://192.168.1.111:8080')
 ```
 
 ### Cli
@@ -49,7 +49,7 @@ Get *account* balance at a particular *height*, get the latest balance by defaul
 Send *txs* to the node cluster
 
 ```Python
->>> acc = ammolite.Account('d9815a0fa4f31172530f17a6ae64bf5f00a3a651f3d6476146d2c62ae5527dc4')
+>>> acc = ammolite.Account('40d498d6f97ba977abc04632f56a0fc956612296539dc39c47da0a22488d8d5b')
 >>> raw_tx, tx_hash = acc.sign({'nonce': 1, 'value': 10000, 'gas': 21000, 'gasPrice': 1, 'to': bytearray.fromhex('230DCCC4660dcBeCb8A6AEA1C713eE7A04B35cAD'), 'data': b''})
 >>> cli.sendTransactions({tx_hash: raw_tx})
 ```
@@ -100,7 +100,7 @@ Use *abi*、*bytecode*、*address* information contained in a contract to initia
 Create a transaction to deploy contracts
 
 ```Python
->>> raw_tx, tx_hash = acc.sign(example_contract.constructor(1).buildTransaction({'nonce': 1, 'gas': 1000000, 'gasPrice': 1}))
+>>> raw_tx, tx_hash = acc.sign(example_contract.constructor(1).buildTransaction({'nonce': 2, 'gas': 1000000, 'gasPrice': 1}))
 >>> cli.sendTransactions({tx_hash: raw_tx})
 ```
 
@@ -109,10 +109,10 @@ Create a transaction to deploy contracts
 Deploy the contract at *address*。
 
 ```Python
->>> receipt = cli.getTransactionReceipts([tx_hash])
->>> receipt
-[{'status': 1, 'contractAddress': '72a429798a4dc1ba12abeeefa891f7f8093a68ce', 'gasUsed': 139643, 'logs': None, 'executing logs': ''}]
->>> example_contract.setAddress('72a429798a4dc1ba12abeeefa891f7f8093a68ce')
+>>> receipts = cli.getTransactionReceipts([tx_hash])
+>>> receipts
+[{'status': 1, 'contractAddress': 'e969da398451ad10daa05763b309ef20ce47ec98', 'gasUsed': 139643, 'logs': None, 'executing logs': ''}]
+>>> example_contract.setAddress('e969da398451ad10daa05763b309ef20ce47ec98')
 ```
 
 **Contract.functions.\<method\>.buildTransaction()**
@@ -120,7 +120,7 @@ Deploy the contract at *address*。
 Create a transaction to call the *method*
 
 ```Python
->>> raw_tx, tx_hash = acc.sign(example_contract.functions.set(2).buildTransaction({'nonce': 2, 'gas': 1000000, 'gasPrice': 1}))
+>>> raw_tx, tx_hash = acc.sign(example_contract.functions.set(2).buildTransaction({'nonce': 3, 'gas': 1000000, 'gasPrice': 1}))
 >>> cli.sendTransactions({tx_hash: raw_tx})
 ```
 
@@ -129,10 +129,10 @@ Create a transaction to call the *method*
 Parse events in the *receipt*
 
 ```Python
->>> receipt = cli.getTransactionReceipts([tx_hash])
->>> receipt
-[{'status': 1, 'contractAddress': '0000000000000000000000000000000000000000', 'gasUsed': 27962, 'logs': [{'address': 'aab025d34bf913be4b9d4704678e7730a1d32047', 'topics': ['284769010a3a23e1f2b4a8c1e10d15110c1a1860ad87816edc4adeb73de7f7c7'], 'data': '0000000000000000000000000000000000000000000000000000000000000002', 'blockNumber': 6980, 'transactionHash': '0000000000000000000000000000000000000000000000000000000000000000', 'transactionIndex': 0, 'blockHash': '0000000000000000000000000000000000000000000000000000000000000000', 'logIndex': 0}], 'executing logs': ''}]
->>> events = example_contract.processReceipt(receipt[0])
+>>> receipts = cli.getTransactionReceipts([tx_hash])
+>>> receipts
+[{'status': 1, 'contractAddress': '0000000000000000000000000000000000000000', 'gasUsed': 27962, 'logs': [{'address': 'e969da398451ad10daa05763b309ef20ce47ec98', 'topics': ['284769010a3a23e1f2b4a8c1e10d15110c1a1860ad87816edc4adeb73de7f7c7'], 'data': '0000000000000000000000000000000000000000000000000000000000000002', 'blockNumber': 2425, 'transactionHash': '0000000000000000000000000000000000000000000000000000000000000000', 'transactionIndex': 0, 'blockHash': '0000000000000000000000000000000000000000000000000000000000000000', 'logIndex': 0}], 'executing logs': ''}]
+>>> events = example_contract.processReceipt(receipts[0])
 >>> events
 {'SetN': {'n': '0000000000000000000000000000000000000000000000000000000000000002'}}
 ```
