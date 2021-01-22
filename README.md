@@ -86,9 +86,9 @@ $ python
 ### Background
 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
-   2. [The Concurrency framework `(TBD)`]()
+   2. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework.md)
    3. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
-   4. [What is ParallelKitties `(TBD)`](https://github.com/arcology-network/benchmarking/blob/main/Parallel-Kitties.md)
+   4. [What is ParallelKitties](https://github.com/arcology-network/benchmarking/blob/main/Parallel-Kitties.md)
    6. [PK source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
 
 ### Interactive Examples
