@@ -46,6 +46,10 @@ The followings are nessary for benchmarking:
 
 ---
 
+## Connection Diagram
+
+![alt text](./benchmarking-suite/connect-to-cluster.png)
+
 ## Ammolite
 
 Ammolite is a collection of libraries implemented in Python that helps to interact with a full node through HTTP. Support for IPC or WebSocket will be added in the future. To start Ammolite, just start **python** and then import necessary Ammolite modules.
