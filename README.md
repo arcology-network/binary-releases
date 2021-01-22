@@ -18,7 +18,7 @@ The followings are nessary for benchmarking:
 * [A docker file to create a docker image containing:](https://github.com/arcology-network/ammolite/blob/master/Dockerfile)
   * Linux environment with all required libraries installed
   * Tools to interact with the node cluster
-  * Tools to compile, deploy and invoke smart contracts on the blockchain
+  * Tools to **compile**, **deploy** and **invoke smart contracts** on the blockchain
   * Pre-generated data files with **2.5 million transactions** between  **5 million accounts** for Parallelized CryptoKitties
   * Pre-generated data files with **5 million transactions** between **5 million accounts** for token transfer
   * Scripts to send high volumne transction data to the node cluster
