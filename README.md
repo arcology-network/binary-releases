@@ -59,7 +59,7 @@ The Ammolite API document is avaiable here [Ammolite API](https://github.com/arc
 ## Connection to the Node clusters
 
 <p align="center">
-  <img width="80%" height="80%" src="./benchmarking-suite/connect-to-cluster.png">
+  <img width="100%" height="100%" src="./benchmarking-suite/connect-to-cluster.png">
 </p>
 
 ---
