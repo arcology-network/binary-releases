@@ -8,6 +8,7 @@ The followings are nessary for benchmarking:
 2. A copy of benchmarking suite in a docker image
 3. A network connection between the benchmarking suite and the node cluster
 
+
 ## **Suite contents**
 
 ### The suite includes the following items
@@ -46,11 +47,6 @@ The followings are nessary for benchmarking:
 
 ---
 
-## Connection Diagram
-
-<p align="center">
-  <img width="100%" height="100%" src="./benchmarking-suite/connect-to-cluster.png">
-</p>
 
 ## Ammolite
 
@@ -59,6 +55,12 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 ## API
 
 The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md)
+
+## Connection to the Node clusters
+
+<p align="center">
+  <img width="80%" height="80%" src="./benchmarking-suite/connect-to-cluster.png">
+</p>
 
 ---
 
