@@ -80,7 +80,7 @@ In the contract above,  there is only one variable “counter”, which has an i
 
 For concurrent calls in multiple VMs running in total isolation, the modifications made are invisible to others. Unless there are some synchronization mechanisms, each VM only executes against the initial value of counter, which is zero.  As these are concurrent updates to a shared variable, only one transaction would go through, others would be simply discarded.
 
-![alt text](.\concurrency-framework\images\counter.png)
+![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter.png)
 
 ### 3.2. Counting with Concurrent Variables
 
