@@ -1,4 +1,4 @@
-# Benchmarking suite
+# **Benchmarking suite**
 
 The benchmarking suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge of python and some understanding in blockchain. The suite has some interactive and batch examples for performance benchmarking.
 
@@ -8,7 +8,7 @@ The followings are nessary for benchmarking:
 2. A copy of benchmarking suite in a docker image
 3. A network connection between the benchmarking suite and the node cluster
 
-## Suite contents
+## **Suite contents**
 
 ### The suite includes the following items
 
@@ -54,7 +54,9 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API)
 
-## Login to the Monaco testnet
+---
+
+## **State Benchmarking**
 
 SSH into the test node with the credentials provided
 
@@ -62,15 +64,23 @@ SSH into the test node with the credentials provided
 * **Username**:   `xxx(TBD)`
 * **Password**:   `xxx(TBD)`
 
+![alt text](./benchmarking-suite/ssh.png)
+
+## List all the files
+
+![alt text](./benchmarking-suite/contents.png)
+
 ## Check cluster status
 
 ```python
 python ./checkStatus.py
 ```
 
+![alt text](./benchmarking-suite/cluster-status.png)
+
 ## Start Ammolite
 
-To start Ammolite, just start python and then import necessary Ammolite modules.
+To start Ammolite, just start python and then **import necessary Ammolite modules.**
 
 ```shell
 $ python
