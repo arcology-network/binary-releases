@@ -14,7 +14,7 @@ The followings are nessary for benchmarking:
 
 * A user guide file
 * Credentials to login into the environment
-* [A docker image files contains:]()
+* [A docker file to create a docker image containing:](https://github.com/arcology-network/ammolite/blob/master/Dockerfile)
   * Linux environment with all required libraries installed
   * Tools to interact with the node cluster
   * Tools to compile, deploy and invoke smart contracts on the blockchain
