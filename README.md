@@ -12,8 +12,8 @@ The followings are nessary for benchmarking:
 
 ### The suite includes the following items
 
-* [A user guide file]()
-* [Credentials to login into the environment]()
+* A user guide file
+* Credentials to login into the environment
 * [A docker image files contains:]()
   * Linux environment with all required libraries installed
   * Tools to interact with the node cluster
@@ -52,7 +52,7 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 ## API
 
-The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API)
+The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md)
 
 ---
 
@@ -88,26 +88,25 @@ $ python
 
 ## Token transfer examples
 
-   1. [Simple Coin transfer case](https://github.com/arcology-network/benchmarking/blob/main/Simple-Transfer-Example.md)
-   2. [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Example-Prevention.md)
+   1. [Simple Coin transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-Coin-Transfer-Example.md)
+   2. [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Prevention-Example.md)
 
 ## Parallelized CryptoKitties
 
 ### Background
 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
-   2. [The Concurrency framework `(TBD)`]()
+   2. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework.md)
    3. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
-   4. [What is ParallelKitties `(TBD)`](https://github.com/arcology-network/benchmarking/blob/main/Parallel-Kitties.md)
-   6. [PK source code]()
+   4. [PK source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
 
 ### Interactive Examples
 
-   1. [ParallelKitties transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-PK-Example.md)
+   1. [Simple Kitty transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-Kitty-Transfer-Example.md)
 
 ---
 
-## Benchmarking
+## Start Benchmarking
 
 To benchmark the system, we suggest you to use the pre-generated data file containing signed transctions in binary format. Generating large volumn of transactions is a very length process that usually takes a lot of time. The pre-generated data files are under the data directory.
 
