@@ -87,7 +87,7 @@ python ./checkStatus.py
 
 ## Start Ammolite
 
-To start Ammolite, just start python and then **import necessary Ammolite modules.**
+To start Ammolite, just start **python** and then **import necessary Ammolite modules.**
 
 ```shell
 $ python
