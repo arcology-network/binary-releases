@@ -96,7 +96,7 @@ $ python
 ## Token transfer examples
 
    1. [Simple Coin transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-Coin-Transfer-Example.md)
-   2. When processing transactions in parallel mode, transactions are execute in totally isolated virtual machines. The [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Prevention-Example.md) shows how the concurrency framework prevents potential state inconsistency with a very typical case called [double spending] https://en.wikipedia.org/wiki/Double-spending
+   2. When processing transactions in parallel mode, transactions are execute in totally isolated virtual machines. The [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Prevention-Example.md) shows how the concurrency framework prevents potential state inconsistency with a very typical case called [double spending](https://en.wikipedia.org/wiki/Double-spending)
 
 ## Parallelized CryptoKitties
 
