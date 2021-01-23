@@ -103,9 +103,9 @@ $ python
 ### Background
 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
-   2. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework.md)
-   3. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
-   4. [PK source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
+   2. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
+   3. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework.md)
+   4. [Parallelized CryptoKitties source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
 
 ### Interactive Examples
 
