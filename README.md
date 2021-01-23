@@ -14,7 +14,7 @@ The followings are nessary for benchmarking:
 ### The suite includes the following items
 
 * A user guide file
-* Credentials to login into the environment
+* Credentials to log in to the environment
 * [A docker file to create a docker image containing:](https://github.com/arcology-network/ammolite/blob/master/Dockerfile)
   * Linux environment with all required libraries installed
   * Tools to interact with the node cluster
@@ -58,7 +58,10 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 ## API
 
-The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md)
+The [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md) provides decriptions and examples of how to write Python scripts to 
+to compile Solidty code and interact with a node cluster through [Ammolite](https://github.com/arcology-network/Ammolite) HTTP interfaces.
+
+> The docker image in the Benchmark suite has all the nessaray libraries and tools installed, so please don't try to reinstall them. 
 
 ---
 
