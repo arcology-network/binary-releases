@@ -1,4 +1,28 @@
-# **Benchmarking suite**
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [What's included in the Suite](#whats-included-in-the-suite)
+  - [Ammolite](#ammolite)
+    - [Relationship with the Node clusters](#relationship-with-the-node-clusters)
+    - [API](#api)
+  - [State Benchmarking](#state-benchmarking)
+    - [List of the files](#list-of-the-files)
+    - [Check the cluster status](#check-the-cluster-status)
+    - [Start Ammolite](#start-ammolite)
+  - [Token transfer examples](#token-transfer-examples)
+  - [Parallelized CryptoKitties](#parallelized-cryptokitties)
+    - [Background](#background)
+    - [Interactive Examples](#interactive-examples)
+  - [Performance Examples](#performance-examples)
+    - [1. Start the performance observer](#1-start-the-performance-observer)
+    - [2. Deploy ParallelKitties](#2-deploy-parallelkitties)
+    - [3. Initialize PK test data](#3-initialize-pk-test-data)
+    - [4. Test ParallelKitties' transfer function](#4-test-parallelkitties-transfer-function)
+    - [5. Test balance transfer between accounts](#5-test-balance-transfer-between-accounts)
+  - [Troubleshooting](#troubleshooting)
+
+## Introduction
 
 The benchmarking suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge of python and some understanding in blockchain. The suite has some interactive and batch examples for performance benchmarking.
 
@@ -9,9 +33,7 @@ The followings are nessary for benchmarking:
 3. A network connection between the benchmarking suite and the node cluster
 
 
-## **Suite contents**
-
-### The suite includes the following items
+## What's included in the Suite
 
 * A user guide file
 * Credentials to login into the environment
@@ -23,7 +45,6 @@ The followings are nessary for benchmarking:
   * Pre-generated data files with **5 million transactions** between **5 million accounts** for token transfer
   * Scripts to send high volumne transction data to the node cluster
   
-### Script and data files in the docker image
 
 |File / Directory |    Description|
 |---|---|
@@ -52,29 +73,29 @@ The followings are nessary for benchmarking:
 
 Ammolite is a collection of libraries implemented in Python that helps to interact with a full node through HTTP. Support for IPC or WebSocket will be added in the future. To start Ammolite, just start **python** and then import necessary Ammolite modules.
 
-## Connection to the Node clusters
+### Relationship with the Node clusters
 
 ![alt text](./benchmarking-suite/connect-to-cluster.png)
 
-## API
+### API
 
 The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md)
 
 ---
 
-## **State Benchmarking**
+## State Benchmarking
 
-SSH into the test node with the credentials provided
+SSH into the container with the credentials provided
 
 * **IP address**: `xxx(TBD)`
 * **Username**:   `xxx(TBD)`
 * **Password**:   `xxx(TBD)`
 
-## List all the files
+### List of the files
 
 ![alt text](./benchmarking-suite/contents.png)
 
-## Check cluster status
+### Check the cluster status
 
 ```python
 python ./checkStatus.py
@@ -82,7 +103,7 @@ python ./checkStatus.py
 
 ![alt text](./benchmarking-suite/cluster-status.png)
 
-## Start Ammolite
+### Start Ammolite
 
 To start Ammolite, just start python and then **import necessary Ammolite modules.**
 
@@ -110,7 +131,7 @@ $ python
 
 ---
 
-## Start Benchmarking
+## Performance Examples
 
 To benchmark the system, we suggest you to use the pre-generated data file containing signed transctions in binary format. Generating large volumn of transactions is a very length process that usually takes a lot of time. The pre-generated data files are under the data directory.
 
