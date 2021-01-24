@@ -26,24 +26,24 @@
 
 The benchmarking suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge of python and some understanding in blockchain. The suite has some interactive and batch examples for performance benchmarking.
 
-The followings are nessary for benchmarking:
+The followings are necessary for benchmarking:
 
-1. A network with **at least one active node cluster** running to interact with the suite
-2. A copy of benchmarking suite in a docker image
-3. A network connection between the benchmarking suite and the node cluster
+- A network with **at least one active node cluster** running to interact with the suite
+- A copy of benchmarking suite in a docker image
+- A network connection between the benchmarking suite and the node cluster
 
 
 ## What's included in the Suite
 
-* A user guide file
-* Credentials to log in to the environment
-* [A docker file to create a docker image containing:](https://github.com/arcology-network/ammolite/blob/master/Dockerfile)
-  * Linux environment with all required libraries installed
-  * Tools to interact with the node cluster
-  * Tools to **compile**, **deploy** and **invoke smart contracts** on the blockchain
-  * Pre-generated data files with **2.5 million transactions** between  **5 million accounts** for Parallelized CryptoKitties
-  * Pre-generated data files with **5 million transactions** between **5 million accounts** for token transfer
-  * Scripts to send high volumne transction data to the node cluster
+- A user guide file
+- Credentials to log in to the environment
+- [A docker file to create a docker image containing:](https://github.com/arcology-network/ammolite/blob/master/Dockerfile)
+  - Linux environment with all required libraries installed
+  - Tools to interact with the node cluster
+  - Tools to **compile**, **deploy** and **invoke smart contracts** on the blockchain
+  - Pre-generated data files with **2.5 million transactions** between  **5 million accounts** for Parallelized CryptoKitties
+  - Pre-generated data files with **5 million transactions** between **5 million accounts** for token transfer
+  - Scripts to send high volumne transction data to the node cluster
   
 
 |File / Directory |    Description|
