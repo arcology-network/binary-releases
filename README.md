@@ -1,26 +1,26 @@
-# Table of Contents
+## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [What's included in the Suite](#whats-included-in-the-suite)
-  - [Ammolite](#ammolite)
-    - [Relationship with the Node clusters](#relationship-with-the-node-clusters)
-    - [API](#api)
-  - [State Benchmarking](#state-benchmarking)
-    - [List of the files](#list-of-the-files)
-    - [Check the cluster status](#check-the-cluster-status)
-    - [Start Ammolite](#start-ammolite)
-  - [Token transfer examples](#token-transfer-examples)
-  - [Parallelized CryptoKitties](#parallelized-cryptokitties)
-    - [Background](#background)
-    - [Interactive Examples](#interactive-examples)
-  - [Performance Examples](#performance-examples)
-    - [1. Start the performance observer](#1-start-the-performance-observer)
-    - [2. Deploy ParallelKitties](#2-deploy-parallelkitties)
-    - [3. Initialize PK test data](#3-initialize-pk-test-data)
-    - [4. Test ParallelKitties' transfer function](#4-test-parallelkitties-transfer-function)
-    - [5. Test balance transfer between accounts](#5-test-balance-transfer-between-accounts)
-  - [Troubleshooting](#troubleshooting)
+- [Introduction](#introduction)
+- [What's included in the Suite](#whats-included-in-the-suite)
+- [Ammolite](#ammolite)
+  - [Connect to the Node clusters](#connect-to-the-node-clusters)
+  - [API](#api)
+- [State Benchmarking](#state-benchmarking)
+  - [List of the files](#list-of-the-files)
+  - [Check the cluster status](#check-the-cluster-status)
+  - [Start Ammolite](#start-ammolite)
+- [Token transfer examples](#token-transfer-examples)
+- [Parallelized CryptoKitties](#parallelized-cryptokitties)
+  - [Background](#background)
+  - [Interactive Examples](#interactive-examples)
+- [Performance Examples](#performance-examples)
+  - [1. Start the performance observer](#1-start-the-performance-observer)
+  - [2. Deploy ParallelKitties](#2-deploy-parallelkitties)
+  - [3. Initialize PK test data](#3-initialize-pk-test-data)
+  - [4. Test ParallelKitties' transfer function](#4-test-parallelkitties-transfer-function)
+  - [5. Test balance transfer between accounts](#5-test-balance-transfer-between-accounts)
+- [Troubleshooting](#troubleshooting)
 
 ## Introduction
 
@@ -73,7 +73,7 @@ The followings are necessary for benchmarking:
 
 Ammolite is a collection of libraries implemented in Python that helps to interact with a full node through HTTP. Support for IPC or WebSocket will be added in the future. To start Ammolite, just start **python** and then **import necessary Ammolite modules**.
 
-### Relationship with the Node clusters
+### Connect to the Node clusters
 
 ![alt text](./benchmarking-suite/connect-to-cluster.png)
 
