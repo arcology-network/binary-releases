@@ -24,7 +24,7 @@
 
 ## Introduction
 
-The benchmarking suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge of python and some understanding in blockchain. The suite has some interactive and batch examples for performance benchmarking.
+The benchmarking suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge of python and some understanding in blockchain. The suite has some interactive examples to help to get familiar with the suite and a couple of batch examples for real performance benchmarking.
 
 The followings are necessary for benchmarking:
 
