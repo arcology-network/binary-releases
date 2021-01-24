@@ -36,7 +36,7 @@ The followings are nessary for benchmarking:
 ## What's included in the Suite
 
 * A user guide file
-* Credentials to login into the environment
+* Credentials to log in to the environment
 * [A docker file to create a docker image containing:](https://github.com/arcology-network/ammolite/blob/master/Dockerfile)
   * Linux environment with all required libraries installed
   * Tools to interact with the node cluster
@@ -71,7 +71,7 @@ The followings are nessary for benchmarking:
 
 ## Ammolite
 
-Ammolite is a collection of libraries implemented in Python that helps to interact with a full node through HTTP. Support for IPC or WebSocket will be added in the future. To start Ammolite, just start **python** and then import necessary Ammolite modules.
+Ammolite is a collection of libraries implemented in Python that helps to interact with a full node through HTTP. Support for IPC or WebSocket will be added in the future. To start Ammolite, just start **python** and then **import necessary Ammolite modules**.
 
 ### Relationship with the Node clusters
 
@@ -79,7 +79,10 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 ### API
 
-The Ammolite API document is avaiable here [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md)
+The [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md) provides decriptions and examples of how to write Python scripts to 
+to compile Solidty code and interact with a node cluster through [Ammolite](https://github.com/arcology-network/Ammolite) HTTP interfaces.
+
+> The docker image in the Benchmark comes with all the nessaray libraries and tools, so please don't try to reinstall them. 
 
 ---
 
@@ -105,7 +108,7 @@ python ./checkStatus.py
 
 ### Start Ammolite
 
-To start Ammolite, just start python and then **import necessary Ammolite modules.**
+To start Ammolite, just start **python** and then **import necessary Ammolite modules.**
 
 ```shell
 $ python
@@ -114,16 +117,16 @@ $ python
 ## Token transfer examples
 
    1. [Simple Coin transfer](https://github.com/arcology-network/benchmarking/blob/main/Simple-Coin-Transfer-Example.md)
-   2. [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Prevention-Example.md)
+   2. When processing transactions in parallel mode, transactions are execute in totally isolated virtual machines. The [Double spending Prevention](https://github.com/arcology-network/benchmarking/blob/main/Double-Spend-Prevention-Example.md) shows how the concurrency framework prevents potential state inconsistency with a very typical case called [double spending](https://en.wikipedia.org/wiki/Double-spending)
 
 ## Parallelized CryptoKitties
 
 ### Background
 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
-   2. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework.md)
-   3. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
-   4. [PK source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
+   2. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
+   3. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework.md)
+   4. [Parallelized CryptoKitties source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
 
 ### Interactive Examples
 
