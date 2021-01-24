@@ -8,24 +8,23 @@ Concurrent programming and parallel computation are effective ways to solve larg
 
 ### 1.1 Issues
 
-This is still no blockchain network that allows intra-node concurrent transaction processing. The reason is because that blockchain networks have some unique features that need to be properly addressed to make concurrent processing possible. For example, different users make requests to same resources by runs the same piece of code with different input arguments. Usually this can be easily achieved by using some synchronization mechanism like locks. The threads get the lock is a random order.
+This is still no blockchain network that allows intra-node concurrent transaction processing. The reason is because that blockchain networks have some unique requirements that need to be properly addressed to make concurrent processing possible. 
 
-Executing a set of transactions in different orders may generate completely different final state, which isn’t a problem for centralized systems.  but in a public blockchain environment,  all the transactions will be processed by multiple nodes and these nodes need to end up with the same final state anyway. Concurrency control mechanisms designed for centralized systems wouldn’t work directly for blockchain networks.
+In concurrent execution environment, different users may assess some shared resources simultaneously. This can be easily handled by using some synchronization mechanism like locks. The threads get the lock is a random order, depending on which thread get the lock first, executing the same set of transactions may result in completely different final state, which isn’t a problem for centralized systems. But on a public blockchain nwt,  all the transactions will be processed by multiple nodes and these nodes need to end up with the same final state. Concurrency control mechanisms designed for centralized systems isn't well suited for blockchain networks.
 
-### 1.2. Concurrency Control Framework
+### 1.2. Features
 
-For of issues mentioned above, there is a need for a blockchain focused concurrency control mechanism to coordinate the resources allocation, execution scheduling and conflict detection etc.  Arcology’s concurrency control mechanism is specially designed for blockchain with some specific emphasis.
+For of issues mentioned above, there is a need for a blockchain focused concurrency control mechanism to coordinate the resources allocation, execution scheduling and conflict detection etc.  Arcology’s concurrency control mechanism is specially designed for blockchain with some unique features
 
-* **Deterministic**
-* **Easy to use**
-* **VM neural**
-* **High performance**
-* **Flexible**
+- **Deterministic**
+- **Easy to use**
+- **VM neural**
+- **High performance**
+- **Flexible**
   
 ### 1.3 Document Focuses
 
-This document is mainly focused on how to parallelize the existing code or write new application on Arcology platform from developer’s prospective. It also provides some conceptual explanations of design considerations and Arcology concurrency framework. 
-All the examples are in Solidity, as it is the first smart contract language Arcology supports, more language support will be added in the future. 
+This document is mainly focused on how to parallelize the existing code or write new application on Arcology platform from developer’s prospective. It also provides some conceptual explanations of design considerations and some real-world examples. All the examples are in Solidity, as it is the first smart contract language Arcology supports, more language support will be added in the future. 
 
 ## 2. Overview
 
@@ -189,5 +188,8 @@ The second part is the serial phase, the function “CountVisits()” is called 
 It is a good practice to declare a deferred function as private as a public ones may cause performance issues. The fork/join model conceptually shares some similarities with multi-phase execution.
 
 ## 4.3. Code Optimization (TBD)
+[How to parallelize CyptroKitties](tbd)
+
+## 5. Examples
 
 
