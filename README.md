@@ -78,10 +78,9 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 ### API
 
-The [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md) provides decriptions and examples of how to write Python scripts to 
-to compile Solidty code and interact with a node cluster through [Ammolite](https://github.com/arcology-network/Ammolite) HTTP interfaces.
+The [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/ammolite-API.md) provides decriptions and some examples of how to write Python scripts to compile Solidty code and interact with a node cluster using [Ammolite](https://github.com/arcology-network/Ammolite) through HTTP interfaces.
 
-> The docker image in the Benchmark comes with all the nessaray libraries and tools, so please don't try to reinstall them. 
+> The docker image in the Benchmark comes with all the nessaray libraries and tools, so please don't try to reinstall them.
 
 ---
 
