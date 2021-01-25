@@ -74,7 +74,7 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 ### Connect to the Node clusters
 
-<img src="./benchmarking-suite/connect-to-cluster.svg" width=50%>
+<img src="./benchmarking-suite/connect-to-cluster.svg" width=60%>
 
 ### API
 
