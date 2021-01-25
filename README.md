@@ -6,7 +6,7 @@
 - [Ammolite](#ammolite)
   - [Connect to the Node clusters](#connect-to-the-node-clusters)
   - [API](#api)
-- [State Benchmarking](#state-benchmarking)
+- [Getting Started](#getting-started)
   - [List of the files](#list-of-the-files)
   - [Check the cluster status](#check-the-cluster-status)
   - [Start Ammolite](#start-ammolite)
@@ -84,7 +84,7 @@ The [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/am
 
 ---
 
-## State Benchmarking
+## Getting Started
 
 SSH into the container with the credentials provided
 
