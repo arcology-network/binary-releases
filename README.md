@@ -88,9 +88,9 @@ The [Ammolite API](https://github.com/arcology-network/benchmarking/blob/main/am
 
 SSH into the container with the credentials provided
 
-* **IP address**: `xxx(TBD)`
-* **Username**:   `xxx(TBD)`
-* **Password**:   `xxx(TBD)`
+* **IP address**: xxx
+* **Username**:   xxx
+* **Password**:   xxx
 
 ### List of the files
 
