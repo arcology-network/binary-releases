@@ -99,7 +99,7 @@ SSH into the container with the credentials provided
 ### Check the cluster status
 
 ```python
-python ./checkStatus.py
+$ python ./checkStatus.py
 ```
 
 ![alt text](./benchmarking-suite/cluster-status.png)
