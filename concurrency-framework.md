@@ -1,12 +1,28 @@
-# Arcology Concurrency Framework
+## Table of Contents
 
-Scalability issue is the single biggest problem that blockchain networks face today. Among many contributing factors, low transaction processing capacity is a major one. Blockchain networks only use single thread to execute transactions.
+- [Table of Contents](#table-of-contents)
+- [1. Introduction](#1-introduction)
+  - [1.1. Issues](#11-issues)
+  - [1.2. Features](#12-features)
+  - [1.3 Focuses](#13-focuses)
+- [2. Overview](#2-overview)
+  - [2.1. Concurrent Execution](#21-concurrent-execution)
+  - [2.2 Concurrency Tools](#22-concurrency-tools)
+- [3. Concurrent data structures](#3-concurrent-data-structures)
+  - [3.1. Counter Example](#31-counter-example)
+  - [3.2. Counting with Concurrent Variables](#32-counting-with-concurrent-variables)
+- [4. Multi-phrase execution](#4-multi-phrase-execution)
+- [4.1 Serial Counter example](#41-serial-counter-example)
+- [4.2. Concurrent Queue with Deferred calls](#42-concurrent-queue-with-deferred-calls)
+- [4.3. Code Optimization](#43-code-optimization)
+- [5. Examples](#5-examples)
 
 ## 1. Introduction
+Scalability issue is the single biggest problem that blockchain networks face today. Among many contributing factors, low transaction processing capacity is a major one. Blockchain networks only use single thread to execute transactions.
 
 Concurrent programming and parallel computation are effective ways to solve large-scale problems. Apply the concept on blockchain will help solve the scalability issue.  More computational resources can be added to handle more workloads whenever needed. In addition, majority of programming languages today have some types of concurrent utilities allowing developers write code to utilize multiple threads and to distribute the workload to multiple server relatively easily.
 
-### 1.1 Issues
+### 1.1. Issues
 
 This is still no blockchain network that allows intra-node concurrent transaction processing. The reason is because that blockchain networks have some unique requirements that need to be properly addressed to make concurrent processing possible. 
 
@@ -22,7 +38,7 @@ For of issues mentioned above, there is a need for a blockchain focused concurre
 - **High performance**
 - **Flexible**
   
-### 1.3 Document Focuses
+### 1.3 Focuses
 
 This document is mainly focused on how to parallelize the existing code or write new application on Arcology platform from developer’s prospective. It also provides some conceptual explanations of design considerations and some real-world examples. All the examples are in Solidity, as it is the first smart contract language Arcology supports, more language support will be added in the future. 
 
@@ -38,16 +54,15 @@ At the beginning of the execution cycle,  each concurrent VM will have an indepe
 
 In the best scenario, a fully parallelized program with no contention point can lead to virtually unlimited speedup, which is only a matter of computational resources available. In the worst case, if all the transactions conflict with each, the design will be slower than serial execution. In practice, the key to achieve maximum parallelizability is to avoid contentions wherever possible.
 
-
-### 2.2. Concurrency Tools
+### 2.2 Concurrency Tools
 
 There are many cases where access to global variables are inevitable.  On platforms like Ethereum, making a call to a deployed contract will always incur some transaction fees to be taken from the caller’s account balance. Another example is some sort of global counters. A lot of smart contract relay heavily on using counters to maintaining internal logics.
 
 In addition to an effective mechanism to prevent potential state conflicts, the framework offers a set of designs working together to help developers write concurrent code with no contention points easily. These include:
 
-* **Concurrent data structures** 
-* **Cumulative variables**
-* **Multi-phase execution**
+- **Concurrent data structures** 
+- **Cumulative variables**
+- **Multi-phase execution**
 
 ## 3. Concurrent data structures
 
@@ -187,8 +202,9 @@ The second part is the serial phase, the function “CountVisits()” is called 
 
 It is a good practice to declare a deferred function as private as a public ones may cause performance issues. The fork/join model conceptually shares some similarities with multi-phase execution.
 
-## 4.3. Code Optimization (TBD)
-[How to parallelize CyptroKitties](tbd)
+## 4.3. Code Optimization
+The key is to find out which part of the code could be parallelized, which part has to be processed in sequential order. 
+[How to parallelize CyptroKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
 
 ## 5. Examples
 
