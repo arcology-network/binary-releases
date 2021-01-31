@@ -9,18 +9,18 @@
 - [4. Getting Started](#4-getting-started)
   - [4.1. List of the files](#41-list-of-the-files)
   - [4.2. Check the cluster status](#42-check-the-cluster-status)
-  - [4.4. Start Ammolite](#44-start-ammolite)
+  - [4.3. Start Ammolite](#43-start-ammolite)
 - [5. Interactive Examples](#5-interactive-examples)
   - [5.1. Token transfer](#51-token-transfer)
   - [5.2. Parallelized CryptoKitties](#52-parallelized-cryptokitties)
     - [5.2.1. Background](#521-background)
     - [5.2.2. Kitty Examples](#522-kitty-examples)
 - [6. Performance Examples](#6-performance-examples)
-  - [6.2. Start the performance observer](#62-start-the-performance-observer)
-  - [6.3. Deploy ParallelKitties](#63-deploy-parallelkitties)
-  - [6.4. Initialize PK test data](#64-initialize-pk-test-data)
-  - [6.6. Test ParallelKitties' transfer function](#66-test-parallelkitties-transfer-function)
-  - [6.7.  Test balance transfer between accounts](#67--test-balance-transfer-between-accounts)
+  - [6.1. Start the performance observer](#61-start-the-performance-observer)
+  - [6.2. Deploy ParallelKitties](#62-deploy-parallelkitties)
+  - [6.3. Initialize PK test data](#63-initialize-pk-test-data)
+  - [6.4. Test ParallelKitties' transfer function](#64-test-parallelkitties-transfer-function)
+  - [6.5.  Test balance transfer between accounts](#65--test-balance-transfer-between-accounts)
 - [7. Troubleshooting](#7-troubleshooting)
 
 ## 1. Introduction
@@ -104,7 +104,7 @@ $ python ./checkStatus.py
 
 ![alt text](./benchmarking-suite/cluster-status.png)
 
-### 4.4. Start Ammolite
+### 4.3. Start Ammolite
 
 To start Ammolite, just start **python** and then **import necessary Ammolite modules.**
 
@@ -140,7 +140,7 @@ To benchmark the system, we suggest you to use the pre-generated data file conta
 
 > *Please wait for one script to complete before starting the next one. The best way to tell is by looking at the number of transactions contained in the lastest block. Once the number of transactions in the latest block drops to zero(not rising from zero which shows the system is picking up speed), it shows the system has processed all transactions.*
 
-### 6.2. Start the performance observer
+### 6.1. Start the performance observer
 
 The performance observer gives realtime performance information for block height, number of transctions in each block, max TPS and average TPS over 60 seconds.
 >Please note the observer only starts to output TPS when the node cluster is actively processing transctions
@@ -151,7 +151,7 @@ $ ./tps.sh
 
 ![alt text](./benchmarking-suite/performance-observer.png)
 
-### 6.3. Deploy ParallelKitties
+### 6.2. Deploy ParallelKitties
 
 ```shell
 $ ./deploy_pk.sh
@@ -159,7 +159,7 @@ $ ./deploy_pk.sh
 
 ![alt text](./benchmarking-suite/deploy-pk.png)
 
-### 6.4. Initialize PK test data
+### 6.3. Initialize PK test data
 
 ```shell
 $ ./send_init_txs.sh
@@ -167,7 +167,7 @@ $ ./send_init_txs.sh
 
 ![alt text](./benchmarking-suite/initialize-pk-txs.png)
 
-### 6.6. Test ParallelKitties' transfer function
+### 6.4. Test ParallelKitties' transfer function
 
 Benchmarking system performance with 2.5 million ParallelKitties transactions between 5 million user addresses
 
@@ -177,7 +177,7 @@ $ ./send_pk_transfer_txs.sh
 
 ![alt text](./benchmarking-suite/send-pk-transfer-txs.png)
 
-### 6.7.  Test balance transfer between accounts
+### 6.5.  Test balance transfer between accounts
 
 Benchmarking system performance with 5 million balance transfer transactions between 5 million user addresses
 
