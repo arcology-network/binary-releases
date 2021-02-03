@@ -50,7 +50,11 @@ Arcology concurrency framework solves the problem of concurrent smart contract e
 
 At the beginning of the execution cycle,  each concurrent VM will have an independent copy of the state store. Updates to the state will by cached and total invisible to other VM instances during execution.  When all the transactions are executed, records of cached accesses will be put together for the conflict detection. Transactions causing potential conflicts will be reverted afterwards. Generally, a smart contract must be processed in serial mode as long as it contains some serial-only logic, even if the serial part only accounts for a tiny proportion of the whole program.
 
-![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/workflow.svg)
+<!-- ![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/workflow.svg)
+<img src="./benchmarking-suite/connect-to-cluster.svg" width=60%> -->
+
+<img src="./benchmarking/blob/main/concurrency-framework/images/workflow.svg" width=80%>
+
 
 In the best scenario, a fully parallelized program with no contention point can lead to virtually unlimited speedup, which is only a matter of computational resources available. In the worst case, if all the transactions conflict with each, the design will be slower than serial execution. In practice, the key to achieve maximum parallelizability is to avoid contentions wherever possible.
 
@@ -121,6 +125,7 @@ When multiple calls come in, all VM instances call their own “Add()”.  The i
 The code snippet above is pretty self-explanatory. Cumulative variables are good for unconditionally increase or decrease a numeric value. However if some of code logics are dependent on the values of shared variables, cumulative variables are no longer a viable option.
 
 ![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter-nonconflict.svg)
+
 
 ## 4. Multi-phrase execution
 
