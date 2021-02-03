@@ -94,7 +94,7 @@ In the contract above,  there is only one variable “counter”, which has an i
 
 For concurrent calls in multiple VMs running in total isolation, the modifications made are invisible to others. Unless there are some synchronization mechanisms, each VM only executes against the initial value of counter, which is zero.  As these are concurrent updates to a shared variable, only one transaction would go through, others would be simply discarded.
 
-![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter.png)
+![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter-conflict.svg)
 
 ### 3.2. Counting with Concurrent Variables
 
@@ -120,7 +120,7 @@ When multiple calls come in, all VM instances call their own “Add()”.  The i
 
 The code snippet above is pretty self-explanatory. Cumulative variables are good for unconditionally increase or decrease a numeric value. However if some of code logics are dependent on the values of shared variables, cumulative variables are no longer a viable option.
 
-![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter2.png)
+![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter-nonconflict.svg)
 
 ## 4. Multi-phrase execution
 
