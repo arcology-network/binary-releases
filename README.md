@@ -125,7 +125,7 @@ $ python
 
    1. [What is CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties)
    2. [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
-   3. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework.md)
+   3. [The Concurrency framework](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/concurrency-framework.md)
    4. [Parallelized CryptoKitties source code](https://github.com/arcology-network/ammolite/tree/master/examples/parallel_kitties)
 
 #### 5.2.2. Kitty Examples
