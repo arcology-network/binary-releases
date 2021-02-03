@@ -21,7 +21,7 @@
 		.st1 {visibility:visible}
 		.st2 {fill:#a5a5a5;fill-opacity:0.6;filter:url(#filter_2);stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.6}
 		.st3 {fill:url(#ptrn5-8);shape-rendering:crispEdges;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.6;stroke-width:0.75}
-		.st4 {fill:#ffffff;font-family:Calibri;font-size:0.916672em;font-weight:bold}
+		.st4 {fill:#ffffff;font-family:Calibri;font-size:1.16666em;font-weight:bold}
 		.st5 {fill:url(#ptrn5-46);shape-rendering:crispEdges;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.6;stroke-width:0.24}
 		.st6 {font-size:1em}
 		.st7 {marker-end:url(#mrkr13-160);stroke:#205867;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
@@ -84,7 +84,7 @@
 					<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st2"/>
 				</g>
 				<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st3"/>
-				<text x="19.3" y="299.94" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
+				<text x="17.1" y="300.84" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
 			<g id="shape1147-10" v:mID="1147" v:groupContext="shape" transform="translate(88.9254,-125.614)">
 				<title>Rectangle.1229</title>
 				<desc>Scheduler</desc>
@@ -98,7 +98,7 @@
 					<rect x="0" y="285.763" width="67.173" height="38.2368" class="st2"/>
 				</g>
 				<rect x="0" y="285.763" width="67.173" height="38.2368" class="st3"/>
-				<text x="10.99" y="308.18" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Scheduler</text>			</g>
+				<text x="4.82" y="309.08" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Scheduler</text>			</g>
 			<g id="shape1148-17" v:mID="1148" v:groupContext="shape" transform="translate(196.302,-86.4897)">
 				<title>Sheet.1148</title>
 				<desc>VM</desc>
@@ -109,7 +109,7 @@
 					<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st2"/>
 				</g>
 				<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st3"/>
-				<text x="19.3" y="299.94" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
+				<text x="17.1" y="300.84" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
 			<g id="shape1149-24" v:mID="1149" v:groupContext="shape" transform="translate(196.302,-155.736)">
 				<title>Sheet.1149</title>
 				<desc>VM</desc>
@@ -120,7 +120,7 @@
 					<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st2"/>
 				</g>
 				<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st3"/>
-				<text x="19.3" y="299.94" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
+				<text x="17.1" y="300.84" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
 			<g id="shape1150-31" v:mID="1150" v:groupContext="shape" transform="translate(196.302,-225.709)">
 				<title>Sheet.1150</title>
 				<desc>VM</desc>
@@ -131,7 +131,7 @@
 					<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st2"/>
 				</g>
 				<ellipse cx="27.3597" cy="296.64" rx="27.3597" ry="27.3597" class="st3"/>
-				<text x="19.3" y="299.94" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
+				<text x="17.1" y="300.84" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>VM</text>			</g>
 			<g id="group1151-38" transform="translate(280.195,-219.341)" v:mID="1151" v:groupContext="group">
 				<title>Sheet.1151</title>
 				<g id="group1152-39" transform="translate(8.31217,-6.612)" v:mID="1152" v:groupContext="group" v:layerMember="0">
@@ -232,9 +232,9 @@
 					</g>
 					<g id="shape1155-58" v:mID="1155" v:groupContext="groupContent" v:layerMember="0">
 						<v:textBlock v:margins="rect(4,4,4,4)"/>
-						<v:textRect cx="20.7683" cy="297.72" width="26.66" height="34.4044"/>
-						<text x="12.69" y="294.42" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
-									x="13.49" dy="1.2em" class="st6">Set</tspan></text>					</g>
+						<v:textRect cx="20.7683" cy="297.72" width="31.74" height="41.6033"/>
+						<text x="10.48" y="293.52" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
+									x="11.51" dy="1.2em" class="st6">Set</tspan></text>					</g>
 				</g>
 			</g>
 			<g id="group1158-61" transform="translate(280.195,-150.631)" v:mID="1158" v:groupContext="group">
@@ -337,9 +337,9 @@
 					</g>
 					<g id="shape1162-80" v:mID="1162" v:groupContext="groupContent" v:layerMember="0">
 						<v:textBlock v:margins="rect(4,4,4,4)"/>
-						<v:textRect cx="20.7683" cy="297.72" width="26.66" height="34.4044"/>
-						<text x="12.69" y="294.42" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
-									x="13.49" dy="1.2em" class="st6">Set</tspan></text>					</g>
+						<v:textRect cx="20.7683" cy="297.72" width="31.74" height="41.6033"/>
+						<text x="10.48" y="293.52" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
+									x="11.51" dy="1.2em" class="st6">Set</tspan></text>					</g>
 				</g>
 			</g>
 			<g id="group1165-83" transform="translate(280.195,-82.649)" v:mID="1165" v:groupContext="group">
@@ -442,9 +442,9 @@
 					</g>
 					<g id="shape1169-102" v:mID="1169" v:groupContext="groupContent" v:layerMember="0">
 						<v:textBlock v:margins="rect(4,4,4,4)"/>
-						<v:textRect cx="20.7683" cy="297.72" width="26.66" height="34.4044"/>
-						<text x="12.69" y="294.42" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
-									x="13.49" dy="1.2em" class="st6">Set</tspan></text>					</g>
+						<v:textRect cx="20.7683" cy="297.72" width="31.74" height="41.6033"/>
+						<text x="10.48" y="293.52" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
+									x="11.51" dy="1.2em" class="st6">Set</tspan></text>					</g>
 				</g>
 			</g>
 			<g id="group1172-105" transform="translate(0,-100.426)" v:mID="1172" v:groupContext="group">
@@ -550,8 +550,8 @@
 						</g>
 						<g id="shape1177-125" v:mID="1177" v:groupContext="groupContent" v:layerMember="0">
 							<v:textBlock v:margins="rect(4,4,4,4)"/>
-							<v:textRect cx="20.7683" cy="297.72" width="25.38" height="21.204"/>
-							<text x="13.32" y="301.02" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Txs</text>						</g>
+							<v:textRect cx="20.7683" cy="297.72" width="30.12" height="24.8035"/>
+							<text x="11.29" y="301.92" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Txs</text>						</g>
 					</g>
 				</g>
 				<g id="group1180-127" v:mID="1180" v:groupContext="group">
@@ -655,8 +655,8 @@
 						</g>
 						<g id="shape1184-146" v:mID="1184" v:groupContext="groupContent" v:layerMember="0">
 							<v:textBlock v:margins="rect(4,4,4,4)"/>
-							<v:textRect cx="20.7683" cy="297.72" width="25.38" height="21.204"/>
-							<text x="13.32" y="301.02" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Txs</text>						</g>
+							<v:textRect cx="20.7683" cy="297.72" width="30.12" height="24.8035"/>
+							<text x="11.29" y="301.92" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Txs</text>						</g>
 					</g>
 				</g>
 			</g>
@@ -673,7 +673,7 @@
 					<rect x="0" y="285.763" width="67.173" height="38.2368" class="st2"/>
 				</g>
 				<rect x="0" y="285.763" width="67.173" height="38.2368" class="st3"/>
-				<text x="10.6" y="308.18" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Arbitrator</text>			</g>
+				<text x="4.33" y="309.08" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Arbitrator</text>			</g>
 			<g id="shape1188-155" v:mID="1188" v:groupContext="shape" v:layerMember="1" transform="translate(250.688,-239.809)">
 				<title>Dynamic connector.1114</title>
 				<v:custProps>
@@ -691,7 +691,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="14.7536" cy="315" width="55" height="21.204"/>
+				<v:textRect cx="14.7536" cy="315" width="70" height="24.8035"/>
 				<path d="M0 315 C4.8 315 12.72 315 19.7 315" class="st7"/>
 			</g>
 			<g id="shape1189-161" v:mID="1189" v:groupContext="shape" v:layerMember="1" transform="translate(156.098,-144.733)">
@@ -711,7 +711,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="19.008" cy="269.091" width="55" height="21.204"/>
+				<v:textRect cx="19.008" cy="269.091" width="70" height="24.8035"/>
 				<path d="M0 324 C19.01 324 19.01 296.96 19.01 269.93 C19.01 248.1 19.01 226.26 30.05 218.57 L30.4 218.47"
 						class="st9"/>
 			</g>
@@ -732,7 +732,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="19.008" cy="373.284" width="55" height="21.204"/>
+				<v:textRect cx="19.008" cy="373.284" width="70" height="24.8035"/>
 				<path d="M0 324 C19.01 324 19.01 348.21 19.01 372.41 C19.01 391.94 19.01 411.46 29.98 418.4 L30.33 418.49"
 						class="st9"/>
 			</g>
@@ -753,7 +753,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="14.669" cy="315" width="55" height="21.204"/>
+				<v:textRect cx="14.669" cy="315" width="70" height="24.8035"/>
 				<path d="M0 315 C4.59 315 12.04 315 18.78 315" class="st11"/>
 			</g>
 			<g id="shape1192-178" v:mID="1192" v:groupContext="shape" v:layerMember="1" transform="translate(250.967,-103.117)">
@@ -773,7 +773,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="14.6142" cy="315" width="55" height="21.204"/>
+				<v:textRect cx="14.6142" cy="315" width="70" height="24.8035"/>
 				<path d="M0 315 C4.56 315 11.97 315 18.67 315" class="st11"/>
 			</g>
 			<g id="group1193-183" transform="translate(280.195,-14.9143)" v:mID="1193" v:groupContext="group">
@@ -876,9 +876,9 @@
 					</g>
 					<g id="shape1197-202" v:mID="1197" v:groupContext="groupContent" v:layerMember="0">
 						<v:textBlock v:margins="rect(4,4,4,4)"/>
-						<v:textRect cx="20.7683" cy="297.72" width="26.66" height="34.4044"/>
-						<text x="12.69" y="294.42" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
-									x="13.49" dy="1.2em" class="st6">Set</tspan></text>					</g>
+						<v:textRect cx="20.7683" cy="297.72" width="31.74" height="41.6033"/>
+						<text x="10.48" y="293.52" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RW<v:newlineChar/><tspan
+									x="11.51" dy="1.2em" class="st6">Set</tspan></text>					</g>
 				</g>
 			</g>
 			<g id="shape1200-205" v:mID="1200" v:groupContext="shape" v:layerMember="1" transform="translate(250.821,-35.3826)">
@@ -898,7 +898,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="14.687" cy="315" width="55" height="21.204"/>
+				<v:textRect cx="14.687" cy="315" width="70" height="24.8035"/>
 				<path d="M0 315 C4.6 315 12.07 315 18.81 315" class="st11"/>
 			</g>
 			<g id="shape1201-210" v:mID="1201" v:groupContext="shape" v:layerMember="1" transform="translate(156.098,-144.733)">
@@ -918,7 +918,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="19.6612" cy="340.024" width="55" height="21.204"/>
+				<v:textRect cx="19.6612" cy="340.024" width="70" height="24.8035"/>
 				<path d="M0 324 C15.36 324 18.31 344.18 30.07 351.91 L30.41 352.02" class="st9"/>
 			</g>
 			<g id="shape1203-215" v:mID="1203" v:groupContext="shape" v:layerMember="1" transform="translate(333.843,-255.421)">
@@ -938,7 +938,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="9.50502" cy="382.194" width="55" height="21.204"/>
+				<v:textRect cx="9.50502" cy="382.194" width="70" height="24.8035"/>
 				<path d="M0 324 C9.5 324 9.5 351.52 9.5 379.05 C9.5 400.8 9.5 422.55 18.57 431.01 L18.91 431.13" class="st9"/>
 			</g>
 			<g id="shape1204-220" v:mID="1204" v:groupContext="shape" v:layerMember="1" transform="translate(333.843,-186.712)">
@@ -958,7 +958,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="11.498" cy="347.318" width="55" height="21.204"/>
+				<v:textRect cx="11.498" cy="347.318" width="70" height="24.8035"/>
 				<path d="M0 324 C7.56 324 9.1 350.53 18.95 361.41 L19.27 361.56" class="st9"/>
 			</g>
 			<g id="shape1205-225" v:mID="1205" v:groupContext="shape" v:layerMember="1" transform="translate(333.843,-118.729)">
@@ -978,7 +978,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="12.1184" cy="308.515" width="55" height="21.204"/>
+				<v:textRect cx="12.1184" cy="308.515" width="70" height="24.8035"/>
 				<path d="M0 324 C7.41 324 9.04 308.17 18.41 301.21 L18.75 301.1" class="st9"/>
 			</g>
 			<g id="shape1206-230" v:mID="1206" v:groupContext="shape" v:layerMember="1" transform="translate(333.843,-50.9946)">
@@ -998,7 +998,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="9.50602" cy="274.127" width="55" height="21.204"/>
+				<v:textRect cx="9.50602" cy="274.127" width="70" height="24.8035"/>
 				<path d="M0 324 C9.5 324 9.5 300.74 9.5 277.48 C9.5 259.12 9.5 240.77 18.42 233.51 L18.76 233.4" class="st9"/>
 			</g>
 			<g id="shape1207-235" v:mID="1207" v:groupContext="shape" v:layerMember="1" transform="translate(59.3385,-153.826)">
@@ -1018,7 +1018,7 @@
 					<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
-				<v:textRect cx="14.7922" cy="333.078" width="55" height="21.204"/>
+				<v:textRect cx="14.7922" cy="333.078" width="70" height="24.8035"/>
 				<path d="M0 332.91 C4.75 332.91 6.61 332.91 7.74 332.92 C9.5 332.95 9.5 333.01 11.31 333.04 C12.72 333.07 15.23 333.08
 							 19.03 333.09 L19.39 333.09" class="st9"/>
 			</g>
@@ -1040,7 +1040,7 @@
 				<v:ud v:nameU="visWfEvent" v:prompt="" v:val="VT0(0):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="19.5876" cy="304.235" width="55" height="21.204"/>
+			<v:textRect cx="19.5876" cy="304.235" width="70" height="24.8035"/>
 			<path d="M0 324 C15.45 324 18.34 298.67 30.25 289.18 L30.59 289.05" class="st9"/>
 		</g>
 	</g>
