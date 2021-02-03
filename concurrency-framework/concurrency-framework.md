@@ -53,7 +53,7 @@ At the beginning of the execution cycle,  each concurrent VM will have an indepe
 <!-- ![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/workflow.svg)
 <img src="./benchmarking-suite/connect-to-cluster.svg" width=60%> -->
 
-<img src="./images/workflow.svg" width=80%>
+<img src="https://github.com/arcology-network/benchmarking/tree/main/concurrency-framework/images/workflow.svg" width=80%>
 
 
 In the best scenario, a fully parallelized program with no contention point can lead to virtually unlimited speedup, which is only a matter of computational resources available. In the worst case, if all the transactions conflict with each, the design will be slower than serial execution. In practice, the key to achieve maximum parallelizability is to avoid contentions wherever possible.
