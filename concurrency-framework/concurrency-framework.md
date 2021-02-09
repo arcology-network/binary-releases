@@ -165,31 +165,42 @@ A Deferred call is a mechanism designed to link the parallel and serial phase lo
 
 ```js
 pragma solidity ^0.5.0;
+
 import "./ConcurrentLibInterface.sol";
-contract ConcurrentVisitCounter {
-uint counter; 
-ConcurrentQueue constant queue = ConcurrentQueue(0xa0); // queue manager
+
+contract Defer {
+    ConcurrentQueue constant queue = ConcurrentQueue(0x82);
+    System constant system = System(0xa1);
+
+    // The variable we want to update in defer function.
+    uint256 counter = 0;
+    event CounterQuery(uint256 value);
+
     constructor() public {
-        counter = 0;
-        //system.createDefer("concurrentCounter", "CountVisits(string)");
-        queue.create("cache", int32(ConcurrentLib.DataType.UINT256)); // declare a queue
+        // Declare concurrent queue and defer function.
+        queue.create("counterUpdates", uint256(ConcurrentLib.DataType.UINT256));
+        system.createDefer("updateCounter", "updateCounter(string)");
     }
 
-    function Visit() public {
-        cache.pushUint256("cache", 1); 
-        system.callDefer(CountVisits, "");  
+    function increase(uint256 value) public {
+        // Enqueue the increasing value.
+        queue.pushUint256("counterUpdates", value);
+        // Call the defer function.
+        system.callDefer("updateCounter");
     }
 
-    function CountVisits(string memory callerName) internal {
-        uint256 length = queue.size("cache"); // get number of iterations
-        for (uint256 n = 0; n < length; n++) {
-            if (counter == 1024) {
-        counter = 0
-            } 
-        uint256 delta = queue.popUint256("cache"); // pop from cache
-            counter += delta;
+    function getCounter() public {
+        emit CounterQuery(counter);
+    }
+
+    function updateCounter(string memory) public {
+        // Update the counter.
+        uint256 len = queue.size("counterUpdates");
+        for (uint256 i = 0; i < len; i++) {
+            uint256 changes = queue.popUint256("counterUpdates");
+            counter += changes;
         }
-    }   
+    }
 }
 ```
 

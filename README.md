@@ -25,13 +25,13 @@
 
 ## 1. Introduction
 
-The benchmarking suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge of python and some understanding in blockchain. The suite has some interactive examples to help to get familiar with the suite and a couple of batch examples for real performance benchmarking.
+The benchmark suite is a package containing ready-developed python scripts to connect to a node cluster, send in simple and complex transactions and observer execution result and key performance information. It is easily enough for users with basic knowledge of python and some understanding in blockchain. The suite has some interactive examples to help to get familiar with the suite and a couple of batch examples for real performance benchmarking.
 
 The followings are necessary for benchmarking:
 
 - A network with **at least one active node cluster** running to interact with the suite
-- A copy of benchmarking suite in a docker image
-- A network connection between the benchmarking suite and the node cluster
+- A copy of benchmark suite in a docker image
+- A network connection between the benchmark suite and the node cluster
 
 ## 2. What's included in the Suite
 
@@ -74,7 +74,7 @@ Ammolite is a collection of libraries implemented in Python that helps to intera
 
 ### 3.1. Connect to the Node clusters
 
-<img src="./benchmarking-suite/connect-to-cluster.svg" width=60%>
+<img src="./images/connect-to-cluster.svg" width=60%>
 
 ### 3.2. API
 
@@ -94,7 +94,7 @@ SSH into the container with the credentials provided
 
 ### 4.1. List of the files
 
-![alt text](./benchmarking-suite/contents.png)
+![alt text](./images/contents.png)
 
 ### 4.2. Check the cluster status
 
@@ -102,7 +102,7 @@ SSH into the container with the credentials provided
 $ python ./checkStatus.py
 ```
 
-![alt text](./benchmarking-suite/cluster-status.png)
+![alt text](./images/cluster-status.png)
 
 ### 4.3. Start Ammolite
 
@@ -149,7 +149,7 @@ The performance observer gives realtime performance information for block height
 $ ./tps.sh
 ```
 
-![alt text](./benchmarking-suite/performance-observer.png)
+![alt text](./images/performance-observer.png)
 
 ### 6.2. Deploy ParallelKitties
 
@@ -157,7 +157,7 @@ $ ./tps.sh
 $ ./deploy_pk.sh
 ```
 
-![alt text](./benchmarking-suite/deploy-pk.png)
+![alt text](./images/deploy-pk.png)
 
 ### 6.3. Initialize PK test data
 
@@ -165,7 +165,7 @@ $ ./deploy_pk.sh
 $ ./send_init_txs.sh
 ```
 
-![alt text](./benchmarking-suite/initialize-pk-txs.png)
+![alt text](./images/initialize-pk-txs.png)
 
 ### 6.4. Test ParallelKitties' transfer function
 
@@ -175,7 +175,7 @@ Benchmarking system performance with 2.5 million ParallelKitties transactions be
 $ ./send_pk_transfer_txs.sh
 ```
 
-![alt text](./benchmarking-suite/send-pk-transfer-txs.png)
+![alt text](./images/send-pk-transfer-txs.png)
 
 ### 6.5.  Test balance transfer between accounts
 
@@ -185,7 +185,7 @@ Benchmarking system performance with 5 million balance transfer transactions bet
 $ ./send_simple_transfer_txs.sh
 ```
 
-![alt text](./benchmarking-suite/balance-tranfer.png)
+![alt text](./images/balance-tranfer.png)
 
 ---
 
