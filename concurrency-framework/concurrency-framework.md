@@ -1,7 +1,5 @@
 # Arcology Concurrency Framework (v 0.8)
 
-> Arcology concurrnecy Framework orchestrate parallel blockchain transaction processing across multiple processor cores
-
 - [Arcology Concurrency Framework (v 0.8)](#arcology-concurrency-framework-v-08)
   - [1. Introduction](#1-introduction)
     - [1.1. Issues](#11-issues)
@@ -20,8 +18,9 @@
     - [3.3. Parallel Execution](#33-parallel-execution)
     - [3.4. Concurrent Queue with Deferred calls](#34-concurrent-queue-with-deferred-calls)
   - [5. Code Optimization](#5-code-optimization)
+    - [5.1. Showcase](#51-showcase)
   - [6. Deployment](#6-deployment)
-  - [7. Troubleshooting](#7-troubleshooting)
+  - [7. Troubleshooting (TBD)](#7-troubleshooting-tbd)
 
 ## 1. Introduction
 
@@ -238,11 +237,13 @@ To make the counter concurrently callable, the original code snippet is divided 
 
 The key is to find out which part of the code could be parallelized, which part has to be processed in sequential order. There is a case study to parallelized CryptoKittes using Arcology concurrent framework.
 
-[How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
-
+### 5.1. Showcase
+ 
+- [How to parallelize CryptoKitties](https://github.com/arcology-network/benchmarking/blob/main/How-to-Parallelize-CryptoKitties.md)
+- [Parallelized Uniswap (TBD)](TBD)
 
 ## 6. Deployment
 
 When deploy a contract, developers may specify the maxiumn concurrency allowed, which tells the system how many transactions calling the smart contract can run in parallel. The sytem will set a default concurrency value, in case of the value is absent.
 
-## 7. Troubleshooting
+## 7. Troubleshooting (TBD)
