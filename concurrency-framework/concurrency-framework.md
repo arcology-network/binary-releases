@@ -1,6 +1,6 @@
-# Arcology Concurrency Framework (v 0.8)
+# Arcology Concurrency Framework (v0.8)
 
-- [Arcology Concurrency Framework (v 0.8)](#arcology-concurrency-framework-v-08)
+- [Arcology Concurrency Framework (v0.8)](#arcology-concurrency-framework-v08)
   - [1. Introduction](#1-introduction)
     - [1.1. Issues](#11-issues)
     - [1.2. Overview](#12-overview)
