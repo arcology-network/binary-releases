@@ -45,7 +45,6 @@ In addition, for most blockchain systems with smart contrast support, transactio
 
 The best way to improve execution efficient is to allow mulitple transactions to execute in mutiple VM instance at the same time. This refers to as parallel transaction processing. Arcology concurrency framework is a specially designed and blockchain-native mechanism to work in combination with Arcology's microservice architecture to achieve maximum performance gain when processing huge volume of transactions. It has ability to orchestrate multiple VM instances working together to process transactions. The framework provides a set of smart contract level concurrent utilities enabling developers to write concurrent code to distribute the workload across all the processing cores avaialbe in a node cluster.
 
-
 - Deterministic
 - VM neural
 - High performance
