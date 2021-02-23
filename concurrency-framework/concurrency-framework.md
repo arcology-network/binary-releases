@@ -14,10 +14,10 @@
     - [2.3. Multi-phrase Execution](#23-multi-phrase-execution)
     - [3.3. Commutative Variables](#33-commutative-variables)
   - [4. Counter Examples](#4-counter-examples)
-    - [4.1. A simple Counter](#41-a-simple-counter)
-    - [4.2. Serial Execution](#42-serial-execution)
-    - [4.3. Parallel Execution](#43-parallel-execution)
-    - [4.4. Concurrent Counter](#44-concurrent-counter)
+    - [4.1. A Sequential Counter](#41-a-sequential-counter)
+      - [4.1.1. Serial Execution](#411-serial-execution)
+      - [4.1.2. Parallel Execution](#412-parallel-execution)
+    - [4.4. Concurrent Counter Implementaion](#44-concurrent-counter-implementaion)
   - [5. Code Optimization](#5-code-optimization)
   - [6. Deployment](#6-deployment)
   - [7. Troubleshooting (TBD)](#7-troubleshooting-tbd)
@@ -148,7 +148,7 @@ Many programs may need counters to count various types of events. One example is
 
 Assume there were 4 calls to the "VisitCounter" contract. The calls were wrapped in 4 transactions *T0*, *T1*, *T2*, *T3*. The execution order is also *T0*, *T1*, *T2*, *T3*.
 
-### 4.1. A simple Counter
+### 4.1. A Sequential Counter
 
  A simplest counter keeping track of number of calls to the smart contract may look just like this:
 
@@ -172,7 +172,7 @@ contract SequentialCounter {
 }
 ```
 
-### 4.2. Serial Execution
+#### 4.1.1. Serial Execution
 
 This is the execution model used by platforms like Ethereum. The system will start a new instance of VM to process a transaction, every transaction is executed against the states after the previous one. During the execution, the contract retrives the counter value from the state DB and increases it by one, then save it back. The next transction will be able to see the counter value the prevoius just updated.  So, when *T1* reads the counter, the value it sees should be 1, becaues it has been increased by *T0* already. When all 4 transaction gets executed the final counter value is 4.
 
@@ -180,15 +180,15 @@ This is the execution model used by platforms like Ethereum. The system will sta
 
 The major draw back is the process speed. There is only one VM running to process one transaction at a time. This execution model has some serious performance issue when huge volume of transactions waiting to be processed.
 
-### 4.3. Parallel Execution
+#### 4.1.2. Parallel Execution
 
 Ideally, the system should be able to process all four transactions simultaneously. Sometimes it will require some restructuring of oringal smart contract to make parallelization possible. Executing sequential-only logic regardlessly only deteriorates overall performance.
 
 In we mistakenly process the transactions concurrently, each VM only executes against the initial value of counter, which is 0. At the end of the execution cycle, the conflict detection module will spot that all 4 transactions have updated the the counter, which may result in state inconsistency. Thus, only 1 of 4 transactions will go through, others will be rollback for reprocessing. In any circustanmOnly non-conflicts transactions will be able to commit their state changes. Obvisouly, this type of parallelization only won't produce any performance gain.
 
-![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter-nonconflict.svg) 
+![alt text](https://github.com/arcology-network/benchmarking/blob/main/concurrency-framework/images/counter-conflict.svg) 
 
-### 4.4. Concurrent Counter
+### 4.4. Concurrent Counter Implementaion
 
 There needs to be a way to parallelize sequential code, at least partically. A Deferred call is a mechanism designed to link the parallel and serial phase logically together. A deferred call enforces a serial execution point after the parallel pharse. The function invoked in the deferred execution phase is called a deferred function. Below is an example using the concurrent queue together with a deferred call to implement a counter.
 
