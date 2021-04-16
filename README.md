@@ -47,7 +47,7 @@ Once hosting machines are ready, you can start to set up the testnet
 ## 5. Set Up the Testnet
 
 The hosting machines are ready by now, the next step is to set up node clusters on the hosting machine.
-The [deployment](https://github.com/arcology-network/deployment) project contains a set of tools to automate the process. Once testnet is live, it is ready to process transactions.  
+The [deployment project](https://github.com/arcology-network/deployment) contains a set of tools to automate the process.
 
 ## 6. Login to the Docker Image
 
