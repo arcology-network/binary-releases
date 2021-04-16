@@ -37,7 +37,7 @@ A client consists of a number of network services communicating through MQ and R
 
 ## 4. Prepare Hosting Machines
 
-1. [On AWS](https://github.com/arcology-network/aws-ansible)
+1. [On AWS](https://github.com/HPISTechnologies/aws-ansible)
 2. On Premises
 
 Once hosting machines are ready, you can start to set up the testnet
@@ -47,7 +47,7 @@ Once hosting machines are ready, you can start to set up the testnet
 ## 5. Set Up the Testnet
 
 The hosting machines are ready by now, the next step is to set up node clusters on the hosting machine.
-The [deployment](https://github.com/arcology-network/deployments) project contains a set of tools to automate the process. Once testnet is live, it is ready to process transactions.  
+The [deployment](https://github.com/HPISTechnologies/deployments) project contains a set of tools to automate the process. Once testnet is live, it is ready to process transactions.  
 
 ## 6. Login to the Docker Image
 
@@ -82,7 +82,7 @@ Benchmarking requires large volumes of transaction data, but generating transcti
 
 ## 7. Start Ammolite
 
-To use [Ammolite](https://github.com/arcology-network/ammolite), just start Python **in the docker image and import all necessary modules.**
+To use [Ammolite](https://github.com/HPISTechnologies/ammolite), just start Python **in the docker image and import all necessary modules.**
 
 ```shell
 $ python
@@ -92,9 +92,9 @@ $ python
 
 The follow cases can run both interactively and programmatically
 
-- [Token transfer](https://github.com/arcology-network/parallel-coin-transfer)
-- [Parallelized CryptoKitties](https://github.com/arcology-network/parallel-kitties)
-- [Parallelized dstoken](https://github.com/arcology-network/ds-token)
+- [Token transfer](https://github.com/HPISTechnologies/parallel-coin-transfer)
+- [Parallelized CryptoKitties](https://github.com/HPISTechnologies/parallel-kitties)
+- [Parallelized dstoken](https://github.com/HPISTechnologies/ds-token)
   
 > Please wait for one script to complete before starting the next one. The best way to tell is by looking at the number of transactions contained in the lastest block. The system has processed all transactions once it drops to zero(not rising from zero which shows the system is picking up speed).
 
