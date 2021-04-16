@@ -54,7 +54,7 @@ The [deployment project](https://github.com/arcology-network/deployment) contain
 The docker container has all necessary modules included to interact with the network. First, you need to login to the container.
 
 ```shell
-ssh -p 32768 root@[Your docker‘s host IP]
+ssh -p 32768 root@[Your docker's host IP]
 ```
 
 - **Username**:   root
@@ -94,7 +94,7 @@ The follow cases can run both interactively and programmatically
 
 - [Token transfer](https://github.com/arcology-network/parallel-coin-transfer)
 - [Parallelized CryptoKitties](https://github.com/arcology-network/parallel-kitties)
-- [Parallelized dstoken](https://github.com/arcology-network/parallel-ds-token)
+- [Parallelized dstoken](https://github.com/arcology-network/parallel-dstoken)
   
 > Please wait for one script to complete before starting the next one. The best way to tell is by looking at the number of transactions contained in the lastest block. The system has processed all transactions once it drops to zero(not rising from zero which shows the system is picking up speed).
 
