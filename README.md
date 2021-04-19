@@ -69,6 +69,6 @@ The follow cases can run both interactively and programmatically.
 
 - [Token transfer](https://github.com/arcology-network/parallel-coin-transfer)
 - [Parallelized CryptoKitties](https://github.com/arcology-network/parallel-kitties)
-- [Parallelized dstoken](https://github.com/arcology-network/ds-token)
+- [Parallelized dstoken](https://github.com/arcology-network/parallel-ds-token)
   
 > Please wait for one script to complete before starting the next one. The best way to tell is by looking at the number of transactions contained in the lastest block. The system has processed all transactions once it drops to zero(not rising from zero which shows the system is picking up speed).
