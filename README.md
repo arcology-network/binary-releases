@@ -1,6 +1,6 @@
 # Testnet Guide (v0.9.1)
 
-- [Testnet Guide (v0.2)](#testnet-guide-v02)
+- [Testnet Guide (v0.9.1)](#testnet-guide-v091)
   - [1. Introduction](#1-introduction)
   - [2. Getting Started](#2-getting-started)
   - [3. Prepare the Hosting Machines](#3-prepare-the-hosting-machines)
