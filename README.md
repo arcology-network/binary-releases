@@ -1,4 +1,4 @@
-# Testnet Guide (v0.2)
+# Testnet Guide (v0.9.1)
 
 - [Testnet Guide (v0.2)](#testnet-guide-v02)
   - [1. Introduction](#1-introduction)
