@@ -3,11 +3,12 @@
 - [Testnet Guide (v0.9.1)](#testnet-guide-v091)
   - [1. Introduction](#1-introduction)
   - [2. Getting Started](#2-getting-started)
-  - [3. Prepare the Hosting Machines](#3-prepare-the-hosting-machines)
-  - [4. Set Up the Testnet](#4-set-up-the-testnet)
-  - [5. Login to the Docker Image](#5-login-to-the-docker-image)
-  - [6. Start Ammolite](#6-start-ammolite)
-  - [7. Choose the Test Cases](#7-choose-the-test-cases)
+  - [3. Release](#3-release)
+  - [4. Prepare the Hosting Machines](#4-prepare-the-hosting-machines)
+  - [5. Set Up the Testnet](#5-set-up-the-testnet)
+  - [6. Login to the Docker Image](#6-login-to-the-docker-image)
+  - [7. Start Ammolite](#7-start-ammolite)
+  - [8. Choose the Test Cases](#8-choose-the-test-cases)
 
 ## 1. Introduction
 
@@ -26,7 +27,11 @@ A client has of a number of network services communicating through MQ and RPC. T
 
 ![alt text](/img/installation-steps.png)
 
-## 3. Prepare the Hosting Machines
+## 3. Release
+
+You can download the latest testnet installer [here](https://github.com/arcology-network/benchmarking/releases) 
+
+## 4. Prepare the Hosting Machines
 
 1. [On AWS](https://github.com/arcology-network/aws-ansible)
 2. On Premises
@@ -35,12 +40,12 @@ Once hosting machines are ready, you can start to set up the testnet
 
 ---
 
-## 4. Set Up the Testnet
+## 5. Set Up the Testnet
 
 The hosting machines are ready by now, the next step is to set up node clusters on the hosting machine.
 The [deployment](https://github.com/arcology-network/deployments) project contains a set of tools to automate the process. Once testnet is live, it is ready to process transactions.  
 
-## 5. Login to the Docker Image
+## 6. Login to the Docker Image
 
 The docker container has all necessary modules included to interact with the network. First, you need to login to the container.
 
@@ -56,14 +61,13 @@ The next step is to check the connection to the node cluster. You can find you f
 ```python
 $ python ./checkStatus.py [The frontend service ip]
 ```
-
 ---
 
-## 6. Start Ammolite
+## 7. Start Ammolite
 
 To use [Ammolite](https://github.com/arcology-network/ammolite), just start Python **in the docker image and import all necessary modules.**
 
-## 7. Choose the Test Cases
+## 8. Choose the Test Cases
 
 The follow cases can run both interactively and programmatically.
 
