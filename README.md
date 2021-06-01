@@ -5,7 +5,7 @@
   - [2. Getting Started](#2-getting-started)
   - [3. Release](#3-release)
   - [4. Prepare the Hosting Machines](#4-prepare-the-hosting-machines)
-  - [5. Set Up the Testnet](#5-set-up-the-testnet)
+  - [5. Set up the Testnet](#5-set-up-the-testnet)
   - [6. Login to the Docker Image](#6-login-to-the-docker-image)
   - [7. Start Ammolite](#7-start-ammolite)
   - [8. Choose the Test Cases](#8-choose-the-test-cases)
@@ -40,7 +40,7 @@ Once hosting machines are ready, you can start to set up the testnet
 
 ---
 
-## 5. Set Up the Testnet
+## 5. Set up the Testnet
 
 The hosting machines are ready by now, the next step is to set up node clusters on the hosting machine.
 The [deployment](https://github.com/arcology-network/deployments) project contains a set of tools to automate the process. Once testnet is live, it is ready to process transactions.  
