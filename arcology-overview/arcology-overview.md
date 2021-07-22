@@ -7,8 +7,11 @@ This document covers some key features and the design considerations behind Arco
   - [2. Architecture Design](#2-architecture-design)
   - [3. Cost and Complexities](#3-cost-and-complexities)
   - [4. Key Features](#4-key-features)
-    - [4.1. Intra-node Scalability](#41-intra-node-scalability)
-    - [4.2. Inter-node Scalability](#42-inter-node-scalability)
+    - [4.1. EVM Compatibility](#41-evm-compatibility)
+    - [4.2. L1 Parallel Transaction Processing](#42-l1-parallel-transaction-processing)
+    - [4.3. Composability](#43-composability)
+    - [4.4. Intra-node Scalability](#44-intra-node-scalability)
+    - [4.5. Inter-node Scalability](#45-inter-node-scalability)
   - [5. Architecture](#5-architecture)
   - [6. System Hierarchy](#6-system-hierarchy)
     - [6.1. Node cluster](#61-node-cluster)
@@ -85,11 +88,23 @@ On one hand, Arcology can be turned as a supercomputer-like, distributed computa
 
 Blockchain cannot magically break the laws of physics, higher TPS always mean more computational resources, the questions are where to get them and how to get them inexpensively.  
 
-### 4.1. Intra-node Scalability
+### 4.1. EVM Compatibility
+
+Arcology has added EVM support because of its popularity. Smart contracts running on Ethereum can be moved  to Arcology smoothly with no modifications required at all. In fact, Arcology is inherently VM agnostic, it can work with any type of VM.
+
+### 4.2. L1 Parallel Transaction Processing
+
+Arcology is caplable of processing both simple transfers and smart contract calls in full parallel mode bring the scalability to the next level.
+
+### 4.3. Composability
+
+Composability is one of major challanges faced sidechain-based scaling solutions. Unlike the L2 solutions on Ethereum, smart contracts running on Arcology are fully Composable.
+
+### 4.4. Intra-node Scalability
 
 In Arcology, all key modules are provided as a network service. If these modules couldn’t handle the workload, the system will automatically start new instances to share the burden. The idea behind is simple, if one machine cannot handle the workload, just add more. With this design, increasing TPS becomes a matter of adding more processing cores, which is something very inexpensive to do these days.
 
-### 4.2. Inter-node Scalability
+### 4.5. Inter-node Scalability
 
 One of major benefit Arcology Architecture provides is to allow both intra-node and inter-node scaling. Conventionally, a node is a single machine (physical/virtual) with one copy of client software installed. Arcology’s client software allows horizontal scaling, users can install one copy of Arcology client software on multiple machines.
 
