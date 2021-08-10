@@ -5,6 +5,7 @@
   - [2. Getting Started](#2-getting-started)
   - [3. Architecture Overview](#3-architecture-overview)
   - [4. Release](#4-release)
+    - [4.1 All in One](#41-all-in-one)
   - [5. Prepare the Hosting Machines](#5-prepare-the-hosting-machines)
   - [6. Set up the Testnet](#6-set-up-the-testnet)
   - [7. Login to the Docker Image](#7-login-to-the-docker-image)
@@ -34,7 +35,11 @@ The [Architecture Overview](./arcology-overview/arcology-overview.md) gives an o
 
 ## 4. Release
 
-You can download the latest testnet installer **[here](https://github.com/arcology-network/benchmarking/releases)** and set up a minimum testnet with the [All in One Installation](./all-in-one-testnet.md) option
+You can find all the releases from **[here](https://github.com/arcology-network/benchmarking/releases)**
+
+### 4.1 All in One
+
+**Among all the releases, the [v1.0-alpha](https://github.com/arcology-network/benchmarking/releases/tag/v1.0-alpha) has an [all-in-one](./all-in-one-testnet.md) installation option for users to set up a minimum testnet.**
 
 ## 5. Prepare the Hosting Machines
 

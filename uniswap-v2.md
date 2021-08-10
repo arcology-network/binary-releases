@@ -26,7 +26,7 @@
 
 ## 1. Introduction
 
-This document shows you how to deploy [Uniswap V2](https://github.com/Uniswap) on an Arcology testnet. 
+This document shows you how to compile, deploy and run [Uniswap V2](https://github.com/Uniswap) on an Arcology testnet.
 
 ## 2. Get the Source Code
 
@@ -50,7 +50,7 @@ This document shows you how to deploy [Uniswap V2](https://github.com/Uniswap) o
 
 ## 3. Install Yarn
 
-Yarn is a node.js package manager, please more info please go to https://classic.yarnpkg.com/lang/en/
+Yarn is a node.js package manager, please go to https://classic.yarnpkg.com/lang/en/ for more info.
 
 ### 3.1 Enable the Official Yarn Repository
 
