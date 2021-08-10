@@ -32,10 +32,9 @@ A client has of a number of network services communicating through MQ and RPC. T
 
 The [Architecture Overview](./arcology-overview/arcology-overview.md) gives an overview of the features and design details of the system.
 
-
 ## 4. Release
 
-You can download the latest testnet installer **[here](https://github.com/arcology-network/benchmarking/releases)**
+You can download the latest testnet installer **[here](https://github.com/arcology-network/benchmarking/releases)** and set up a minimum testnet with the [All in One Installation](./all-in-one-testnet.md) option
 
 ## 5. Prepare the Hosting Machines
 
