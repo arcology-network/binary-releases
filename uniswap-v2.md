@@ -20,8 +20,8 @@
     - [5.2. Contents](#52-contents)
     - [5.2. Tools](#52-tools)
   - [6. Contract Deployment](#6-contract-deployment)
-    - [6.1. Deploy the Contracts](#61-deploy-the-contracts)
-  - [6. Send in Some Transactions](#6-send-in-some-transactions)
+    - [6.1. Deploy the Uniswap v2](#61-deploy-the-uniswap-v2)
+  - [6. Call Uniswap v2](#6-call-uniswap-v2)
     - [6.1. Mint](#61-mint)
     - [6.2. Approve](#62-approve)
     - [6.3. liquidity Pool](#63-liquidity-pool)
@@ -124,13 +124,13 @@ You need to copy the compiled contracts into the container, so they can be deplo
 
 ## 5. Testnet Interaction
 
-You can interact with the Arcology testnet through HTTP connections right now. Arcology provides a collection of tools and libraries to facilitate the process. They are included in the docker container that comes with the installer package. You don't need to do anything as the installer will automatically set up everything for you by the time the installation is completed.
+You can interact with the Arcology testnet through HTTP connections right now. Arcology provides a collection of tools and libraries to facilitate the process. These tools are included in the docker container that comes with the installer package. You don't need to do anything as the installer will automatically set up everything for you.
 
-If the installation is successfully complete, there should be a docker container listening on port `8080` of the host machine where the all-in-one Arcology testnet is running.
+Once the installation is successfully complete, there should be a docker container listening on port `32768` of the host machine an Arcology node is running.
 
 ### 5.1. Client Docker Container
 
-If your host IP is 192.168.1.109 then use the command below to log in to the docker container. Please replace the IP address with yours.
+If your host machine's IP is 192.168.1.109 then use the command below to log in to the docker container. Please replace the IP address with yours.
 
 - Username: root
 - Password: frY6CvAy8c9E
@@ -148,22 +148,21 @@ The docker containes the following files.
 
 ### 5.2. Tools
 
-You will need to use `sendtxs.py` to send transactions to the network. What it does is to
-load in a series of pre-generated transaction files and send them to an Arcology node through
-a HTTP connection.
+You will need to use `sendtxs.py` to load in a series of pre-generated transaction files and send them to an Arcology node through HTTP connections.
 
 **Syntax:**
 
 ```sh
 python sendtxs.py [NODE_IP] [TRANSACTION_FILES]
-
 ```
 
 ## 6. Contract Deployment
 
-### 6.1. Deploy the Contracts
+You have to deploy the uniswap contracts on the Arcology testnet first between calling them.
 
-If the Arcology node's IP address is https://192.168.1.109:8080, then in the docker image, run the following command under the root direct to deploy the contracts to the testnet. The port 8080 on a Arcology node is reserved for communications with clients.
+### 6.1. Deploy the Uniswap v2
+
+If the Host IP address is https://192.168.1.109:8080, then in the docker image, run the following command under the root direct to deploy the contracts to the testnet. The port 8080 on a Arcology node is reserved for communications with clients.
 
 ```sh
 > cd uniswap
@@ -174,9 +173,9 @@ You should be able to see the screen below if the deployment is successfuly comp
 
 ![alt text](./img/uniswap/uniswap-deployment.png)
 
-## 6. Send in Some Transactions
+## 6. Call Uniswap v2
 
-The package comes with some pre-genearted transactions files.
+The package comes with some pre-genearted transactions files ready to used.
 
 ### 6.1. Mint
 
