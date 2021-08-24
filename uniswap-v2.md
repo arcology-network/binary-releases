@@ -17,7 +17,7 @@
     - [4.4. Copy the Files](#44-copy-the-files)
   - [5. Testnet Interaction](#5-testnet-interaction)
     - [5.1. Client Docker Container](#51-client-docker-container)
-    - [5.2. Contents](#52-contents)
+    - [5.2. Contents of the Docker Image](#52-contents-of-the-docker-image)
     - [5.2. Tools](#52-tools)
   - [6. Contract Deployment](#6-contract-deployment)
     - [6.1. Deploy the Uniswap v2](#61-deploy-the-uniswap-v2)
@@ -130,7 +130,13 @@ Once the installation is successfully complete, there should be a docker contain
 
 ### 5.1. Client Docker Container
 
-If your host machine's IP is 192.168.1.109 then use the command below to log in to the docker container. Please replace the IP address with yours.
+Please use the command below to log in to the docker.  
+
+```sh
+ssh -p 32768 root@[Your docker host IP]
+```
+
+For example, if your host machine's IP is 192.168.1.109 then use the command below to log in to the docker container. Please replace the IP address with yours.
 
 - Username: root
 - Password: frY6CvAy8c9E
@@ -139,12 +145,23 @@ If your host machine's IP is 192.168.1.109 then use the command below to log in 
 > ssh -p 32768 root@192.168.1.109
 ```
 
-### 5.2. Contents
+### 5.2. Contents of the Docker Image
 
-The docker containes the following files.
+The docker image containes the following files.
 
 ![alt text](./img/testnet/docker-contents.png)
 
+- blockmon.py: Realtime blockchain monitor 
+- checkStatus.py: 
+- data: Data folder for transaction files
+- ds_token: Scripts and data files for ds_token showcase  
+- parallel_kitties Scripts and data files for the parallel CryptoKitties showcase  
+- python: The last python executable
+- sendtx.py 
+- sendtx.sh
+- tps.py: Realtime TPS observer
+- uniswap: Scripts and data files for uniswap showcase  
+- utils.py
 
 ### 5.2. Tools
 
@@ -162,7 +179,7 @@ You have to deploy the uniswap contracts on the Arcology testnet first between c
 
 ### 6.1. Deploy the Uniswap v2
 
-If the Host IP address is https://192.168.1.109:8080, then in the docker image, run the following command under the root direct to deploy the contracts to the testnet. The port 8080 on a Arcology node is reserved for communications with clients.
+If the Host IP address is https://192.168.1.109:8080, then in the docker image, run the following command under the root direct to deploy the contracts to the testnet. The port 8080 is reserved for communications with clients.
 
 ```sh
 > cd uniswap
