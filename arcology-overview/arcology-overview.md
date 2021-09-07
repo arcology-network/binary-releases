@@ -26,15 +26,15 @@ This document covers some key features and the design considerations behind Arco
   - [7. Service List](#7-service-list)
     - [7.1. Frontend](#71-frontend)
     - [7.2. Client service](#72-client-service)
-    - [7.3. Sigver Service](#73-sigver-service)
+    - [7.3. (TPP Service)(https://github.com/arcology-network/tpp-svc)](#73-tpp-servicehttpsgithubcomarcology-networktpp-svc)
     - [7.4. Pool service](#74-pool-service)
-    - [7.5. P2P Service](#75-p2p-service)
+    - [7.5. P2P Service(https://github.com/arcology-network/p2p-svc)](#75-p2p-servicehttpsgithubcomarcology-networkp2p-svc)
     - [7.6. Core service](#76-core-service)
     - [7.7. Consensus service](#77-consensus-service)
     - [7.8. Executor Service](#78-executor-service)
       - [7.8.1. EU](#781-eu)
       - [7.8.2. EVM](#782-evm)
-      - [7.8.3. StateDB Adaptors](#783-statedb-adaptors)
+      - [7.8.3. VM Adaptors](#783-vm-adaptors)
       - [7.8.4. Transition Cache](#784-transition-cache)
       - [7.8.5. Transition Set](#785-transition-set)
       - [7.8.6. Local Snapshot](#786-local-snapshot)
@@ -219,7 +219,7 @@ An Arcology client software consists of a list of services. With a couple of exc
 
 > Please note that Arcology is under active development, services above may change in the future.
 
-### 7.1. Frontend
+### 7.1. [Frontend](https://github.com/arcology-network/frontend-svc)
 
 The frontend service is responsible to establish and maintain connections with the end users through network connections. Frontend service is the gateway for users to interact with an Arcology node. There can be multiple frontend services to answer large volumes of user requests if necessary. The frontend supports the following functions at the moment.
 
@@ -236,15 +236,15 @@ The Client service is the entry point for all transactions entering an Arcology 
 
 The service ensures that no transaction will enter the node cluster twice. In addition, the client service will impose inbound request throttling when the pressure exceeds node cluster’s processing capacity. The service determines what transactions will finally enter processing workflow.
 
-### 7.3. Sigver Service
+### 7.3. (TPP Service)(https://github.com/arcology-network/tpp-svc)
 
-Sigver is the signature verification module responsible for checking transaction before sending them to the pool service. Signature verification could be a serious bottleneck when processing large volumes of transactions. So in general, multiple instances will certainly help with overall performance.
+TPP is the signature verification module responsible for checking the transactions before sending them to the pool service. Signature verification could be a serious bottleneck when processing large volumes of transactions. So in general, multiple instances will certainly help with overall performance.
 
-### 7.4. Pool service
+### 7.4. [Pool service](https://github.com/arcology-network/pool-svc)
 
 The pool service keeps a set of transactions waiting to be processed internally. When a new block starts, the service will pick a list of transactions based on a set of selection strategies and then send the transactions to the scheduling service for execution planning.
 
-### 7.5. P2P Service
+### 7.5. P2P Service(https://github.com/arcology-network/p2p-svc)
 
  To make the network fully decentralized, there have to be multiple nodes / node clusters. Nodes need to talk to each other frequently to keep the network moving. Obviously, there will be a lot of communication going on in the process, which consumes a lot of bandwidth. Another factor having an impact on the communication is the number of nodes / node clusters.
  
@@ -258,20 +258,19 @@ The P2P service  can dynamically adjust itself connections according to the band
 
 ![alt text](./img/multi-p2p.svg)
 
-### 7.6. Core service
+### 7.6. [Core service](https://github.com/arcology-network/core-svc)
 
 The core service is the bridge between the consensus algorithm, which mainly deals with external parties and the transaction processing procedures whose role is more internal. From the consensus service’s prospective, the core service is the only party it needs to interact with in terms of transaction processing.
 
 The Core service is mainly responsible for making new blocks and coordinating related services to answer various types of requests from the consensus service through a set of standard interfaces. The Core isn’t aware of specific consensus algorithms used within the consensus service.
 
-### 7.7. Consensus service
+### 7.7. [Consensus service](https://github.com/arcology-network/consensus-svc)
 
-The Consensus service is generalization of different consensus algorithms. f. The service communicates and interacts with other services via a set of standard network interfaces.
+The Consensus service is generalization of different consensus algorithms. The service communicates and interacts with other services via a set of standard network interfaces. 
 
 The consensus part is only very loosely coupled with the rest of the system. The specific consensus algorithmn used within the service is completely invisible from outside. The underlying algorithm can be replaced or updated independently from other services or the overall workflow. It is pretty much plug & play ready.
 
-Arcology will use its own consensus algorithm named multifactor, which can be seen as an upgraded version of the conventional PoS. For now, Arcology is using a customized version of Tendermint PoS on the testnets, with some major optimizations to the original consensus workflow.
-The optimization efforts have been focused on following aspects:
+Arcology will use its own consensus algorithm named multifactor, which can be seen as an upgraded version of the conventional PoS. For now, Arcology is using a customized version of **Tendermint** PoS on the testnets, with some major optimizations to the original consensus workflow. The efforts have been focused on following aspects:
 
 - Allowing parallelization between the proposer and validators
 - Proposed blocks compression
@@ -279,7 +278,7 @@ The optimization efforts have been focused on following aspects:
   
 > Arcology will move to its own consensus algorithm called multifactor in the future. Please check out Arcology’s whitepaper for more details.
 
-### 7.8. Executor Service
+### 7.8. [Executor Service](https://github.com/arcology-network/exec-svc)
 
 The scheduler connects to a network service called the Executor service. It is where the real transaction processing takes place. Depending on configuration, an Arcology node cluster may have a number of Executor instances running in parallel to process transactions. Each executor comprises the following components
 
@@ -304,7 +303,7 @@ This design allows multiple heterogenous VM to work on the Arcology. All it take
 
 On Arcology, Arcology’s EU support all functionalities of the original ones with some extra features. Developers can still use the tools and libraries they have on the native platforms and the experience wouldn’t be any different from the original VM.
 
-#### 7.8.2. EVM
+#### 7.8.2. [EVM](https://github.com/arcology-network/evm)
 
 EVM support has been added to Arcology already for its popularity. Support for more VM types will be added in the future. There are some changes we made to the original EVM implementation to help it work with Arcology smoothly.
 
@@ -312,9 +311,9 @@ EVM support has been added to Arcology already for its popularity. Support for m
 
 - **Arcology concurrent programming:** Arcology has a library to help with concurrent programming in native solidity. The library provides functions wrapped as native solidity smart contracts deployed at some reserved addresses. The EVM adaptor intercepts  invocations to these special smart contracts and redirect them to the Arcology's handling procedures.
 
-#### 7.8.3. StateDB Adaptors
+#### 7.8.3. [VM Adaptors](https://github.com/arcology-network/vm-adaptor)
 
-The stateDB adaptors bridges the gap between native VM and Arcology platform. To work with Arcology, each type of native VM must implement its own StateDB. In many cases, supporting a new VM type only involves in implementing a new state access adaptor and some having abilities to access Arcology’s concurrent library.  
+The VM adaptors bridges the gap between native VM and Arcology platform. To work with Arcology, each type of native VM must implement its own StateDB. In many cases, supporting a new VM type only involves in implementing a new state access adaptor and some having abilities to access Arcology’s concurrent library.  
 
 #### 7.8.4. Transition Cache
 
@@ -356,8 +355,7 @@ The workflow below illustrate the major steps involved in the transaction execut
 
 10. The scheduler service will update its conflict history database based on newly discovered conflict pattern, if any.
 
-
-### 7.9. Arbitrator Service
+### 7.9. [Arbitrator Service](https://github.com/arcology-network/arbitrator-svc)
 
 The Arbitrator will collect all the transaction execution results and look for potential access conflict. The transactions causing conflicts will be reverted together with their state transitions. 
 The Arbitrator service will send the conflicting transactions back to the scheduler service.  The whole process is completely deterministic. Arbitrator determines conflict status based on the following the following conflict model.
@@ -370,7 +368,7 @@ The Arbitrator service will send the conflicting transactions back to the schedu
 
 >In the best scenario, a fully parallelized program with no conflict point can lead to virtually unlimited speedup, which is only a matter of computational resources available. The key to achieve maximum parallelizability is to avoid conflicts wherever possible.
 
-### 7.10. Eshing Service
+### 7.10. [Eshing Service](https://github.com/arcology-network/eshing-svc)
 
 Permissionless blockchains are dependent on Merkle proofs to verify the authenticity and integrity of blockchain data. In many other designs, for example Ethereum, the Merkle proofs and the actually state data are both stored in a Merkle tree and persisted in an embedded DB like LevelDB or RocksDB.  
 
@@ -391,7 +389,7 @@ The VMs no longer need to work with the Merkle tree to retrieve or update states
 
 The Eshing service answers Merkle proofs queries from external parties.
 
-### 7.11. Scheduler Service
+### 7.11. [Scheduler Service](https://github.com/arcology-network/scheduling-svc)
 
 The scheduler is responsible for allocating transactions, making optimal transaction execution plans, and managing resources available based on the execution strategy.
 
@@ -405,7 +403,7 @@ Developers can either implicitly declare if a call to a smart contract address i
 
 At the end of each block cycle, the scheduler service will update its internal conflict database based on conflict information detected by the Arbitrator service. If two smart contracts turns out to be conflicting with others, the system will avoid putting in the same generation in the future.
 
-### 7.12. Storage Service
+### 7.12. [Storage Service](https://github.com/arcology-network/storage-svc)
 
 Blockchains generate different types of data that need to be persisted. Over the years, many different types of database systems have been developed to meet different use bases. In-memory databases usually offers the best performance in terms of access speed. But because of limited capacity, keeping everything in RAM isn’t always practical in reality. Cloud storage services  like Amazon S3 provides cost efficient options for achieved data at cost of access speed.
 
