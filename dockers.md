@@ -70,6 +70,8 @@ The testnet should be ready at this point.
 
 ## 5. Uniswap Showcase
 
+In the client docker container the following commands to test the all-in-one testnet. **Please replace the IP address http://192.168.1.103 below with the IP of your own Node Docker.**
+
 ### 5.1. Deploy the Contracts
 
 ```sh
