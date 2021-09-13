@@ -10,7 +10,7 @@
     - [4.3 Log in to the Client Docker](#43-log-in-to-the-client-docker)
     - [4.4 Showcases](#44-showcases)
   - [5. Uniswap Showcase](#5-uniswap-showcase)
-    - [5.1. Deploy the Contract](#51-deploy-the-contract)
+    - [5.1. Deploy the Contracts](#51-deploy-the-contracts)
     - [5.2. Initialize the First Token](#52-initialize-the-first-token)
     - [5.3. Initialize the Second Token](#53-initialize-the-second-token)
     - [5.4. Approve the First Token](#54-approve-the-first-token)
@@ -30,6 +30,7 @@
 
 ## 1. Getting Started
 
+---
 The package has virtually everything you need to start using Acology.It is the easiest way to set up an Arcology testnet. THe docker engine is probably the only thing you will need other than the docker images. There are three major components.
 
 - A Node Docker image
@@ -38,8 +39,9 @@ The package has virtually everything you need to start using Acology.It is the e
 
 ![alt text](./img/testnet/docker-relationship.svg)
 
-
 ## 2. Download the Node Docker
+
+---
 
 ```sh
 sudo docker pull cody0yang/cluster:latest
@@ -47,11 +49,15 @@ sudo docker pull cody0yang/cluster:latest
 
 ## 3. Start the Node Docker
 
+---
+
 ```sh
 sudo docker run --name allinone-cluster -p 8080:8080 -d cody0yang/cluster:latest /root/dstart.sh
 ```
 
 ## 4. Download the Client Docker
+
+---
 
 ```sh
 sudo docker pull cody0yang/ammolite:latest
@@ -86,7 +92,11 @@ In the client docker container the following commands to test the all-in-one tes
 
 ## 5. Uniswap Showcase
 
-### 5.1. Deploy the Contract
+---
+The uniswap is one of the most popular DeFi applications on Ethereum. The example below demonstrates how to deploy and then
+run the contracts.
+
+### 5.1. Deploy the Contracts
 
 ```sh
 cd uniswap
@@ -129,8 +139,10 @@ python sendtxs.py http://192.168.1.103:8080 data/uniswap_v2/add_liquidity_200.ou
 python sendtxs.py http://192.168.1.103:8080 data/uniswap_v2/swap_200.out
 ```
 
-
 ## 6. Dstoken Showcase
+
+---
+The dstoken was developed by MakerDAO and has been widely used in some popular applications like DAI. The version in the client docker has been optimized to allow concurrent execution.
 
 ### 6.1. Deploy the Contract
 
@@ -152,6 +164,9 @@ python sendtxs.py http://192.168.1.103:8080 data/ds_token/ds_token__100.out
 ```
 
 ## 7. Parallel Kitties Showcase
+
+---
+The CryptoKitties is one of the most popular NFT application on Ethereum platform. The original version only allow sequential execution. We optimized the CryptoKitties using Arcology's concurrent library to allow concurrent exeuction and named it ParallelKitties.
 
 ### 7.1. Deploy the Contract
 
