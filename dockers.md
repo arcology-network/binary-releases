@@ -8,14 +8,24 @@
     - [4.1. Download the Transaction Data](#41-download-the-transaction-data)
     - [4.2. Start the Client Docker](#42-start-the-client-docker)
     - [4.3 Log in to the Client Docker](#43-log-in-to-the-client-docker)
+    - [4.4 Showcases](#44-showcases)
   - [5. Uniswap Showcase](#5-uniswap-showcase)
-    - [5.1. Deploy the Contracts](#51-deploy-the-contracts)
+    - [5.1. Deploy the Contract](#51-deploy-the-contract)
     - [5.2. Initialize the First Token](#52-initialize-the-first-token)
     - [5.3. Initialize the Second Token](#53-initialize-the-second-token)
     - [5.4. Approve the First Token](#54-approve-the-first-token)
     - [5.5. Approve the Second Token](#55-approve-the-second-token)
     - [5.6. Add to the Liquidity Pool](#56-add-to-the-liquidity-pool)
     - [5.7. Start Swap Tokens](#57-start-swap-tokens)
+  - [6. Dstoken Showcase](#6-dstoken-showcase)
+    - [6.1. Deploy the Contract](#61-deploy-the-contract)
+    - [6.2. Mint Tokens](#62-mint-tokens)
+    - [6.3. Transfer Tokens](#63-transfer-tokens)
+  - [7. Parallel Kitties Showcase](#7-parallel-kitties-showcase)
+    - [7.1. Deploy the Contract](#71-deploy-the-contract)
+    - [7.2. Generate the First Generation](#72-generate-the-first-generation)
+    - [7.3. Transfer Kitties](#73-transfer-kitties)
+    - [8. Coin Transfer](#8-coin-transfer)
 
 
 ## 1. Getting Started
@@ -68,11 +78,15 @@ You can log in to the docker contain with the credential below.
 
 The testnet should be ready at this point. 
 
+### 4.4 Showcases
+
+In the client docker container the following commands to test the all-in-one testnet.
+
+>**Please replace the IP address http://192.168.1.103 below with the IP of your own Node Docker.**
+
 ## 5. Uniswap Showcase
 
-In the client docker container the following commands to test the all-in-one testnet. **Please replace the IP address http://192.168.1.103 below with the IP of your own Node Docker.**
-
-### 5.1. Deploy the Contracts
+### 5.1. Deploy the Contract
 
 ```sh
 cd uniswap
@@ -113,4 +127,54 @@ python sendtxs.py http://192.168.1.103:8080 data/uniswap_v2/add_liquidity_200.ou
 
 ```sh
 python sendtxs.py http://192.168.1.103:8080 data/uniswap_v2/swap_200.out
+```
+
+
+## 6. Dstoken Showcase
+
+### 6.1. Deploy the Contract
+
+```sh
+cd ds_token
+python deploy.py ./contracts/ http://192.168.1.103:8080 ab3884806d0351e807b2e17a26ed38238deacfa53cc3c552a27bd7d62fbfb987
+```
+
+### 6.2. Mint Tokens
+
+```sh
+python sendtxs.py http://192.168.1.103:8080 data/ds_token/ds_token_mint_200.out
+```
+
+### 6.3. Transfer Tokens
+
+```sh
+python sendtxs.py http://192.168.1.103:8080 data/ds_token/ds_token__100.out
+```
+
+## 7. Parallel Kitties Showcase
+
+### 7.1. Deploy the Contract
+
+```sh
+cd parallel_kitties
+python deploy_v2.py http://192.168.1.103:8080 ../data/genesis_accounts_200.txt
+```
+
+### 7.2. Generate the First Generation
+
+```sh
+python sendtxs.py http://192.168.1.103:8080 data/pk/pk_init_gen0_200.out
+```
+
+### 7.3. Transfer Kitties
+
+```sh
+python sendtxs.py http://192.168.1.103:8080 data/pk/pk_kitty_transfer_100.out
+```
+
+### 8. Coin Transfer
+
+```sh
+coin_transfer
+python sendtxs.py http://192.168.1.103:8080 data/coin_transfer/simple_transfer_100.out
 ```
