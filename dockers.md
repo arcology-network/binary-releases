@@ -42,7 +42,7 @@ sudo docker pull cody0yang/ammolite:latest
 
 ## Download the Transaction Data
 
-You may download the transaction data file from [here](./pregen_tx.tar). Uncompress the data files into a local folder, you will need to access these files from the client docker container later.
+You may download the transaction data file from [here](./data/pregen_tx.tar). Uncompress the data files into a local folder, you will need to access these files from the client docker container later.
 
 ## Start the Client Docker
 
