@@ -1,88 +1,63 @@
-# Testnet Guide (v0.9.1)
+# Arcology Testnet Guide
 
-- [Testnet Guide (v0.9.1)](#testnet-guide-v091)
+- [Arcology Testnet Guide](#arcology-testnet-guide)
   - [1. Introduction](#1-introduction)
+    - [1.1. Architecture Overview](#11-architecture-overview)
+    - [1.2. Release](#12-release)
+    - [1.3. Tools](#13-tools)
   - [2. Getting Started](#2-getting-started)
-  - [3. Architecture Overview](#3-architecture-overview)
-  - [4. Release](#4-release)
-    - [4.1 All in One](#41-all-in-one)
-  - [5. Prepare the Hosting Machines](#5-prepare-the-hosting-machines)
-  - [6. Set up the Testnet](#6-set-up-the-testnet)
-  - [7. Login to the Docker Image](#7-login-to-the-docker-image)
-  - [8. Start Ammolite](#8-start-ammolite)
-  - [9. Choose the Test Cases](#9-choose-the-test-cases)
+    - [2.1. Installation Options](#21-installation-options)
+    - [2.2. Prerequisites](#22-prerequisites)
+  - [3. Arcology Client Container](#3-arcology-client-container)
+  - [4. Applications](#4-applications)
 
 ## 1. Introduction
 
-The client software consists of multiple network services that can be deployed on multiple machines to achieve optimal performance. One of implications this type of design is increased complexicity. The testnet suite is a package containing all the necessary librares, python scripts and binary installers to make deployment and testing process easiler.
+The client software consists of multiple network services that can be deployed on multiple machines to achieve optimal performance. The testnet suite is a package containing all the necessary librares, python scripts and binary installers to make deployment and testing process easiler.
 
-The suite is designed to facilitate these tasks:
+The package is designed to facilitate the following tasks:
 
-1. **Deploy a testnet**
-2. **Interact with the testnet**
+- Deploy a testnet
+- Interact with the testnet
 
 Users with knowledge of python and blockchain should be able to start a testnet and take test runs with little effort.
 
+### 1.1. Architecture Overview
+
+Arcology consists of a number of network services communicating through MQ and RPC. These services can be deployed on multiple machines to achieve better performance. The **[Architecture Overview](./arcology-overview/arcology-overview.md)** gives an overview of the features and design details of the system.
+
+### 1.2. Release
+
+You can find all the releases and installers from **[here](https://github.com/arcology-network/benchmarking/releases)**.
+
+### 1.3. Tools
+
+The **[deployment](https://github.com/arcology-network/deployments)** project contains a set of tools to automate the installation process.
+
 ## 2. Getting Started
 
-A client has of a number of network services communicating through MQ and RPC. These services can be deployed on multiple machines to achieve better performance. The whole installation process consist of the following major steps.
+**The easiest to way to start working on Arcology** is to use the docker images come with the stardard Arcology releases. Just **[check this out](./allinone-node-docker.md)** for more information. You can skip the installation steps if you have decided to the all-in-one docker.
 
-![alt text](./img/installation-steps.png)
+### 2.1. Installation Options
 
-## 3. Architecture Overview
+Arcology also offers other testnet setup modes for you to choose. Please read through **[this document](./installation-comparison.md)**, before trying to start a testnet.
 
-The [Architecture Overview](./arcology-overview/arcology-overview.md) gives an overview of the features and design details of the system.
+### 2.2. Prerequisites
 
-## 4. Release
+- Ubuntu 20.04
+- Docker Engine
 
-You can find all the releases from **[here](https://github.com/arcology-network/benchmarking/releases)**
+## 3. Arcology Client Container
 
-### 4.1 All in One
+Once the client docker container is successfully connected to a working testnet, you will need a client docker to interact with the Arcology testnet. **[The client docker container has all the necessary module you will need to work with an Arcology testnet.](./ammolite-client-docker.md)**
 
-**Among all the releases, the [v1.0-alpha](https://github.com/arcology-network/benchmarking/releases/tag/v1.0-alpha) has an [all-in-one](./all-in-one-testnet.md) installation option for users to set up a minimum testnet.**
+## 4. Applications
 
-## 5. Prepare the Hosting Machines
-
-1. [On AWS](https://github.com/arcology-network/aws-ansible)
-2. On Premises
-
-Once hosting machines are ready, you can start to set up the testnet
-
----
-
-## 6. Set up the Testnet
-
-The hosting machines are ready by now, the next step is to set up node clusters on the hosting machine.
-The [deployment](https://github.com/arcology-network/deployments) project contains a set of tools to automate the process. Once testnet is live, it is ready to process transactions.  
-
-## 7. Login to the Docker Image
-
-The docker container has all necessary modules included to interact with the network. First, you need to login to the container.
-
-```shell
-ssh -p 32768 root@[Your docker's host IP]
-```
-
-- **Username**:   root
-- **Password**:   frY6CvAy8c9E
-
-The next step is to check the connection to the node cluster. You can find you frontend serivce ip from **testnet.json** file.
-
-```python
-$ python ./checkStatus.py [The frontend service ip]
-```
----
-
-## 8. Start Ammolite
-
-To use [Ammolite](https://github.com/arcology-network/ammolite), just start Python **in the docker image and import all necessary modules.**
-
-## 9. Choose the Test Cases
-
-The follow cases can run both interactively and programmatically.
+The following Ethereum applications have been tested on Arcology. Please check out the links to learn more
 
 - [Token transfer](https://github.com/arcology-network/parallel-coin-transfer)
 - [Parallelized CryptoKitties](https://github.com/arcology-network/parallel-kitties)
 - [Parallelized dstoken](https://github.com/arcology-network/parallel-dstoken)
+- [Uniswap v2](https://github.com/arcology-network/uniswap-testing)
   
-> Please wait for one script to complete before starting the next one. The best way to tell is by looking at the number of transactions contained in the lastest block. The system has processed all transactions once it drops to zero(not rising from zero which shows the system is picking up speed).
+

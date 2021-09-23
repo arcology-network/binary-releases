@@ -1,6 +1,6 @@
-# All in One Installation Guide (v1.0.0)
+# All-in-One Installation Guide (v1.0.0)
 
-- [All in One Installation Guide (v1.0.0)](#all-in-one-installation-guide-v100)
+- [All-in-One Installation Guide (v1.0.0)](#all-in-one-installation-guide-v100)
   - [1. Introduction](#1-introduction)
   - [2. Installation](#2-installation)
     - [2.1. Prerequisites](#21-prerequisites)
@@ -14,19 +14,15 @@
   - [3. Testnet Client](#3-testnet-client)
     - [Docker container](#docker-container)
     - [3.1. SSH into the docker container](#31-ssh-into-the-docker-container)
-  - [4. Uniswap Showcase](#4-uniswap-showcase)
 
 ## 1. Introduction
 
-This document shows how to start an all-in-one testnet one a local / remote machine.
+This document shows how to start an all-in-one testnet one a local / remote machine. Arcology is a complex system, especially when it comes to the installation. Setting up the testnet is perhaps the most challenging step. Users often get confused about certain procedures.  
 
-Arcology is a complex system, especially when it comes to the installation. Setting up the testnet is perhaps the most challenging step. Users often get confused about certain procedures.  
-
-The All-in-one helps users to host all the services on a single machine. In many cases, it is going to be a notebook or workstation. So the users won’t bother to go through the cluster setup process first, which is perhaps the most challenging step.  
-
-The all-in-one installation option trades performance for installation easiness. But it is a perfectly fine option for a beginner to start with.
+The All-in-one helps users to host all the services on a single machine. In many cases, it is going to be a notebook or workstation. So the users won’t bother to go through the cluster setup process first, which is perhaps the most challenging step. The all-in-one installation option trades performance for installation easiness. But it is a perfectly fine option for a beginner to start with.
 
 ## 2. Installation
+
 
 ### 2.1. Prerequisites
 
@@ -98,6 +94,7 @@ You should be ready to the start the testnet by now.
 ```sh
 > ./restart.sh
 ```
+
 ![alt text](./img/testnet/restart_sh.png)
 
 ## 3. Testnet Client
@@ -113,12 +110,8 @@ The installation scripts will automatically start a Docker container on the host
 
 ### 3.1. SSH into the docker container
 
-If your host machine's IP address is 192.168.1.109 then
+If your host machine's IP address is 192.168.1.109 then ssh into the client docker container. The testnet is ready at this point
 
 ```sh
 > ssh -p 32768 root@192.168.1.109
 ```
-
-## 4. Uniswap Showcase
-
-The testnet is ready at this point. [This document shows you how to compile, deploy and run Uniswap V2 on the testnet.]((./uniswap-v2.md) )
