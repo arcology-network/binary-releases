@@ -4,7 +4,7 @@
   - [1. Getting Started](#1-getting-started)
     - [1.1. Contents](#11-contents)
     - [1.2. System Requirements](#12-system-requirements)
-    - [1.3. **Download the testnet Docker**](#13-download-the-testnet-docker)
+    - [1.3. **Download the Testnet Docker**](#13-download-the-testnet-docker)
     - [1.4. **Start the testnet Docker**](#14-start-the-testnet-docker)
     - [1.5. **Testnet Docker Status**](#15-testnet-docker-status)
       - [1.5.1. Log in to the Testnet Docker](#151-log-in-to-the-testnet-docker)
@@ -31,7 +31,7 @@ The transaction data files are pregenerated transaction data to facilite the tes
 - ubuntu 20.04
 - Docker Engine
 
-### 1.3. **Download the testnet Docker**
+### 1.3. **Download the Testnet Docker**
 
 ```sh
 sudo docker pull cody0yang/cluster:latest
