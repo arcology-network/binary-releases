@@ -36,7 +36,7 @@ The **[deployment](https://github.com/arcology-network/deployments)** project co
 
 ## 2. Getting Started
 
-**The easiest to way to start working on Arcology is to use the docker images come with the stardard Arcology releases. Just **[check this out](./testnet-docker-allinone.md)** for more information. You can skip the installation steps if you have decided to the all-in-one docker.**
+**[The easiest to way to start working on Arcology is to use the docker images come with the stardard Arcology releases. Just check this out for more information](./testnet-docker-allinone.md).** You can skip the installation steps if you have decided to the all-in-one docker.
 
 ### 2.1. Installation Options
 
