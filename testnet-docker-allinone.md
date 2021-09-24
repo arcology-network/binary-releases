@@ -4,52 +4,55 @@
   - [1. Getting Started](#1-getting-started)
     - [1.1. Contents](#11-contents)
     - [1.2. System Requirements](#12-system-requirements)
-    - [1.3. **Download the Testnet Docker**](#13-download-the-testnet-docker)
-    - [1.4. **Start the testnet Docker**](#14-start-the-testnet-docker)
-    - [1.5. **Testnet Docker Status**](#15-testnet-docker-status)
-      - [1.5.1. Log in to the Testnet Docker](#151-log-in-to-the-testnet-docker)
+    - [1.3. **Download the Testnet Container**](#13-download-the-testnet-container)
+    - [1.4. **Start the Testnet Container**](#14-start-the-testnet-container)
+    - [1.5. **Check the Testnet**](#15-check-the-testnet)
+      - [1.5.1. Log in to the Testnet Container](#151-log-in-to-the-testnet-container)
       - [1.5.2. Log in to the Testnet Docker](#152-log-in-to-the-testnet-docker)
-  - [2. Interact with the Testnet Docker](#2-interact-with-the-testnet-docker)
+  - [2. Interact with the Testnet](#2-interact-with-the-testnet)
 
 ## 1. Getting Started
 
-The dockers has virtually everything you need to get started. It is probably the easiest way to set up a testnet. THe docker engine is thing you will need other than the docker images.
+The testnet docker container has virtually everything you need to get started. It is probably the easiest way to set up a testnet. THe docker engine is only thing you will need other than the docker images.
 
 ### 1.1. Contents
 
-There are three major components in the docker package.
+There are three major components in the docker container package.
 
-- A Testnet Docker image
-- A Client Docker image
+- A Testnet container
+- A Client container
+- Transaction data files
 
 The transaction data files are pregenerated transaction data to facilite the test. They are part of the testnet installers, which need to be downloaded separately from [here](https://github.com/arcology-network/benchmarking/releases)
 
-![alt text](./img/testnet/docker-relationship.svg)
+![alt text](./img/testnet/testnet-container.svg)
 
 ### 1.2. System Requirements
 
 - ubuntu 20.04
 - Docker Engine
 
-### 1.3. **Download the Testnet Docker**
+### 1.3. **Download the Testnet Container**
 
 ```sh
 sudo docker pull cody0yang/cluster:latest
 ```
 
-### 1.4. **Start the testnet Docker**
+### 1.4. **Start the Testnet Container**
 
-Use the the command below to start the docker container and map the port of your container to the host machine. You will need to use the host IP to access the docker container.
+Use the the command below to start the testnet container and map the port `8080` to the host machine. You will need to use the host IP to access the docker container later. Remember, the host machine is the one on which your testnet docker is running.
 
 ```sh
 sudo docker run --name allinone-cluster -p 8080:8080 -d cody0yang/cluster:latest /root/dstart.sh
 ```
 
-Your client docker should be listening on port 8080 and ready to be connected on your host machine. Again, the host is the machine on which your testnet docker is running.
+### 1.5. **Check the Testnet**
 
-### 1.5. **Testnet Docker Status**
+Your client docker should be listening on port 8080 and ready to be connected by know. The next step is to check the testnet status to see if everything is running properly.
 
-#### 1.5.1. Log in to the Testnet Docker
+#### 1.5.1. Log in to the Testnet Container
+
+First, you will need to log in to the testnet container with the command below
 
 ```sh
 sudo docker exec -it allinone-cluster /bin/sh
@@ -57,7 +60,7 @@ sudo docker exec -it allinone-cluster /bin/sh
 
 #### 1.5.2. Log in to the Testnet Docker
 
-Use the command below to check the testnet status.
+Then, use these commands to check the if all the Arcology services are running. You can simply copy and paste them into your console.
 
 ``` sh
 ps -e | grep arbitrator-svc
@@ -74,10 +77,10 @@ ps -e | grep frontend-svc
 ps -e | grep pool-svc
 ```
 
-<u>If everything is running properly, you should be able to see a list of running services, which should look like this.</u>
+<u>If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this.</u>
 
 ![alt text](./img/testnet/allinone-testnet-docker-svclist.png)
 
-## 2. Interact with the Testnet Docker
+## 2. Interact with the Testnet
 
-Once the testnet docker has been started, it is listening on port 8080 of the host machine and ready to be connected. **[This document describes how to connect to a the testnet docker from a client docker.](./ammolite-client-docker.md)**
+Now, a fully function Arcology testnet has been deployed. **[This document describes how to connect to a the testnet docker and send it transactions from a client container.](./ammolite-client-docker.md)**
