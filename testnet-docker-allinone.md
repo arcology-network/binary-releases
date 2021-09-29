@@ -45,6 +45,7 @@ Use the the command below to start the testnet container and map the port `8080`
 ```sh
 sudo docker run --name allinone-cluster -p 8080:8080 -d cody0yang/cluster:latest /root/dstart.sh
 ```
+> It will take some time for the services to start. Please wait for some time before proceeding to the next steps.
 
 ### 1.5. **Check the Testnet**
 
@@ -77,9 +78,11 @@ ps -e | grep frontend-svc
 ps -e | grep pool-svc
 ```
 
-<u>If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this.</u>
+If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this. 
 
 ![alt text](./img/testnet/allinone-testnet-docker-svclist.png)
+
+**The whole starting process may take a few minutes. If you only see some of the services are running, that is usually because other services haven't been started yet.**
 
 ## 2. Interact with the Testnet
 
