@@ -82,7 +82,7 @@ If everything is in order, you should be able to see a list of Arcology services
 
 ![alt text](./img/testnet/allinone-testnet-docker-svclist.png)
 
-**The whole starting process may take a few minutes. If you only see some of the services are running, that is usually because other services haven't been started yet.**
+>The whole starting process may take a few minutes. If you only see some of the services running, that is usually because other services haven't been started yet. You can check back later.
 
 ## 2. Interact with the Testnet
 
