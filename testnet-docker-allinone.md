@@ -1,6 +1,6 @@
-# All-in-One Testnet Docker Guide (v1.1.0)
+# All-in-One Testnet Docker Guide
 
-- [All-in-One Testnet Docker Guide (v1.1.0)](#all-in-one-testnet-docker-guide-v110)
+- [All-in-One Testnet Docker Guide](#all-in-one-testnet-docker-guide)
   - [1. Getting Started](#1-getting-started)
     - [1.1. Contents](#11-contents)
     - [1.2. System Requirements](#12-system-requirements)
@@ -8,8 +8,12 @@
     - [1.4. **Start the Testnet Container**](#14-start-the-testnet-container)
     - [1.5. **Check the Testnet**](#15-check-the-testnet)
       - [1.5.1. Log in to the Testnet Container](#151-log-in-to-the-testnet-container)
-      - [1.5.2. Log in to the Testnet Docker](#152-log-in-to-the-testnet-docker)
+      - [1.5.2. Check the Services](#152-check-the-services)
+      - [1.5.3. Check the Connectivity](#153-check-the-connectivity)
   - [2. Interact with the Testnet](#2-interact-with-the-testnet)
+  - [3. Troubleshooting](#3-troubleshooting)
+    - [3.1. I Cann't See All the Services](#31-i-cannt-see-all-the-services)
+    - [3.2. The Localhost Doesn't Work](#32-the-localhost-doesnt-work)
 
 ## 1. Getting Started
 
@@ -23,7 +27,7 @@ There are three major components in the docker container package.
 - A Client container
 - Transaction data files
 
-The transaction data files are pregenerated transaction data to facilite the test. They are part of the testnet installers, which need to be downloaded separately from [here](https://github.com/arcology-network/benchmarking/releases)
+The transaction data files are pregenerated transaction data to facilite the test. They are part of the testnet installers, which need to be downloaded separately from **[here](https://github.com/arcology-network/benchmarking/releases)**
 
 ![alt text](./img/testnet/testnet-container.svg)
 
@@ -49,17 +53,18 @@ sudo docker run --name allinone-cluster -p 8080:8080 -d cody0yang/cluster:latest
 
 ### 1.5. **Check the Testnet**
 
-Your client docker should be listening on port 8080 and ready to be connected by know. The next step is to check the testnet status to see if everything is running properly.
+Your testnet docker should be listening on port 8080 and ready to be connected by know.
+
 
 #### 1.5.1. Log in to the Testnet Container
 
-First, you will need to log in to the testnet container with the command below
+ The next step is to check the testnet status to see if everything is running properly. First, you will need to log in to the testnet container with the command below.
 
 ```sh
 sudo docker exec -it allinone-cluster /bin/sh
 ```
 
-#### 1.5.2. Log in to the Testnet Docker
+#### 1.5.2. Check the Services
 
 Then, use these commands to check the if all the Arcology services are running. You can simply copy and paste them into your console.
 
@@ -82,8 +87,43 @@ If everything is in order, you should be able to see a list of Arcology services
 
 ![alt text](./img/testnet/allinone-testnet-docker-svclist.png)
 
->The whole starting process may take a few minutes. If you only see some of the services running, that is usually because other services haven't been started yet. You can check back later.
+#### 1.5.3. Check the Connectivity
+
+The testnet container should be listening on port 8080 of your host machine already. To check if the testnet is reachable, paste the following line into your host machine browser. Replace the `localhost` address with the host IP, if you are connecting from other machines.
+
+```sh
+http://localhost:8080/blocks/latest?access_token=access_token&transactions=false
+```
+
+You should be able to see somthing like the blow.
+
+```json
+{
+  "block": {
+      "height":41285,
+      "hash":"b2858fbefc496e844e1a7e8a0d2ee23afb8c18492f1ce694b70160fe96db7c47",
+      "coinbase":"0x971Df33B1EFe022ec4173E61f1113C3887c08b8E",
+      "number":0,
+      "transactions":null,
+      "gasUsed":0,
+      "elapsedTime":173000,
+      "timestamp":1632962218
+  }
+}
+```
 
 ## 2. Interact with the Testnet
 
 Now, a fully function Arcology testnet has been deployed. **[This document describes how to connect to a the testnet docker and send it transactions from a client container.](./ammolite-client-docker.md)**
+
+## 3. Troubleshooting
+
+### 3.1. I Cann't See All the Services
+
+The whole starting process may take a few minutes. If you only see some of the services running, that is usually because other services haven't been started yet, just can check back later.
+
+### 3.2. The Localhost Doesn't Work
+
+Don't use the localhost 127.0.0.1 when you try to connect to a testnet from the client docker, even if the testnet container is running on the same host machine with you client container.
+
+ 

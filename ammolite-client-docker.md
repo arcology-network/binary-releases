@@ -3,10 +3,9 @@
 - [Ammolite Client Docker Container](#ammolite-client-docker-container)
   - [1. What Is Ammolite](#1-what-is-ammolite)
   - [2. Prerequisites](#2-prerequisites)
-  - [3. Downloads](#3-downloads)
+  - [3. The Package](#3-the-package)
+    - [3.1.  Pregenerated Transactions](#31--pregenerated-transactions)
     - [3.2. Structure](#32-structure)
-    - [3.2.  Pregenerated Transactions](#32--pregenerated-transactions)
-    - [3.3. **The Installer Package**](#33-the-installer-package)
   - [4.  Work with the Client Container](#4--work-with-the-client-container)
     - [4.1. Start the Client Container](#41-start-the-client-container)
     - [4.2. Container Login](#42-container-login)
@@ -30,13 +29,20 @@ The client docker is pretty much self-contained. You only the following items to
 - An Arcology Testnet
 - Docker Engine
 
-## 3. Downloads
+## 3. The Package
 
-Assume you are working on ubuntu. You may use the command below to get the latest Arcology client docker.
+The package consists of two major parts.
 
-```sh
-sudo docker pull cody0yang/cluster:latest
-```
+- A client docker container
+- Pregenerated transaction files
+
+### 3.1.  Pregenerated Transactions
+
+The stand Arcology releases contain some pregenearted transaction files that can be used directly in testing. There files are not part of the client docker. You will need to get them from the installer package.
+
+Download the latest installer, uncompress the package to a location of your choice, the folder structure should look like the below. There is a folder named `./testnet-installer/txs`, which containes all the pregenerated transaction files. **You will need to mount the folder to the client docker to continue the test.**
+
+![alt text](./img/testnet/tx-location.png)
 
 ### 3.2. Structure
 
@@ -54,21 +60,11 @@ The docker image containes the following files and folders.
 - uniswap: Scripts and data files for uniswap showcase  
 - utils.py: Utility tools
 
-### 3.2.  Pregenerated Transactions
-
-The stand Arcology releases contain some pregenearted transaction files that can be used directly in testing. There files are not part of the client docker. You will need to get them from the installer package.
-
-### 3.3. **The Installer Package**
-
-Download the latest installer, uncompress the package to a location of your choice, the folder structure should look like the below. There is a folder named `./testnet-installer/txs`, which containes all the pregenerated transaction files. **You will need to mount the folder to the client docker to continue the test.**
-
-![alt text](./img/testnet/tx-location.png)
-
 ## 4.  Work with the Client Container
 
 ### 4.1. Start the Client Container
 
-The following command starts the client container and mount the transaction data folder.
+The following command starts the client container and mount the transaction data folder. Replace the folder `/home/testnet-installer/txs` with the directory where your pregenerated transitions reside.
 
 ```shell
 sudo docker run --name ammo -p 32768:22 -v /home/testnet-installer/txs:/root/data  -d cody0yang/ammolite /usr/sbin/sshd  -D
@@ -76,7 +72,7 @@ sudo docker run --name ammo -p 32768:22 -v /home/testnet-installer/txs:/root/dat
 
 ### 4.2. Container Login
 
-Run the command to log in to the client container. Simply **replace `192.168.1.103` with your host machine IP (Not docker's).** The host is the machine on which the client docker is running.
+Run the command to log in to the container. Simply **replace `192.168.1.103` with your host machine IP.**  Again, the host is the machine on which the client docker is running.
 
 ```shell
 ssh -p 32768 root@192.168.1.103
@@ -94,6 +90,10 @@ In the client docker container, type in the command below to check if the client
 ```shell
 python checkStatus.py 192.168.1.103:8080
 ```
+
+If the testnet is working normally you will see something like the below.
+
+![alt text](./img/testnet/checkstatus.png)
 
 ### 4.3 Send the Transactions
 

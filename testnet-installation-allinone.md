@@ -1,11 +1,11 @@
-# All-in-One Installation Guide (v1.0.0)
+# All-in-One Installation Guide
 
-- [All-in-One Installation Guide (v1.0.0)](#all-in-one-installation-guide-v100)
+- [All-in-One Installation Guide](#all-in-one-installation-guide)
   - [1. Introduction](#1-introduction)
   - [2. Installation](#2-installation)
     - [2.1. Prerequisites](#21-prerequisites)
     - [2.2. Download the Installer](#22-download-the-installer)
-    - [2.3. Package Contents](#23-package-contents)
+    - [2.3. The Installer Contents](#23-the-installer-contents)
     - [2.4. Host Information](#24-host-information)
     - [2.5. Update the Installation Files](#25-update-the-installation-files)
     - [2.6. Install Dependencies](#26-install-dependencies)
@@ -31,9 +31,9 @@ The All-in-one helps users to host all the services on a single machine. In many
 
 ### 2.2. Download the Installer
 
-Download the [latest installer package](https://github.com/arcology-network/benchmarking/releases) from Arcology’s GitHub repository, then uncompress the package into a directory *on the host machine* of your choice, making you have enough permission.
+Download the [latest installer package](https://github.com/arcology-network/benchmarking/releases) from Arcology’s GitHub repository, then uncompress the package into a directory of your choice. You will need the folder when starting the client container.
 
-### 2.3. Package Contents
+### 2.3. The Installer Contents
 
 The installer package has the below structure
 
