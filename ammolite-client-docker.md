@@ -12,10 +12,6 @@
     - [4.3 Connect to a Node Cluster](#43-connect-to-a-node-cluster)
     - [4.3 Send the Transactions](#43-send-the-transactions)
   - [5. Showcases](#5-showcases)
-    - [5.1. Parallel Kitties](#51-parallel-kitties)
-    - [5.2. Parallel Dstoken](#52-parallel-dstoken)
-    - [5.3. Uniswap v2](#53-uniswap-v2)
-    - [5.4. Parallel Coin Transfer](#54-parallel-coin-transfer)
   - [6. Note](#6-note)
 
 ## 1. What Is Ammolite
@@ -111,17 +107,10 @@ The command above calls a python script file called `sendtxs.py` to load a prege
 
 There are a few applications that are available on Arcology testnet. These cases are part of the client docker, so you may run the directly without having to install them manually.
 
-### 5.1. [Parallel Kitties](https://github.com/arcology-network/parallel-kitties/blob/master/parallel-kitties-test-scripts.md)
-
-### 5.2. [Parallel Dstoken](https://github.com/arcology-network/parallel-dstoken/blob/master/parallel-dstoken-test-scripts.md)
-
-### 5.3. [Uniswap v2](https://github.com/arcology-network/uniswap-testing/blob/master/uniswap-v2-test-scripts.md)
-
-### 5.4. Parallel Coin Transfer
-
-```sh
-python sendtxs.py http://192.138.1.103:8080 data/coin_transfer/simple_transfer_100.out
-```
+- [Parallel Kitties](https://github.com/arcology-network/parallel-kitties/blob/master/parallel-kitties-test-scripts.md)
+- [Parallel Dstoken](https://github.com/arcology-network/parallel-dstoken/blob/master/parallel-dstoken-test-scripts.md)
+- [Uniswap v2](https://github.com/arcology-network/uniswap-testing/blob/master/uniswap-v2-test-scripts.md)
+- [Parallel Coin Transfer](./parallel-coin-transfer.md)
 
 ## 6. Note
 

@@ -10,10 +10,13 @@
       - [1.5.1. Log in to the Testnet Container](#151-log-in-to-the-testnet-container)
       - [1.5.2. Check the Services](#152-check-the-services)
       - [1.5.3. Check the Connectivity](#153-check-the-connectivity)
+    - [1.7. Stop the Testnet](#17-stop-the-testnet)
+    - [1.8. Remove the Container](#18-remove-the-container)
   - [2. Interact with the Testnet](#2-interact-with-the-testnet)
   - [3. Troubleshooting](#3-troubleshooting)
     - [3.1. I Cann't See All the Services](#31-i-cannt-see-all-the-services)
     - [3.2. The Localhost Doesn't Work](#32-the-localhost-doesnt-work)
+    - [3.3. Why Am I Receiving {"sysdbg":"block is nil"}](#33-why-am-i-receiving-sysdbgblock-is-nil)
 
 ## 1. Getting Started
 
@@ -110,9 +113,23 @@ Aagin, you should see somthing like the blow.
 }
 ```
 
+### 1.7. Stop the Testnet
+
+Use the command below the stop the testnet. Please don't try to start a testnet docker while another one is still running. Always stop the running instance first before starting the next one. Otherwise you might have to reinstall the testnet docker.
+
+```sh
+sudo docker stop allinone-cluster 
+```
+
+### 1.8. Remove the Container
+
+```sh
+sudo docker rm allinone-cluster 
+```
+
 ## 2. Interact with the Testnet
 
-Now, **a fully function Arcology testnet has been deployed.** [This document describes how to connect to the testnet docker and send in transactions from a client container.](./ammolite-client-docker.md)
+**Now, a fully functional Arcology testnet has been deployed. [This document describes how to connect to the testnet docker and send in transactions from a client container.](./ammolite-client-docker.md)**
 
 ## 3. Troubleshooting
 
@@ -124,4 +141,6 @@ The whole starting process may take a few minutes. If you only see some of the s
 
 Don't use the localhost 127.0.0.1 when you try to connect to a testnet from the client docker, even if the testnet container is running on the same host machine with you client container.
 
- 
+### 3.3. Why Am I Receiving {"sysdbg":"block is nil"}
+
+If you are receiving {"sysdbg":"block is nil"} while [checking the connectivity](#153-check-the-connectivity), please [remove the testnet docker](#18-remove-the-container) first and then [start the testnet again.](#14-start-the-testnet-container)
