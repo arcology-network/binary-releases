@@ -55,7 +55,6 @@ sudo docker run --name allinone-cluster -p 8080:8080 -d cody0yang/cluster:latest
 
 Your testnet docker should be listening on port 8080 and ready to be connected by know.
 
-
 #### 1.5.1. Log in to the Testnet Container
 
  The next step is to check the testnet status to see if everything is running properly. First, you will need to log in to the testnet container with the command below.
@@ -66,7 +65,7 @@ sudo docker exec -it allinone-cluster /bin/sh
 
 #### 1.5.2. Check the Services
 
-Then, use these commands to check the if all the Arcology services are running. You can simply copy and paste them into your console.
+Then, use these commands to check the if all the Arcology services are running. You can simply copy and paste them into your container console.
 
 ``` sh
 ps -e | grep arbitrator-svc
@@ -83,19 +82,18 @@ ps -e | grep frontend-svc
 ps -e | grep pool-svc
 ```
 
-If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this. 
+If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this.
 
 ![alt text](./img/testnet/allinone-testnet-docker-svclist.png)
 
 #### 1.5.3. Check the Connectivity
 
-The testnet container should be listening on port 8080 of your host machine already. To check if the testnet is reachable, paste the following line into your host machine browser. Replace the `localhost` address with the host IP, if you are connecting from other machines.
-
+The testnet container should be listening on port 8080 of your host machine already. To check if the testnet is reachable, paste the following line into your **host machine browser**. Replace the `localhost` address with the host IP, if you are connecting **from other machines.**
 ```sh
 http://localhost:8080/blocks/latest?access_token=access_token&transactions=false
 ```
 
-You should be able to see somthing like the blow.
+Aagin, you should see somthing like the blow.
 
 ```json
 {
@@ -114,7 +112,7 @@ You should be able to see somthing like the blow.
 
 ## 2. Interact with the Testnet
 
-Now, a fully function Arcology testnet has been deployed. **[This document describes how to connect to a the testnet docker and send it transactions from a client container.](./ammolite-client-docker.md)**
+Now, **a fully function Arcology testnet has been deployed.** [This document describes how to connect to the testnet docker and send in transactions from a client container.](./ammolite-client-docker.md)
 
 ## 3. Troubleshooting
 
