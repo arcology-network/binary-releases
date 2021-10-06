@@ -37,6 +37,8 @@ The transaction data files are pregenerated transaction data to facilite the tes
 ### 1.2. System Requirements
 
 - ubuntu 20.04
+- 2 Cores
+- 16G RAM
 - Docker Engine
 
 ### 1.3. **Download the Testnet Container**
@@ -143,4 +145,4 @@ Don't use the localhost 127.0.0.1 when you try to connect to a testnet from the 
 
 ### 3.3. Why Am I Receiving {"sysdbg":"block is nil"}
 
-If you are receiving {"sysdbg":"block is nil"} while [checking the connectivity](#153-check-the-connectivity), please [remove the testnet docker](#18-remove-the-container) first and then [start the testnet again.](#14-start-the-testnet-container)
+If you are receiving {"sysdbg":"block is nil"} in the brower window, while [checking the connectivity](#153-check-the-connectivity), please [remove the testnet docker](#18-remove-the-container) first and then [start the testnet again.](#14-start-the-testnet-container)
