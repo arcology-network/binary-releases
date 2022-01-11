@@ -1,9 +1,12 @@
-# Arcology Overview (v0.9.1)
+# Arcology Architecture Overview (v1.2)
 
 This document covers some key features and the design considerations behind Arcology network. It isn’t designated to explain every single technical detail within the system, but rather to offer a big picture of the whole design characteristics.
 
-- [Arcology Overview (v0.9.1)](#arcology-overview-v091)
+- [Arcology Architecture Overview (v1.2)](#arcology-architecture-overview-v12)
   - [1. What is Arcology](#1-what-is-arcology)
+    - [Sidechain](#sidechain)
+    - [1.1. Parallel Processing](#11-parallel-processing)
+    - [1.2. Composability](#12-composability)
   - [2. Architecture Design](#2-architecture-design)
   - [3. Cost and Complexities](#3-cost-and-complexities)
   - [4. Key Features](#4-key-features)
@@ -52,17 +55,25 @@ This document covers some key features and the design considerations behind Arco
 
 ## 1. What is Arcology
 
-Arcology is the new generation of blockchain system. It is arming to solve some of the deeply rooted issues within current blockchain designs. Arcology adopts an event-driven, microservice based Architecture to address scalability, it is foundationally different from other blockchain design in many different ways.
+Arcology is the new generation of blockchain system utilizing parallel computation to solve some of the deeply rooted issues within current blockchain designs. It is foundationally different from many other blockchain designs in a number of ways.
 
-In the centralized world , when there are scalability problems, a solution is to use multiple threading. If one machine cannot live up to the task, then just spread the workload to multiple machines.  But with current blockchain design there isn’t a lot you can do.
+In the centralized world, when there are scalability problems, Horizontal scaling an effective solution. If a single design cannot handle to workload, simply use multiple-threading. If one machine cannot live up to the task, just spread the workload to multiple machines.
 
-For virtually all blockchain project, a piece of client software has an all-in-one design, (e.g., Geth for Ethereum). They usually have a P2P, a consensus module, an embedded database module (LevelDB, RocksDB), one single threaded EVM etc.  
+Today, virtually all blockchain projects have a monolithic design, (e.g., Geth for Ethereum) and can only be installed on a single machine. In short, the current blockchain designs fail to explore the benefits of horizontal scaling, a solution has been proven effective for the scalability issue.
 
-In contrast, of the major benefits of Arcology is allowing multiple instances of the same functional module to work together sharing the workload. For the transaction processing part, we can have multiple VMs working in parallel to process transactions.
+### Sidechain
+
+### 1.1. Parallel Processing
+
+Arcology has many inherent design advantages over other blockchain systems. One of the major benefits of Arcology is allowing multiple instances of the same functional module to work together sharing the workload.
+
+### 1.2. Composability
+
+Unlike other scaling solutions usually trade composabilty for some performance gain, smart contracts on Arcology are fully composable.  
 
 ## 2. Architecture Design
 
-Arcology has an event-driven, microservice architecture. The goal is to have a new paradigm architecture for both permissioned and permissionless networks.
+Arcology adpoted an event-driven, asynchronous microservice architecture. The goal is to have a new paradigm architecture for both permissioned and permissionless networks.
 
 Arcology is a high-performance and general-purpose system that naturally demands a flexible, scalable and loosely coupled system architecture. All key functional modules can be horizontally scaled and new service can be integrated into the existing framework to fully harness the computational power that clusters offer.  The architecture has following benefits:
 
