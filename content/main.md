@@ -55,23 +55,23 @@ Multifactor PoS guarantees the maximum level of decentralization without sacrifi
 
 ---
 
-## 3. Showcases
+## 3. [Showcases](../content/showcases/showcases.md)
 
 ### 3.1. Coin transfer
 
-Makes a big propotion of on-chain activities, Check out how Arcology handle simplee transfer. [(learn more)](./showcases/coin-transfer.md)
+Makes a big propotion of on-chain activities, Check out how Arcology handle simplee transfer.
 
 ### 3.2. CryptoKitties
 
-How we can possible make CryptoKitties 1000x Faster On Arcology[(learn more)](./showcases/cryptokitties.md)
+How we can possible make CryptoKitties 1000x Faster On Arcology.
 
 ### 3.3. Uniswap V2
 
-See how one of the most successful DeFi Application on Ethereum works on Arcology[(learn more)](./showcases/uniswap-v2.md)
+See how one of the most successful DeFi Application on Ethereum works on Arcology
 
 ### 3.4. DSToken
 
-ERC20 tokens play a big goal in the whole DeFi landscape. Arcology can help developers build lightning fast ERC20 applications. [(learn more)](./showcases/parallel-destoken.md)
+ERC20 tokens play a big goal in the whole DeFi landscape. Arcology can help developers build lightning fast ERC20 applications.
 
 ---
 ## 4. Developers
