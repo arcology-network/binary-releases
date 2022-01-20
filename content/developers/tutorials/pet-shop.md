@@ -14,8 +14,7 @@ There is a tutorial example in Truffle development document that you can find he
 The only difference is that Arcology uses its own blockchain call Monaco AOI in place of [Ganache](https://trufflesuite.com/ganache/). Run the command below to download and start the test network docker container
 
 ```sh
-docker run --name allinone-cluster -p 8080:8080 -p 7545:7545 -d cody0yang/cluster:1.13 /root/dstart.sh
-  chainID:100  rpcPort:7545
+docker run --name allinone-cluster -p 8080:8080 -p 7545:7545 -d cody0yang/cluster:1.13 /root/dstart.sh chainID:100  rpcPort:7545
 ```
 
 ### 1.3. Comparison Chart
