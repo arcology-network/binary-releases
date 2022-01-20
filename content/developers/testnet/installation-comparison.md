@@ -36,7 +36,7 @@ Using the docker images come with Arcology releases is probably the easist way t
 
 The main focus here is to help users get familiar with Arcology. So if you are new to Arcology or developing smart contracts on Arcology platform, we strongly suggest you to try the docker version first before moving to full-scale setups
 
-[This link explains how to use Arcology docker containers](./allinone-node-docker.md)
+[This link explains how to use Arcology docker containers](./testnet-docker-allinone.md)
 
 ### 2.2. Single Machine Installation
 

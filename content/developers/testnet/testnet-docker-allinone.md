@@ -1,6 +1,6 @@
-# All-in-One Testnet Docker Guide
+# All-in-One Testnet Docker Guide (v1.3)
 
-- [All-in-One Testnet Docker Guide](#all-in-one-testnet-docker-guide)
+- [All-in-One Testnet Docker Guide (v1.3)](#all-in-one-testnet-docker-guide-v13)
   - [1. Getting Started](#1-getting-started)
     - [1.1. Contents](#11-contents)
     - [1.2. System Requirements](#12-system-requirements)
@@ -13,6 +13,8 @@
     - [1.7. Stop the Testnet](#17-stop-the-testnet)
     - [1.8. Remove the Container](#18-remove-the-container)
   - [2. Interact with the Testnet](#2-interact-with-the-testnet)
+    - [2.1. Using Ethereum Tools](#21-using-ethereum-tools)
+    - [2.2. Using Ammolite](#22-using-ammolite)
   - [3. Troubleshooting](#3-troubleshooting)
     - [3.1. I Cann't See All the Services](#31-i-cannt-see-all-the-services)
     - [3.2. The Localhost Doesn't Work](#32-the-localhost-doesnt-work)
@@ -44,15 +46,17 @@ The transaction data files are pregenerated transaction data to facilite the tes
 ### 1.3. **Download the Testnet Container**
 
 ```sh
-sudo docker pull cody0yang/cluster:latest
+sudo docker pull cody0yang/cluster:1.13
 ```
 
 ### 1.4. **Start the Testnet Container**
 
-Use the the command below to start the testnet container and map the port `8080` to the host machine. You will need to use the host IP to access the docker container later. Remember, the host machine is the one on which your testnet docker is running.
+Use the the command below to start the testnet container and map the port `8080` to the host machine. You will need to use the host IP to access the docker container later. Remember, the host machine is the one on which your testnet docker is running. 
+
+The port 7545 is for handling standard Ethereum json rpc calls so users can use the standard Ethereum tools like Truffle, Remix and MetaMask to connect.
 
 ```sh
-sudo docker run --name allinone-cluster -p 8080:8080 -d cody0yang/cluster:latest /root/dstart.sh
+docker run --name allinone-cluster -p 8080:8080 -p 7545:7545 -d cody0yang/cluster:1.13 /root/dstart.sh chainID:100 rpcPort:7545
 ```
 > It will take some time for the services to start. Please wait for some time before proceeding to the next steps.
 
@@ -76,7 +80,7 @@ Then, use these commands to check the if all the Arcology services are running. 
 ps -e | grep arbitrator-svc
 ps -e | grep eshing-svc
 ps -e | grep generic-hashing-svc
-ps -e | grep ppt-svc
+ps -e | grep tpp-svc
 ps -e | grep scheduling-svc
 ps -e | grep exec-svc
 ps -e | grep core-svc
@@ -85,6 +89,7 @@ ps -e | grep storage-svc
 ps -e | grep gateway-svc
 ps -e | grep frontend-svc
 ps -e | grep pool-svc
+ps -e | eth-api-svc
 ```
 
 If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this.
@@ -131,7 +136,13 @@ sudo docker rm allinone-cluster
 
 ## 2. Interact with the Testnet
 
-**Now, a fully functional Arcology testnet has been deployed. [This document describes how to connect to the testnet docker and send in transactions from a client container.](./ammolite-client-docker.md)**
+**Now, a fully functional Arcology testnet has been deployed.**. To interact with an Arcology test network there are 2 possible ways.
+
+### 2.1. Using Ethereum Tools
+Since Arcology is fully EVM compatabile and support all standard json rpc api, you can use the standard Ethereum tools like Truffle, Remix and MetaMask to interact with Arcology network and the experience isn't much different from connecting to an Ethereum test network from user's point of view. [Please check Pet Shop tutorial](../tutorials/pet-shop.md)
+
+### 2.2. Using Ammolite
+Ammolite is another option and it is especially effective for handing large volume for transaction data, which is something you cannot do very esily with the standard Ethereum tools. [This document describes how to connect to the testnet docker and send in transactions from an Ammolite client container.](./ammolite-client-docker.md)
 
 ## 3. Troubleshooting
 

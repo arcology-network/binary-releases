@@ -1,12 +1,13 @@
 # Arcology Network (Built To Scale)
 
-**L1 Parallelism**
+**The Ultimate Blockchain Solution**
 
 
 - [Arcology Network (Built To Scale)](#arcology-network-built-to-scale)
   - [What Is Arcology](#what-is-arcology)
     - [1.1. Revolutionary](#11-revolutionary)
-    - [1.2. Scalable](#12-scalable)
+    - [1.2. L1 Parallelism](#12-l1-parallelism)
+    - [1.2. Lightning Fast](#12-lightning-fast)
   - [2. Why Arcology](#2-why-arcology)
     - [2.1. Compatibilty](#21-compatibilty)
     - [2.2. Performance](#22-performance)
@@ -25,16 +26,16 @@
     - [4.5. Demo Videos](#45-demo-videos)
   
 ## What Is Arcology
-
-Arcology is the new generation of blockchain system to unleash the full potentials of blockchain technologies with incomparable performance. Built to support various types of  applications requiring both high performance and low cost.
+Arcology is a layer one blockchain platform arming to solve some of the deeply rooted issues within current blockchain designs. Built to support various types of  applications requiring both high performance and low cost.
 
 ### 1.1. Revolutionary
+Arcology has an revolutionary of blockchain design to unleash the full potentials of blockchain technologies with incomparable performance.
 
-Arcology is a layer one blockchain platform arming to solve some of the deeply rooted issues within current blockchain designs. It has dramatic different design from other platforms [(learn more)](https://github.com/arcology-network/benchmarking/blob/e56585bd4d4739698d6d724980d5709419011cac/arcology-overview/arcology-overview.md)
+### 1.2. L1 Parallelism 
+Experience the linear scalability with Arcology’s Architectural Design, witness things that weren’t even believed possible.
 
-### 1.2. Scalable
-
-Arcology is a platform that is capable of processing transactions including complex smart contract calls at unprecedented speed. Experience the linear scalability with Arcology’s Architectural Design, witness things that weren’t even believed possible.
+### 1.2. Lightning Fast 
+Arcology is capable of processing tens of thousands of transactions including complex smart contract calls per second.
 
 ---
 
