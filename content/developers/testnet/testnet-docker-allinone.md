@@ -15,14 +15,14 @@
   - [2. Interact with the Testnet](#2-interact-with-the-testnet)
     - [2.1. Using Ethereum Tools](#21-using-ethereum-tools)
     - [2.2. Using Ammolite](#22-using-ammolite)
-  - [3. Troubleshooting](#3-troubleshooting)
+  - [3. `Troubleshooting`](#3-troubleshooting)
     - [3.1. I Cann't See All the Services](#31-i-cannt-see-all-the-services)
     - [3.2. The Localhost Doesn't Work](#32-the-localhost-doesnt-work)
     - [3.3. Why Am I Receiving {"sysdbg":"block is nil"}](#33-why-am-i-receiving-sysdbgblock-is-nil)
 
 ## 1. Getting Started
 
-The testnet docker container has virtually everything you need to get started. It is probably the easiest way to set up a testnet. THe docker engine is only thing you will need other than the docker images.
+The testnet docker container has virtually everything you need to get started. It is probably the easiest way to set up a testnet. THe docker engine is the only thing you will need other than the docker images.
 
 ### 1.1. Contents
 
@@ -34,7 +34,7 @@ There are three major components in the docker container package.
 
 The transaction data files are pregenerated transaction data to facilite the test. They are part of the testnet installers, which need to be downloaded separately from **[here](https://github.com/arcology-network/benchmarking/releases)**
 
-![alt text](./img/testnet/testnet-container.svg)
+![alt text](../../../img/testnet/testnet-container.svg)
 
 ### 1.2. System Requirements
 
@@ -89,12 +89,12 @@ ps -e | grep storage-svc
 ps -e | grep gateway-svc
 ps -e | grep frontend-svc
 ps -e | grep pool-svc
-ps -e | eth-api-svc
+ps -e | grep eth-api-svc
 ```
 
 If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this.
 
-![alt text](./img/testnet/allinone-testnet-docker-svclist.png)
+![alt text](../img/../../../img/testnet/allinone-testnet-docker-svclist.png)
 
 #### 1.5.3. Check the Connectivity
 
@@ -144,7 +144,7 @@ Since Arcology is fully EVM compatabile and support all standard json rpc api, y
 ### 2.2. Using Ammolite
 Ammolite is another option and it is especially effective for handing large volume for transaction data, which is something you cannot do very esily with the standard Ethereum tools. [This document describes how to connect to the testnet docker and send in transactions from an Ammolite client container.](./ammolite-client-docker.md)
 
-## 3. Troubleshooting
+## 3. `Troubleshooting`
 
 ### 3.1. I Cann't See All the Services
 
