@@ -3,7 +3,7 @@
 - [All-in-One Testnet Docker Guide (v1.3)](#all-in-one-testnet-docker-guide-v13)
   - [1. Getting Started](#1-getting-started)
     - [1.1. Contents](#11-contents)
-    - [1.2. System Requirements](#12-system-requirements)
+    - [1.2. Minimum Requirements](#12-minimum-requirements)
     - [1.3. **Download the Testnet Container**](#13-download-the-testnet-container)
     - [1.4. **Start the Testnet Container**](#14-start-the-testnet-container)
     - [1.5. **Check the Testnet**](#15-check-the-testnet)
@@ -36,11 +36,11 @@ The transaction data files are pregenerated transaction data to facilite the tes
 
 ![alt text](../../../img/testnet/testnet-container.svg)
 
-### 1.2. System Requirements
+### 1.2. Minimum Requirements
 
 - ubuntu 20.04
-- 2 Cores
-- 16G RAM
+- 2 Cores**
+- **16G RAM**
 - Docker Engine
 
 ### 1.3. **Download the Testnet Container**
