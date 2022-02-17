@@ -3,9 +3,9 @@
   - [1. Introduction](#1-introduction)
     - [1.2. Monaco](#12-monaco)
     - [1.3. Comparison Chart](#13-comparison-chart)
-  - [2. How to Run](#2-how-to-run)
+  - [**2. How to Run**](#2-how-to-run)
+    - [2.1. Installation](#21-installation)
   - [3. Accounts](#3-accounts)
-  - [4. Login](#4-login)
 
 ## 1. Introduction
 There is a tutorial example in Truffle development document that you can find here https://trufflesuite.com/tutorial/index.html. The example walks you through the steps for building an Ethereum DApp.
@@ -19,17 +19,24 @@ docker run --name allinone-cluster -p 8080:8080 -p 7545:7545 -d cody0yang/cluste
 
 ### 1.3. Comparison Chart
 
-|Platform|Development|Wallet|Blockchain|
+|Platform|Development|Wallet|Environment|
 |---|---|---|---|
-|**Ethereum**|Truffle|MetaMask|Ganache|
-|**Arcology**|Truffle|MetaMask|**`Monaco`**|
+|Ethereum|Truffle|MetaMask|Ganache|
+|Arcology|Truffle|MetaMask|`Monaco`|
 
-## 2. How to Run
-Just follow steps in the tutorial. **You can run the example on Arcology network directly.** There is no need to change anything to the smart contracts or the backend code. 
+## **2. How to Run**
+Just follow steps in the tutorial. **You can run the example on Arcology network directly.** There is no need to change anything to the smart contracts or the backend code.
 
+### 2.1. Installation
+* [Start AOI Docker Container](../testnet/testnet-docker-allinone.md)
+* [Install Truffle Suite](https://trufflesuite.com/docs/truffle/getting-started/installation.html)
+* [Install MetaMask](https://metamask.io/)
+* [Run the tutorial example](https://trufflesuite.com/tutorial/index.html)
+
+**When running the example, please make sure you are connected the AOI docker and use the accounts listed below.**
 
 ## 3. Accounts
-There are a list of pre-created accounts in the docker container that developers can use to initiate. transactions.
+There are a list of pre-created accounts in the docker container with sufficient balanace that developers and can use to initiate transactions instead.
 
 |Private Keys|Addresses|Balances|
 |---|---|---|
@@ -45,7 +52,7 @@ There are a list of pre-created accounts in the docker container that developers
 |d9815a0fa4f31172530f17a6ae64bf5f00a3a651f3d6476146d2c62ae5527dc4|x8aa62d370585e28fd2333325d3dbaef6112279Ce |701000000000000000000
 |||
 
-## 4. Login
-In case you need to log in to the testnet docker container, please use the credential in [this document](../testnet/testnet-docker-allinone.md)
->Please don't change anything in the container unless you know what you are doing.
+
+> In case you need to log in to the AIO docker container, please use the credential in [this document](../testnet/testnet-docker-allinone.md).
+>Don't change anything in the container unless you know what you are doing.
 

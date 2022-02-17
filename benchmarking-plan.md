@@ -21,6 +21,11 @@ On Arcology, the overall throughput of the platform is proportional to amount of
 
 There is always an upper limit on the number of cores that a single server can actually have. Apart of the multicore scenario, a further question is if Arcology can effectively expand to multiple servers.
 
+### 1.3. AWS Fluctuation
+
+We oberseved a few of times that aws machines didn't not give up constant 
+
+
 ---
 
 ## 2. Benchmarking

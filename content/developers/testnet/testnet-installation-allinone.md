@@ -43,7 +43,7 @@ The installer package has the below structure
 - `modifyconfig.sh`  is reposible to generate install configuraiton file based on user information
 - `tools` folder has some miscellaneous tools for data preparation and cleaning.
 
-![alt text](./img/testnet/installer-structure.png)
+![alt text](./img/installer-structure.png)
 
 ### 2.4. Host Information
 
@@ -76,7 +76,7 @@ For example, suppose your have the following login information
 > ./setup.sh
 ```
 
-![alt text](./img/testnet/setup_sh.png)
+![alt text](./img/setup_sh.png)
 
 ### 2.7. Pregenerated Transactions
 
@@ -95,7 +95,7 @@ You should be ready to the start the testnet by now.
 > ./restart.sh
 ```
 
-![alt text](./img/testnet/restart_sh.png)
+![alt text](./img/restart_sh.png)
 
 ## 3. Testnet Client
 

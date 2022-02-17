@@ -10,15 +10,16 @@
       - [1.5.1. Log in to the Testnet Container](#151-log-in-to-the-testnet-container)
       - [1.5.2. Check the Services](#152-check-the-services)
       - [1.5.3. Check the Connectivity](#153-check-the-connectivity)
-    - [1.7. Stop the Testnet](#17-stop-the-testnet)
-    - [1.8. Remove the Container](#18-remove-the-container)
   - [2. Interact with the Testnet](#2-interact-with-the-testnet)
     - [2.1. Using Ethereum Tools](#21-using-ethereum-tools)
     - [2.2. Using Ammolite](#22-using-ammolite)
-  - [3. `Troubleshooting`](#3-troubleshooting)
-    - [3.1. I Cann't See All the Services](#31-i-cannt-see-all-the-services)
-    - [3.2. The Localhost Doesn't Work](#32-the-localhost-doesnt-work)
-    - [3.3. Why Am I Receiving {"sysdbg":"block is nil"}](#33-why-am-i-receiving-sysdbgblock-is-nil)
+  - [3. Shut Down the Testnet](#3-shut-down-the-testnet)
+    - [3.1. Stop the Contanier](#31-stop-the-contanier)
+    - [3.2. Remove the Container](#32-remove-the-container)
+  - [4. Troubleshooting](#4-troubleshooting)
+    - [4.1. I Cann't See All the Services](#41-i-cannt-see-all-the-services)
+    - [4.2. The Localhost Doesn't Work](#42-the-localhost-doesnt-work)
+    - [4.3. Why Am I Receiving {"sysdbg":"block is nil"}](#43-why-am-i-receiving-sysdbgblock-is-nil)
 
 ## 1. Getting Started
 
@@ -34,7 +35,7 @@ There are three major components in the docker container package.
 
 The transaction data files are pregenerated transaction data to facilite the test. They are part of the testnet installers, which need to be downloaded separately from **[here](https://github.com/arcology-network/benchmarking/releases)**
 
-![alt text](../../../img/testnet/testnet-container.svg)
+![alt text](./img/testnet-container.svg)
 
 ### 1.2. Minimum Requirements
 
@@ -58,6 +59,14 @@ The port 7545 is for handling standard Ethereum json rpc calls so users can use 
 ```sh
 docker run --name allinone-cluster -p 8080:8080 -p 7545:7545 -d cody0yang/cluster:1.13 /root/dstart.sh chainID:100 rpcPort:7545
 ```
+![alt txt](./img/docker-run.png)
+
+
+```
+docker ps -a
+```
+![alt txt](./img/docker-ps.png)
+
 > It will take some time for the services to start. Please wait for some time before proceeding to the next steps.
 
 ### 1.5. **Check the Testnet**
@@ -94,7 +103,7 @@ ps -e | grep eth-api-svc
 
 If everything is in order, you should be able to see a list of Arcology services running in the testnet container, which should look like this.
 
-![alt text](../img/../../../img/testnet/allinone-testnet-docker-svclist.png)
+![alt text](./img/allinone-testnet-docker-svclist.png)
 
 #### 1.5.3. Check the Connectivity
 
@@ -120,19 +129,6 @@ Aagin, you should see somthing like the blow.
 }
 ```
 
-### 1.7. Stop the Testnet
-
-Use the command below the stop the testnet. Please don't try to start a testnet docker while another one is still running. Always stop the running instance first before starting the next one. Otherwise you might have to reinstall the testnet docker.
-
-```sh
-sudo docker stop allinone-cluster 
-```
-
-### 1.8. Remove the Container
-
-```sh
-sudo docker rm allinone-cluster 
-```
 
 ## 2. Interact with the Testnet
 
@@ -144,16 +140,32 @@ Since Arcology is fully EVM compatabile and support all standard json rpc api, y
 ### 2.2. Using Ammolite
 Ammolite is another option and it is especially effective for handing large volume for transaction data, which is something you cannot do very esily with the standard Ethereum tools. [This document describes how to connect to the testnet docker and send in transactions from an Ammolite client container.](./ammolite-client-docker.md)
 
-## 3. `Troubleshooting`
+## 3. Shut Down the Testnet
 
-### 3.1. I Cann't See All the Services
+Use the command below the stop the testnet. Please don't try to start a testnet docker while another one is still running. Always stop the running instance first before starting the next one. Otherwise you might have to reinstall the testnet docker.
+
+### 3.1. Stop the Contanier
+
+```sh
+sudo docker stop allinone-cluster 
+```
+
+### 3.2. Remove the Container
+
+```sh
+sudo docker rm allinone-cluster 
+```
+
+## 4. Troubleshooting
+
+### 4.1. I Cann't See All the Services
 
 The whole starting process may take a few minutes. If you only see some of the services running, that is usually because other services haven't been started yet, just can check back later.
 
-### 3.2. The Localhost Doesn't Work
+### 4.2. The Localhost Doesn't Work
 
 Don't use the localhost 127.0.0.1 when you try to connect to a testnet from the client docker, even if the testnet container is running on the same host machine with you client container.
 
-### 3.3. Why Am I Receiving {"sysdbg":"block is nil"}
+### 4.3. Why Am I Receiving {"sysdbg":"block is nil"}
 
 If you are receiving {"sysdbg":"block is nil"} in the brower window, while [checking the connectivity](#153-check-the-connectivity), please [remove the testnet docker](#18-remove-the-container) first and then [start the testnet again.](#14-start-the-testnet-container)

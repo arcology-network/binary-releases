@@ -38,7 +38,7 @@ The stand Arcology releases contain some pregenearted transaction files that can
 
 Download the latest installer, uncompress the package to a location of your choice, the folder structure should look like the below. There is a folder named `./testnet-installer/txs`, which containes all the pregenerated transaction files. **You will need to mount the folder to the client docker to continue the test.**
 
-![alt text](./img/testnet/tx-location.png)
+![alt text](./img/tx-location.png)
 
 ### 3.2. Structure
 
@@ -89,7 +89,7 @@ python checkStatus.py 192.168.1.103:8080
 
 If the testnet is working normally you will see something like the below.
 
-![alt text](./img/testnet/checkstatus.png)
+![alt text](./img/checkstatus.png)
 
 ### 4.3 Send the Transactions
 
