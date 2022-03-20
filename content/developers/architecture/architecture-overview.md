@@ -1,8 +1,8 @@
-# Arcology Architecture Overview (v1.2)
+# Arcology Architecture Overview (v1.3.1)
 
 This document covers some key features and the design considerations behind Arcology network. It isn’t designated to explain every single technical detail within the system, but rather to offer a big picture of the whole design characteristics.
 
-- [Arcology Architecture Overview (v1.2)](#arcology-architecture-overview-v12)
+- [Arcology Architecture Overview (v1.3.1)](#arcology-architecture-overview-v131)
   - [1. What is Arcology](#1-what-is-arcology)
     - [Sidechain](#sidechain)
     - [1.1. Parallel Processing](#11-parallel-processing)
@@ -225,6 +225,7 @@ An Arcology client software consists of a list of services. With a couple of exc
 | Eshing | Merkle proof generator Answering Merkle proof requests|
 | Storage         | Data storage module |
 | Arbitrator      | Detect access conflicts during transaction execution process |
+| Eth-api         | Service to support all the standard Ethereum JSON API RPC interfaces|
 | Streamer        | Universal event management system|
 |||
 

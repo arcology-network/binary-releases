@@ -23,7 +23,6 @@ The All-in-one helps users to host all the services on a single machine. In many
 
 ## 2. Installation
 
-
 ### 2.1. Prerequisites
 
 - ubuntu 20.04
