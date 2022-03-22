@@ -52,9 +52,9 @@ This document covers some key features and the design considerations behind Arco
 
 ## 1. What is Arcology
 
-Arcology is the new generation of blockchain system utilizing parallel computation to solve some of the deeply rooted issues within current blockchain designs. It is foundationally different from many other blockchain designs in a number of ways.
+Arcology is the new generation of blockchain system utilizing parallel computation to solve some of the deeply rooted issues within current blockchain designs. It is foundationally different from many other blockchains in a number of ways.
 
-In the centralized world, when there are scalability problems, Horizontal scaling an effective solution. If a single design cannot handle to workload, simply use multiple-threading. If one machine cannot live up to the task, just spread the workload to multiple machines.
+In the centralized world, when there are scalability problems, Horizontal scaling an effective solution. If a single design cannot handle to workload, simply use multiple-threading. If one machine cannot live up to the task, just spread the workload to multiple machines. 
 
 Today, virtually all blockchain projects have a monolithic design, (e.g., Geth for Ethereum) and can only be installed on a single machine. In short, the current blockchain designs fail to explore the benefits of horizontal scaling, a solution has been proven effective for the scalability issue.
 
