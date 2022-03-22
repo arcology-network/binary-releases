@@ -4,7 +4,6 @@ This document covers some key features and the design considerations behind Arco
 
 - [Arcology Architecture Overview (v1.3.1)](#arcology-architecture-overview-v131)
   - [1. What is Arcology](#1-what-is-arcology)
-    - [Sidechain](#sidechain)
     - [1.1. Parallel Processing](#11-parallel-processing)
     - [1.2. Composability](#12-composability)
   - [2. Architecture Design](#2-architecture-design)
@@ -47,11 +46,9 @@ This document covers some key features and the design considerations behind Arco
     - [7.11. Scheduler Service](#711-scheduler-service)
     - [7.12. Storage Service](#712-storage-service)
       - [7.12.1. Embedded DB](#7121-embedded-db)
-      - [7.12.2. RW Amplification](#7122-rw-amplification)
-      - [7.12.3. Storage Design](#7123-storage-design)
-      - [7.12.4. Reduced Overhead](#7124-reduced-overhead)
-      - [7.12.5. Decoupling](#7125-decoupling)
-      - [7.12.6. Flexibility](#7126-flexibility)
+      - [7.12.2. Reduced Overhead](#7122-reduced-overhead)
+      - [7.12.3. Decoupling](#7123-decoupling)
+      - [7.12.4. Flexibility](#7124-flexibility)
 
 ## 1. What is Arcology
 
@@ -60,8 +57,6 @@ Arcology is the new generation of blockchain system utilizing parallel computati
 In the centralized world, when there are scalability problems, Horizontal scaling an effective solution. If a single design cannot handle to workload, simply use multiple-threading. If one machine cannot live up to the task, just spread the workload to multiple machines.
 
 Today, virtually all blockchain projects have a monolithic design, (e.g., Geth for Ethereum) and can only be installed on a single machine. In short, the current blockchain designs fail to explore the benefits of horizontal scaling, a solution has been proven effective for the scalability issue.
-
-### Sidechain
 
 ### 1.1. Parallel Processing
 
@@ -222,7 +217,7 @@ An Arcology client software consists of a list of services. With a couple of exc
 | Scheduler       | Execution scheduler, dealing with executor services, optimizing transaction execution plans |
 | Executor        | Transaction execution service, each instance contains multiple EUs |
 | EU              | Execution Unit, Generic wrapper for platform dependent VMs |
-| Eshing | Merkle proof generator Answering Merkle proof requests|
+| Eshing          | Merkle proof generator Answering Merkle proof requests|
 | Storage         | Data storage module |
 | Arbitrator      | Detect access conflicts during transaction execution process |
 | Eth-api         | Service to support all the standard Ethereum JSON API RPC interfaces|
@@ -363,7 +358,7 @@ The workflow below illustrate the major steps involved in the transaction execut
 
 8. The Arbitrator will scan through all the transitions for potential conflicts.
 
-9.  The transitions causing conflict will be reverted together with the changes they made.
+9. The transitions causing conflict will be reverted together with the changes they made.
 
 10. The scheduler service will update its conflict history database based on newly discovered conflict pattern, if any.
 
@@ -426,31 +421,24 @@ StateDB is where date get persisted in a node cluster. Most blockchains rely on 
 However, when network grows the storage becomes a big problem. First, embedded databases are difficult to scale once they are running out of storage space. Second, embedded databases are still not fast enough to support high TPS.
 How projects like Ethereum organize their data further complicate the problem. Ethereum stores their data in a struct called Merkle tree together with related Merkle proofs.
 
-#### 7.12.2. RW Amplification
-
-An insertion starts from the root node and then go all the way to down to find right leaf node to place the entry.  The byproducts of this process are some non-leaf nodes along the path. As the data entries grow, so does the non-leaf nodes, the deeper the tree is the more non-leaf nodes will be added and they will occupy a lot storage space.
-
-Depends on depth of the tree, the number of read / write of non-leaf nodes might vary, but as the number of entries grow, so does the non-leaf nodes, the deeper the tree is the more non-leaf nodes would be created or retrieved. When reading a data entry, the process starts from getting root node first then getting keys of its children and repeat the process until arrive at the target leaf node. Reading an entry won’t create extra non-leaf node, but there are still multiple queries involved before the target data entry is found.
-
-Usually, reading or writing an entry to a “flat” database only take one step.  On the contrary, dealing with an in-database Merkle tree always takes multiple “unnecessary“ steps and extra storage space, which will seriously affect overall performance in the end.
-
-#### 7.12.3. Storage Design
-
 Arcology used the storage service in place of stateDB. The storage service provides a set of standard interfaces for external parties to use. The actual database system is hidden behind these service interfaces to make the service vender-agnostic. The actual databases in the storage service only flat state data meaning the Merkle tree is no longer tangled with the state data. The eshing service will take Merkle proofs instead.
 
 ![alt text](./img/storage-executor-users.svg)
 
-#### 7.12.4. Reduced Overhead
+#### 7.12.2. Reduced Overhead
 
 This design has some unique advantages. First, because of everything is hidden in the storage service, the  underlying database are completely decoupled with the data users.  An Embedded database instance is no longer the only choice. User can even choose to run multiple databases instances behind the service to fulfill different needs. 
 Second, since the state data are no longer stored in the Merkle tree,  they could be retrieved and updated through a direct key value pair lookup, reducing search complexity from O(log⁡n) to O(1).
 
-#### 7.12.5. Decoupling
+#### 7.12.3. Decoupling
 
 An ideal DB system for blockchains has to meet a few seemingly contradictory requirements. There is hardly a one-size-fits-all solution. Arcology classifies the data into different categories and assign them to different databases based on their access frequency.
 
 For example, access speed is paramount while executing a transaction. In contrast,  for the sake of cost cutting, it is best to put bulky and less frequently accessed data (i.e. old blocks and old receipts) into more cost-efficient storage solutions.
 
-#### 7.12.6. Flexibility
+#### 7.12.4. Flexibility
 
 There aren’t strict rules for how data should be categorized or exactly where they should be saved, the decision is up to users to decide based on their budgets and expectation on overall system throughput.  Performance-wise, putting all the data in a memory DB would certainly be a perfect choice. On the other hand depending solely on cloud storage is also perfectly possible.
+
+
+

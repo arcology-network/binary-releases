@@ -26,7 +26,7 @@
     - [4.5. Demo Videos](#45-demo-videos)
   
 ## What Is Arcology
-Arcology is a layer one blockchain platform arming to solve some of the deeply rooted issues within current blockchain designs. Built to support various types of  applications requiring both high performance and low cost.
+Arcology is a layer one blockchain platform arming to solve some of the deeply rooted issues within current blockchain designs. Built to support various types of applications requiring both high performance and low cost.
 
 ### 1.1. Revolutionary
 Arcology has an revolutionary of blockchain design to unleash the full potentials of blockchain technologies with incomparable performance.
