@@ -1,6 +1,6 @@
 # Arcology Concurrent Framework
 
-***V1.3 - 2021/1/9***
+***V1.3 - 2022/1/9***
 
 - [Arcology Concurrent Framework](#arcology-concurrent-framework)
   - [1. Introduction](#1-introduction)
@@ -118,7 +118,6 @@ Among these major parts, only the VM interfaces are visible to the developers in
 Apart from the obvious benefits of being much more compatible and portable, this design also allows multiple heterogenous VM to work on the same platform. All it takes is to implement necessary adaptor modules on a platform-by-platform basis. 
 
 #### 2.1.3. Executor Service
-2
 To further expand scalability, a set of VM containers are group together and hosted as an Executor service instance that can be accessed remotely over the network.  There is no limit on number of VM contains each Transaction Execution can host or number of transaction execution instances available.
 
 #### 2.1.4. Execution Unit

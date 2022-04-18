@@ -121,7 +121,6 @@ There is no theorical limit on how fast the system can go, everything is a matte
 There is a benchmark package containing about 5M transactions calling CryptoKitties, DSToken and Uniswap V2.  The TPS is around 15k ~ 20k on a testnet on AWS.
 
 ## 8. Conclusion
-
 Arcology is the choice for large-scale applications like decentralized social network application and it can be a high performance sidechain for Ethereum as well.
 
 

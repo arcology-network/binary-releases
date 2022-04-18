@@ -20,4 +20,18 @@ In Arcology, developers will be able to explore a much broader horizon. Applicat
 - Blockchain-based games
 - Decentralized social networks
 
+
 Acology is especially friendly to resource intensive applications.
+
+Concurrency Framework in native Solidity
+
+
+Running single nodes on multiple machines for the maxiumn throughput
+
+Concurrency framework in native Solidity to support concurrent smart contract development
+
+High profit for validators and low cost for end users
+
+Developer friendly platform with maximum compatibility with existing ecosystems
+
+Applications that were believed only possible on centralized solutions because of per

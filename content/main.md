@@ -1,6 +1,6 @@
 # Arcology Network (Built To Scale)
 
-**The Ultimate Blockchain Solution**
+**Architectured for Resource Intensive DApps**
 
 
 - [Arcology Network (Built To Scale)](#arcology-network-built-to-scale)
@@ -26,7 +26,15 @@
     - [4.5. Demo Videos](#45-demo-videos)
   
 ## What Is Arcology
-Arcology is a layer one blockchain platform arming to solve some of the deeply rooted issues within current blockchain designs. Built to support various types of applications requiring both high performance and low cost.
+Arcology is a layer one blockchain platform arming to solve . Built to support various types of applications requiring both high performance and low cost.
+
+
+
+Witness how the world's fastest blockchain with real-world transactions. 
+
+
+
+deeply rooted issues
 
 ### 1.1. Revolutionary
 Arcology has an revolutionary of blockchain design to unleash the full potentials of blockchain technologies with incomparable performance.
@@ -78,6 +86,7 @@ ERC20 tokens play a big goal in the whole DeFi landscape. Arcology can help deve
 
 ---
 ## 4. Developers
+
 ### 4.1. [Whitepaper](https://docs.arcology.network/docs/introduction.html)
 ### 4.2. [Architecture Design](./developers/architecture/architecture-overview.md)
 ### 4.3. [Developer's Guide](./developers/programming/arcology/concurrent-programming-guide.md)
