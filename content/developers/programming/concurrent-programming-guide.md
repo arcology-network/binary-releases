@@ -97,8 +97,6 @@ At the beginning of the execution cycle,  each concurrent VM will have an indepe
 <p align="center"> Figure 1. Workflow  </p>
 
 
-
-
 ### 2.1 Major Modules
 
 
