@@ -22,8 +22,8 @@
 
 The client docker is pretty much self-contained. You only the following items to start working with an Arcology testnet.
 
-- An Arcology Testnet
-- Docker Engine
+- A live Arcology testnet
+- Docker engine
 
 ## 3. The Package
 

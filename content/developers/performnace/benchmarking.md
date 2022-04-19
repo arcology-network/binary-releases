@@ -1,7 +1,11 @@
-# Internal Testnet V1.2
-- [Internal Testnet V1.2](#internal-testnet-v12)
-  - [1. Log into ammolite](#1-log-into-ammolite)
-  - [2. Check cluster status](#2-check-cluster-status)
+# Benchmarking
+
+- [Benchmarking](#benchmarking)
+  - [1. Introduction](#1-introduction)
+  - [2. Preparation](#2-preparation)
+    - [2.1.Check Testnet Status](#21check-testnet-status)
+    - [2.2. Start the Ammolite Container](#22-start-the-ammolite-container)
+    - [2.3. Log in to the Ammolite Container Image](#23-log-in-to-the-ammolite-container-image)
   - [3. Deployment](#3-deployment)
     - [3.1. deploy parallel_kitties](#31-deploy-parallel_kitties)
     - [3.2. deploy ds_token](#32-deploy-ds_token)
@@ -13,7 +17,7 @@
     - [4.3. Send 1M ds_token](#43-send-1m-ds_token)
     - [4.4. Send 600K uniswap_v2](#44-send-600k-uniswap_v2)
 
-## 1. Log into ammolite
+## 1. Introduction
 
 ```sh
 >ssh -p 32768 root@75.158.199.158
@@ -22,11 +26,26 @@
 - Username: root
 - Password: frY6CvAy8c9E
 
-## 2. Check cluster status
+## 2. Preparation
+
+Please follow the steps below to get everything ready for the test.
+
+### 2.1.Check Testnet Status
 
 ```sh
 >python checkStatus.py 192.168.1.106:8080
 ```
+
+### 2.2. Start the Ammolite Container
+
+The [Ammolite docker image](./ammolite-client-docker.md) has all the pre-generated transaction for the performance. Please start it before starting the benchmarking.
+
+### 2.3. Log in to the Ammolite Container Image
+
+```sh
+>ssh -p 32768 root@75.158.199.158
+```
+
 
 ## 3. Deployment
 

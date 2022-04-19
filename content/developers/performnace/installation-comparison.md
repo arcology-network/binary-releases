@@ -12,7 +12,7 @@
 
 Arcology is a very powerful and sophisticated system. For other blockchain networks, everything has to run on the same machine. Arcology support horizontal scaling, you can horizontally scale many key modules like transaction execution and data storage. Basically, users can tune their clusters based on applications and budgets. 
 
-Arcology is highly configurable. For example, you may have 12 machines in total and you want 6 of them to run multiple EVM instances for transaction processing, 4 others for storage and 2 for other services, or just you could have only 2 machines running EVMs and 8 machine running storage and 2 for other services.
+Arcology is highly configurable. For example, you may have 12 machines in total and you config 6 of them to run multiple EVM instances for transaction processing, 4 others for storage and 2 for other services, or just you could have only 2 machines running EVMs and 8 machine running storage and 2 for other services.
 
 This document tries to explore different installation options and pros and cons associated with them. The goal is to help Arcology users set up they Arcology testnets more effortlessly and smoothly. Users can find detailed installation guides in different sections below.
 
@@ -34,9 +34,9 @@ Below are the installation options users can choose from.
 
 Using the docker images come with Arcology releases is probably the easist way to start with. These all-in-one dockers are functionally identical to larger clusters with dozens of machines. Everything is readily available out of the box.
 
-The main focus here is to help users get familiar with Arcology. So if you are new to Arcology or developing smart contracts on Arcology platform, we strongly suggest you to try the docker version first before moving to full-scale setups
+The main focus here is to help users get familiar with Arcology. So if you are new to Arcology or developing smart contracts on Arcology platform, we strongly suggest you to try the docker version first before moving to full-scale setups.
 
-[This link explains how to use Arcology docker containers](./testnet-docker-allinone.md)
+[This link explains how to use Arcology docker containers](./../../getting-started/connect-aio-docker.md)
 
 ### 2.2. Single Machine Installation
 
@@ -57,6 +57,4 @@ Users can either write down these random IPs and log in to every single host mac
 Some type of installation tools can help a lot but these tools must be smart and flexible encough. They need to  automatically extract the IP addresses and use the login credentials to complete the installlation on the host machines. There are a few tools written in python to help with the whole process.
 
 Please refer to [this document](https://github.com/arcology-network/aws-ansible) on how to start a testnet on AWS.
-
-
 

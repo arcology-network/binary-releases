@@ -1,6 +1,6 @@
-# All-in-One Testnet Docker Guide (v1.3)
+# All-in-One Testnet Docker Guide
 
-- [All-in-One Testnet Docker Guide (v1.3)](#all-in-one-testnet-docker-guide-v13)
+- [All-in-One Testnet Docker Guide](#all-in-one-testnet-docker-guide)
   - [1. Getting Started](#1-getting-started)
     - [1.1. Contents](#11-contents)
     - [1.2. Minimum Requirements](#12-minimum-requirements)
@@ -28,12 +28,20 @@ The testnet docker container has virtually everything you need to get started. I
 ### 1.1. Contents
 
 There are three major components in the docker container package.
-
 - A Testnet container
-- A Client container
-- Transaction data files
 
-The transaction data files are pregenerated transaction data to facilite the test. They are part of the testnet installers, which need to be downloaded separately from **[here](https://github.com/arcology-network/benchmarking/releases)**
+
+
+
+
+
+- A Client container (benchmarking only)
+- Transaction data files (benchmarking only)
+
+> The client container and Transaction data files are for performance benchmarking only. If you aren't interested in doing benchmarking at this time, simply
+> download testnet container only.
+
+The transaction data files are pregenerated transactions to facilite the test.They are part of the testnet installers, which need to be downloaded separately from **[here](https://github.com/arcology-network/benchmarking/releases)**
 
 ![alt text](./img/testnet-container.svg)
 
@@ -108,6 +116,7 @@ If everything is in order, you should be able to see a list of Arcology services
 #### 1.5.3. Check the Connectivity
 
 The testnet container should be listening on port 8080 of your host machine already. To check if the testnet is reachable, paste the following line into your **host machine browser**. Replace the `localhost` address with the host IP, if you are connecting **from other machines.**
+
 ```sh
 http://localhost:8080/blocks/latest?access_token=access_token&transactions=false
 ```
