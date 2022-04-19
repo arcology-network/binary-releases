@@ -6,12 +6,11 @@
     - [2.1.Check Testnet Status](#21check-testnet-status)
     - [2.2. Start the Ammolite Container](#22-start-the-ammolite-container)
     - [2.3. Log in to the Ammolite Container Image](#23-log-in-to-the-ammolite-container-image)
-  - [3. Deployment](#3-deployment)
+  - [3. Deployment Contracts](#3-deployment-contracts)
     - [3.1. deploy parallel_kitties](#31-deploy-parallel_kitties)
     - [3.2. deploy ds_token](#32-deploy-ds_token)
     - [3.3. Deploy uniswap_v2](#33-deploy-uniswap_v2)
-  - [4. Testnet Status](#4-testnet-status)
-  - [4. Process Transactions](#4-process-transactions)
+  - [4. Send in Transactions](#4-send-in-transactions)
     - [4.1. Send 500k coin_transfer](#41-send-500k-coin_transfer)
     - [4.2. Send 1M parallel_kitties](#42-send-1m-parallel_kitties)
     - [4.3. Send 1M ds_token](#43-send-1m-ds_token)
@@ -19,12 +18,16 @@
 
 ## 1. Introduction
 
-```sh
->ssh -p 32768 root@75.158.199.158
-```
+This document explains how to run a benchmark test on an Arcology testnet. 
 
-- Username: root
-- Password: frY6CvAy8c9E
+- A live testnet
+- [An Ammolite container image](./ammolite-client-docker.md)
+- [Transaction data files]()
+
+The transaction data files are pregenerated transactions to facilite the test.They are part of the testnet installers, which need to be downloaded separately from **[here](https://github.com/arcology-network/benchmarking/releases)**
+
+> The client container and Transaction data files are for performance benchmarking only. If you aren't interested in doing benchmarking at this time, simply
+> download testnet container only.
 
 ## 2. Preparation
 
@@ -32,22 +35,33 @@ Please follow the steps below to get everything ready for the test.
 
 ### 2.1.Check Testnet Status
 
+Make sure the testnet is up and running.
+
 ```sh
 >python checkStatus.py 192.168.1.106:8080
 ```
 
+> Replace `192.168.1.106` with the Ammolite node that your are connected to
+
 ### 2.2. Start the Ammolite Container
 
-The [Ammolite docker image](./ammolite-client-docker.md) has all the pre-generated transaction for the performance. Please start it before starting the benchmarking.
+The Ammolite docker image has all the pre-generated transaction for the performance.
 
 ### 2.3. Log in to the Ammolite Container Image
 
 ```sh
->ssh -p 32768 root@75.158.199.158
+>ssh -p 32768 root@localhost
 ```
 
+> Replace `locahost` with your host IP of the Ammolite container.
 
-## 3. Deployment
+- Username: root
+- Password: frY6CvAy8c9E
+
+
+## 3. Deployment Contracts
+
+This first step is to deploy the smart contracts used in the tests.
 
 ### 3.1. deploy parallel_kitties
 
@@ -70,16 +84,9 @@ The [Ammolite docker image](./ammolite-client-docker.md) has all the pre-generat
 >python deploy.py http://192.168.1.106:8080 134aea740081ac7e0e892ff8e5d0a763ec400fcd34bae70bcfe6dae3aceeb7f0
 ```
 
-## 4. Testnet Status
+## 4. Send in Transactions
 
-There is [webpage](http://75.158.199.158/d/GoB_UgYWz/internal-testnet?orgId=1&refresh=5s&var-Instance=75.158.199.158:9100&from=now-1h&to=now) to observe realtime testnet status.
-
-Please use the credential below to log in
-
-- Username: Guest
-- Password: buhco0-zujfYm-hopdif
-
-## 4. Process Transactions
+Once the deployment is completed, it is the time to start benchmarking.
 
 ### 4.1. Send 500k coin_transfer  
 

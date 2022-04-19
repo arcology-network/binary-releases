@@ -2,6 +2,7 @@
 
 - [Ammolite Client Docker Container](#ammolite-client-docker-container)
   - [1. What Is Ammolite](#1-what-is-ammolite)
+  - [1.1. Why Ammolite](#11-why-ammolite)
   - [2. Prerequisites](#2-prerequisites)
   - [3. The Package](#3-the-package)
     - [3.1.  Pregenerated Transactions](#31--pregenerated-transactions)
@@ -16,7 +17,15 @@
 
 ## 1. What Is Ammolite
 
-[Ammolite](https://github.com/arcology-network/ammolite) is Arcology's network client package written in Python. It can interact with Arcology nodes through HTTP connections. Ammolite to Arcology is like web3.js to Ethereum. The Ammolite client container is docker image with all the necessary modules and libraries installed to compile the solidity smart contracts and to interact with an Arcology testnet.
+[Ammolite](https://github.com/arcology-network/ammolite) is Arcology's network client package written in Python. It can interact with Arcology nodes through HTTP connections. Ammolite to Arcology is like web3.js to Ethereum. 
+
+The Ammolite client container is docker image with all the necessary modules and libraries installed to compile the solidity smart contracts and to interact with an Arcology testnet.
+
+## 1.1. Why Ammolite
+
+Standard Ethereum RPC APIs aren't designed for stress tests or performance benchmarking. They lack ability to send in massive number of transction to the network all at once, but it is something Arcology critically needs.
+
+Whereas Ammolite is specificaly built for the purpose, it is capable of sending in millions of transcations to the network in seconds.
 
 ## 2. Prerequisites
 

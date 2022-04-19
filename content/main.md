@@ -54,7 +54,7 @@ Arcology is superiour solution all-around.
 Deploy your Ethereum applications on Arcology effortlessly and using popular Ethereum development toolchains on Arcology.  [Learn More](./why-arcology/compatibilty.md) 
 
 ### 2.2. Performance
-Parallel Transactions processing powered by our deterministic Concurrency framework and microsevice Architecture. Arcology is the ultimate solution to the scaliabality issue.[Learn More](./why-arcology/performance.md) 
+Parallel Transactions processing powered by our deterministic Concurrency framework and microsevice Architecture. Arcology is the solution to the scaliabality issue.[Learn More](./why-arcology/performance.md) 
 
 ### 2.3. Low Cost
 Very low transitions for both computation and storage extensive applications. An ideal option for both storage and computation intensive applications. [Learn More](./why-arcology/lowcost.md)

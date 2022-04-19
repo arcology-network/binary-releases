@@ -33,16 +33,6 @@ There are three major components in the docker container package.
 
 
 
-
-
-- A Client container (benchmarking only)
-- Transaction data files (benchmarking only)
-
-> The client container and Transaction data files are for performance benchmarking only. If you aren't interested in doing benchmarking at this time, simply
-> download testnet container only.
-
-The transaction data files are pregenerated transactions to facilite the test.They are part of the testnet installers, which need to be downloaded separately from **[here](https://github.com/arcology-network/benchmarking/releases)**
-
 ![alt text](./img/testnet-container.svg)
 
 ### 1.2. Minimum Requirements
@@ -60,22 +50,7 @@ sudo docker pull cody0yang/cluster:1.13
 
 ### 1.4. **Start the Testnet Container**
 
-Use the the command below to start the testnet container and map the port `8080` to the host machine. You will need to use the host IP to access the docker container later. Remember, the host machine is the one on which your testnet docker is running. 
 
-The port 7545 is for handling standard Ethereum json rpc calls so users can use the standard Ethereum tools like Truffle, Remix and MetaMask to connect.
-
-```sh
-docker run --name allinone-cluster -p 8080:8080 -p 7545:7545 -d cody0yang/cluster:1.13 /root/dstart.sh chainID:100 rpcPort:7545
-```
-![alt txt](./img/docker-run.png)
-
-
-```
-docker ps -a
-```
-![alt txt](./img/docker-ps.png)
-
-> It will take some time for the services to start. Please wait for some time before proceeding to the next steps.
 
 ### 1.5. **Check the Testnet**
 
