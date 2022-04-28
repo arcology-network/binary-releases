@@ -23,14 +23,14 @@ There is always an upper limit on the number of cores that a single server can a
 
 ### 1.3. AWS Fluctuation
 
-We oberseved a few of times that aws machines didn't not give up constant 
+We observed a few of times that aws machines didn't not give up constant 
 
 
 ---
 
 ## 2. Benchmarking
 
- Arcology is extememlly flexible, so the configurations of individual nodes are completely transparent to other peers. The only noticable different is the speed. To make the deployment process easier, We will divide the tests into 4 groups focusing on different aspects of Arcology’s scalability.
+ Arcology is extremely flexible, so the configurations of individual nodes are completely transparent to other peers. The only notable different is the speed. To make the deployment process easier, We will divide the tests into 4 groups focusing on different aspects of Arcology’s scalability.
 
 | |Testnet 1 | Testnet 2  |Testnet 3  |Testnet 4  |
 |---|---|---|---|---|
@@ -43,11 +43,11 @@ We oberseved a few of times that aws machines didn't not give up constant
 
 ### 2.1. Single Machine with Multiple Cores *(A1)*
 
-In this test, we are going to start a testnet of multiple single-machine nodes. A single-machine configuration is where all the services are running on a single machine. The purpose is to see if Arcology is capable to fully utilize all the computational resources available on single computer with mutiple cores.
+In this test, we are going to start a testnet of multiple single-machine nodes. A single-machine configuration is where all the services are running on a single machine. The purpose is to see if Arcology is capable to fully utilize all the computational resources available on single computer with multiple cores.
 
 ### 2.2. Small Cluster with Multiple Cores *(A2)*
 
-This test focuses on processing transactions on an Arcology testnet of small node clusters. Each node will typicaly consists of 3 ~ 4 machines.
+This test focuses on processing transactions on an Arcology testnet of small node clusters. Each node will typically consists of 3 ~ 4 machines.
 
 ### 2.3. Midsize Node Clusters *(B1)*
 
