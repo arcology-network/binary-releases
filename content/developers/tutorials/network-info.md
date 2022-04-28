@@ -1,0 +1,4 @@
+- Network Name: Arcology Network
+- Chain ID: 100
+- RPC Port: 7545
+- Currency Symbol: ARCOL
