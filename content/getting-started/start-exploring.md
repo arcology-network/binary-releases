@@ -13,7 +13,7 @@
   
 ## 1. Introduction
 
-Arcology supports all Ethereum standard RPC APIs. All Ethereum tools and DApps should work with Arcology seamlessly. This document shows how to connect Ethereum Applications and to an Arcology network.
+Arcology supports all Ethereum standard RPC APIs. All Ethereum tools and DApps should work with Arcology seamlessly. This document shows how to connect Ethereum Applications to an Arcology network.
 
 ## 2. MetaMask
 
