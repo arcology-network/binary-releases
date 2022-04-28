@@ -43,7 +43,7 @@ Before you start, please make sure you are [connected the AOI docker](https://gi
 
 ### 2.3. Accounts
 
-[There are a list of pre-created accounts](./accounts.md)with sufficient balanace in the docker container that you can use to initiate transactions.
+[There are a list of pre-created accounts](./accounts.md)with sufficient balances in the docker container that you can use to initiate transactions.
 
 
 

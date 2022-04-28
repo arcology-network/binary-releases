@@ -13,7 +13,7 @@ There are a few showcase applications that are available on Arcology testnet. Th
 
 ## 2. Applications
 
-There showcases have been divided into two categories. Arcology provides a concurrent library for developers to optimized their solidity smart contracts using using Arcology concurency library. Arcology also has mechanism to speed up the execution of the native Solidity smart contracts without using Arcology concurency framework.
+There showcases have been divided into two categories. Arcology provides a concurrent library for developers to optimized their solidity smart contracts using using Arcology concurrency library. Arcology also has mechanism to speed up the execution of the native Solidity smart contracts without using Arcology concurrency framework.
 
 ### 2.1. NTF
 

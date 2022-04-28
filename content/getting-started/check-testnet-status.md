@@ -17,7 +17,7 @@ To check if the network is reachable, paste the following line into your browser
 http://localhost:8080/blocks/latest?access_token=access_token&transactions=false
 ```
 
-You should see somthing like the blow.
+You should see something like the blow.
 
 ```json
 {
@@ -42,7 +42,7 @@ If the network isn't responding, please refer to the section below.
  
 ### 2.1. Local docker testnet
 
-In case you are using a local docker tesnet, please follow the steps below.
+In case you are using a local docker testnet, please follow the steps below.
 
 #### 2.1.1 Check your network
 

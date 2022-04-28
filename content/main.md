@@ -68,7 +68,7 @@ Multifactor PoS guarantees the maximum level of decentralization without sacrifi
 
 ### 3.1. Coin transfer
 
-Makes a big propotion of on-chain activities, Check out how Arcology handle simplee transfer. [Learn More](../content/showcases/showcases.md)
+Makes a big proportion of on-chain activities, Check out how Arcology handle simply transfer. [Learn More](../content/showcases/showcases.md)
 
 ### 3.2. CryptoKitties
 

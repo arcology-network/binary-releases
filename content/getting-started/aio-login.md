@@ -33,4 +33,4 @@ You should be able to see a list of Arcology services running in the testnet con
 
 ## 2. Reinstall
 
-If you don't see all of them, the  image itself may be damaged. Please redownload the docke image.
+If you don't see all of them, the  image itself may be damaged. Please redownload the docker image.

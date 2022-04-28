@@ -1,10 +1,10 @@
 # Troubleshooting
 - [Troubleshooting](#troubleshooting)
-  - [1.1. I Cann't See All the Services](#11-i-cannt-see-all-the-services)
+  - [1.1. I Can't See All the Services](#11-i-cant-see-all-the-services)
   - [1.2. The Localhost Doesn't Work](#12-the-localhost-doesnt-work)
   - [1.3. Why Am I Receiving {"sysdbg":"block is nil"}](#13-why-am-i-receiving-sysdbgblock-is-nil)
   
-## 1.1. I Cann't See All the Services
+## 1.1. I Can't See All the Services
 
 The whole starting process may take a few minutes. If you only see some of the services running, that is usually because other services haven't been started yet, just can check back later.
 

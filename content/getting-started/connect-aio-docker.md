@@ -7,14 +7,14 @@
     - [1.4. Download the Image](#14-download-the-image)
     - [1.5. Start the Image](#15-start-the-image)
   - [2. Shut Down the Testnet](#2-shut-down-the-testnet)
-    - [2.1. Stop the Contanier](#21-stop-the-contanier)
+    - [2.1. Stop the Container](#21-stop-the-container)
     - [2.2. Remove the Container](#22-remove-the-container)
   - [3. Troubleshooting](#3-troubleshooting)
 
 ## 1. Start the Testnet
 
-The testnet docker container has virtually everything you need to get started. It is probably the easiest way to set up a testnet. 
-Users can downlaod our [all-in-one testnet](../../testnet-docker-allinone.md) docker image and then start a one-node testnet localcally. 
+The testnet docker container has virtually everything you need to get started. It is probably the easiest way to set up a testnet.
+Users can download our [all-in-one testnet](../../testnet-docker-allinone.md) docker image and then start a one-node testnet locally.
 The testnet is fully functional.
 
 Once the testnet is running you can start interact with it through standard [Ethereum jason RPC API.](https://github.com/ethereum/execution-apis).
@@ -60,8 +60,7 @@ docker ps -a
 
 Use the command below the stop the testnet. Please don't try to start a testnet docker while another one is still running. Always stop the running instance first before starting the next one. Otherwise you might have to reinstall the testnet docker.
 
-
-### 2.1. Stop the Contanier
+### 2.1. Stop the Container
 
 ```sh
 sudo docker stop allinone-cluster 

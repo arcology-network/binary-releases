@@ -33,7 +33,7 @@ Download and install MetaMask from https://metamask.io/
 
 ### 2.4. Import Accounts
 
-There are a list of [pre-created accounts](../developers/tutorials/accounts.md) in the docker container with sufficient balanace that developers and can use to initiate transactions instead.
+There are a list of [pre-created accounts](../developers/tutorials/accounts.md) in the docker container with sufficient balances that developers and can use to initiate transactions instead.
 
 ### 2.4. Show Balances
 

@@ -2,7 +2,7 @@
 
 Arcology is the first systemic solution to address all the common challenges faced by the blockchain technologies today with its sophisticated designs and revolutionary technologies. 
 
-Arcology finally opens door to the long-awaited mass adoption, the future promised by the industry since the inception of blockchain technologies. It is targeting at solving some deeply rooted issues that having plaguing the whole industy for years without effective solution.
+Arcology finally opens door to the long-awaited mass adoption, the future promised by the industry since the inception of blockchain technologies. It is targeting at solving some deeply rooted issues that having plaguing the whole industry for years without effective solution.
 
 ## Vision
 
@@ -22,13 +22,11 @@ In Arcology, developers will be able to explore a much broader horizon. Applicat
 - Resource Intensive Games
 - Decentralized social networks
 
-
 Acology is especially friendly to resource intensive applications.
 
 Concurrency Framework in native Solidity
 
-
-Running single nodes on multiple machines for the maxiumn throughput
+Running single nodes on multiple machines for the maximum throughput
 
 Concurrency framework in native Solidity to support concurrent smart contract development
 
