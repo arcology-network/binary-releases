@@ -13,11 +13,11 @@
   
 ## 1. Introduction
 
-Arcology support all Ethereum standard RPC APIs. All Ethereum tools and DApps should work with Arcology seamlessly. This document shows how to connect Ethereum Applications and to Arcology network.
+Arcology supports all Ethereum standard RPC APIs. All Ethereum tools and DApps should work with Arcology seamlessly. This document shows how to connect Ethereum Applications and to an Arcology network.
 
 ## 2. MetaMask
 
-MetaMask is the most popular Ethereum wallet and is als supported on Arcology.
+MetaMask is the most popular Ethereum wallet and it can work with Arcology as well.
 
 ### 2.1. Install MetaMask
 
@@ -41,8 +41,8 @@ There are a list of [pre-created accounts](../developers/tutorials/accounts.md) 
 
 ## 3. Truffle
 
-[This document](../developers/tutorials/pet-shop.md) guides you through the steps to work with Truffle on Arcology
+[This document](../developers/tutorials/pet-shop.md) guides you through the steps to work with Truffle on Arcology.
 
 ## 4. Other Apps
 
-Other Ethereum Apps should work with Arcology too. However, if you have difficulty connected your application to Arcology, please let us know.
+Other Ethereum Apps should work with Arcology too. However, if you have difficulty connecting your applications to Arcology, please let us know.
