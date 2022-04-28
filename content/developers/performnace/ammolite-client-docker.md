@@ -19,7 +19,7 @@
 
 [Ammolite](https://github.com/arcology-network/ammolite) is Arcology's network client package written in Python. It can interact with Arcology nodes through HTTP connections. Ammolite to Arcology is like web3.js to Ethereum. 
 
-The Ammolite client container is docker image with all the necessary modules and libraries installed to compile the solidity smart contracts and to interact with an Arcology testnet.
+The Ammolite client container is in a docker image with all the necessary modules and libraries installed to compile the solidity smart contracts and to interact with an Arcology testnet.
 
 ## 1.1. Why Ammolite
 

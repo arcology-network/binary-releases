@@ -2,6 +2,7 @@
 
 - [Arcology Overview](#arcology-overview)
   - [1. Background](#1-background)
+  - [1.1. Solution Overview](#11-solution-overview)
   - [1.1. Parallel Processing](#11-parallel-processing)
   - [2. Sharding/Sidechains](#2-shardingsidechains)
     - [2.1. Example](#21-example)
@@ -23,7 +24,11 @@
 ## 1. Background
 
 Scalability is the most imperative for the blockchain industry today. Cost is another major factor stops blockchain from mass adoption. Scalability and cost are intertwined issues in many cases and are very complicated. Over the years, we’ve seen many proposals, but few successes. This, we believe, is a result of deeply rooted design problems that haven’t been addressed. 
+
 Arcology is a revolutionary blockchain infrastructure, specially targeting at scalability issue that many blockchain networks are facing today. A truly scalable blockchain infrastructure for the web3.0 era. It is significantly faster, cheaper to use, we believe it is the best blockchain network in the world.
+
+## 1.1. Solution Overview
+Lays at the core 
 
 ## 1.1. Parallel Processing
 
