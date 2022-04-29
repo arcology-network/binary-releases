@@ -14,7 +14,7 @@ There is a tutorial example in Truffle development document that you can find he
 
 ### 1.1. Example
 
- **You can run the example on Arcology network directly.** There is no need to make any changes to the smart contracts or the backend code.The only difference is that Arcology uses its own blockchain in place of [Ganache](https://trufflesuite.com/ganache/). 
+ **You can run the example on Arcology network directly.** There is no need to make any changes to the smart contracts or the backend code.The only difference is that Arcology uses its own blockchain in place of [Ganache](https://trufflesuite.com/ganache/).
 
 ### 1.2. Connection Information
 
@@ -28,7 +28,7 @@ Use the information in this [document](../tutorials/network-info.md) to connect 
 
 ## 2. How to Run
 
-Simply install the packages listed below and follow steps in the orginal Ethereum tutorial. 
+Simply install the packages listed below and follow steps in the original Ethereum tutorial.
 
 ### 2.1. Installation
 
