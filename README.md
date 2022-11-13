@@ -11,6 +11,7 @@
 1. Upgraded to GO v1.19.
 2. Refactored executor service to process multiple deferred functions at the same time.
 3. Refactored executor scheduling service.
+5. Transaction reaping based on nonce.  
 4. Some bug fixes.
 
 **v1.5**
