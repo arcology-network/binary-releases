@@ -2,10 +2,10 @@
 
 **v2.0.0**
 - Integrated Optimism Bridge: Enhanced interoperability with the Optimism network.
+- Reconstructed Storage Structure and Process: Overhauled the storage architecture for better efficiency and scalability. Removed transient DBs. Async storage for Eth stateDB. 
+- Refactored Transaction Execution Phase Process: Improved the transaction execution process for increased reliability and speed.
+- Refactored Execution scheduling: Added new deferred functions.
 - Upgrade to Go 1.22: Updated to the latest version of Go for improved performance and security.
-- Reconstructed Storage Structure and Process: Overhauled the storage architecture for better efficiency and scalability.
-- Refactored Trade Execution Phase Process: Improved the trade execution process for increased reliability and speed.
-- Refactored Scheduling Phase Process: Enhanced the scheduling phase for better resource management and performance.
 
 **v1.9.0**
 - Added Merkle-Proof Logic: Implemented Merkle-proof verification to enhance data integrity and security.
