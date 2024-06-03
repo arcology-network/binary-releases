@@ -7,7 +7,7 @@
 - Refactored Execution scheduling: Added new deferred functions.
 - Upgrade to Go 1.22: Updated to the latest version of Go for improved performance and security.
 - Ethereum: V 1.11
-- OP:v1.2.0
+- OP: V 1.2.0
 
 **v1.9.0**
 - Added Merkle-Proof Logic: Implemented Merkle-proof verification to enhance data integrity and security.
