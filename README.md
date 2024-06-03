@@ -6,8 +6,7 @@
 - Refactored Transaction Execution Phase Process: Improved the transaction execution process for increased reliability and speed.
 - Refactored Execution scheduling: Added new deferred functions.
 - Upgrade to Go 1.22: Updated to the latest version of Go for improved performance and security.
-- Ethereum: V 1.11
-- OP: V 1.2.0
+- Tested as L2 with Ethereum: V 1.11 & OP: V 1.2.0
 
 **v1.9.0**
 - Added Merkle-Proof Logic: Implemented Merkle-proof verification to enhance data integrity and security.
