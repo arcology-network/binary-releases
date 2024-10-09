@@ -1,5 +1,8 @@
 # Arcology Releases
 
+**v2.2.0**
+- Upgrade Optimism Bridge: Upgrade optimism to 1.7.7.
+
 **v2.0.0**
 - Integrated Optimism Bridge: Enhanced interoperability with the Optimism network.
 - Reconstructed Storage Structure and Process: Overhauled the storage architecture for better efficiency and scalability. Removed transient DBs. Async storage for Eth stateDB. 
